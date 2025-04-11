@@ -8,9 +8,11 @@
 #include <mavros_msgs/msg/detail/command_code__struct.hpp>
 #include <mavros_msgs/msg/detail/state__struct.hpp>
 #include <mavros_msgs/srv/detail/command_bool__struct.hpp>
+#include <mavros_msgs/srv/detail/set_mode__struct.hpp>
 #include <rclcpp/client.hpp>
 #include <rclcpp/duration.hpp>
 #include <rclcpp/executors.hpp>
+#include <rclcpp/future_return_code.hpp>
 #include <rclcpp/logging.hpp>
 #include <rclcpp/rate.hpp>
 #include <rclcpp/utilities.hpp>
@@ -62,6 +64,52 @@ bool UAV_Mission::getTopicVal(T &returnVal, const std::string &topicName,
   returnVal = *last_msg;
   return true;
 }
+
+void UAV_Mission::switch_mode(std::string mode) {
+  RCLCPP_INFO_STREAM(nh->get_logger(), "--- Changing mode to " << mode);
+  rclcpp::Client<mavros_msgs::srv::SetMode>::SharedPtr setMode_client;
+  setMode_client =
+      nh->create_client<mavros_msgs::srv::SetMode>("/mavros/set_mode");
+
+  auto req = std::make_shared<mavros_msgs::srv::SetMode::Request>();
+  req->base_mode = 0;
+  req->custom_mode = mode;
+  mavros_msgs::msg::State curr_state;
+
+  // The only way to exit this loop with no error is when desired mode is
+  // reached
+  uint8_t count = 0;
+  do {
+    count++;
+    if (count > 5) {
+      RCLCPP_FATAL(nh->get_logger(), "---Mode changing failed. Terminate.---");
+      return;
+    }
+
+    auto future = setMode_client->async_send_request(req);
+    if (rclcpp::spin_until_future_complete(nh, future) ==
+        rclcpp::FutureReturnCode::SUCCESS) {
+      auto response = future.get();
+      if (!response->mode_sent) {
+        RCLCPP_WARN(nh->get_logger(),
+                    "---Mode changing failed, retrying...---");
+      }
+      rclcpp::sleep_for(std::chrono::seconds(5));
+      int gotTopic =
+          getTopicVal(curr_state, "/mavros/state", std::chrono::seconds(5));
+    } else {
+      RCLCPP_FATAL_STREAM(nh->get_logger(), "Terminate in func " << __func__);
+      return;
+    }
+  } while (boost::algorithm::to_lower_copy(curr_state.mode) !=
+           boost::algorithm::to_lower_copy(mode));
+}
+
+void UAV_Mission::land() {
+  RCLCPP_INFO(nh->get_logger(), "--- Land Initiated ---");
+  switch_mode("LAND");
+}
+
 void UAV_Mission::arm_throttle() {
   RCLCPP_INFO(nh->get_logger(), "--- Arming ---");
   rclcpp::Client<mavros_msgs::srv::CommandBool>::SharedPtr client;

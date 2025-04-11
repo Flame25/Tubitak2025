@@ -1,8 +1,11 @@
+#include <boost/algorithm/algorithm.hpp>
+#include <boost/algorithm/string.hpp>
 #include <functional>
 #include <keyboard_msgs/msg/key.hpp>
 #include <mavros_msgs/msg/state.hpp>
 #include <mavros_msgs/srv/command_bool.hpp>
 #include <mavros_msgs/srv/command_tol.hpp>
+#include <mavros_msgs/srv/set_mode.hpp>
 #include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <string>
@@ -14,6 +17,8 @@ class UAV_Mission {
 public:
   void arm_throttle();
   void takeoff();
+  void land();
+  void switch_mode(std::string mode);
   template <class T>
   bool getTopicVal(T &returnVal, const std::string &topicName,
                    std::chrono::seconds retryTimeout);
