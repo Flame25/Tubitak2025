@@ -8,15 +8,15 @@
 #include <mavros_msgs/srv/set_mode.hpp>
 #include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/nav_sat_fix.hpp>
+#include <std_msgs/msg/float64.hpp>
 #include <string>
 #include <yaml-cpp/yaml.h>
-
-using command_func = std::function<void()>; // Define function pointer type
 
 class UAV_Mission {
 public:
   void arm_throttle();
-  void takeoff();
+  void takeoff(double height);
   void land();
   void switch_mode(std::string mode);
   template <class T>
@@ -37,7 +37,7 @@ public:
       auto func = uav_funcs.find(cmd_name);
       if (func != uav_funcs.end()) {
         std::cout << "Command: " << cmd_name << std::endl;
-        uav_funcs[cmd_name]();
+        func->second(command);
       } else {
         // If command is invalid, throw an exception
         throw std::invalid_argument("Invalid command in .yaml file: " +
@@ -64,5 +64,5 @@ public:
   UAV_Mission(rclcpp::Node::SharedPtr node);
 
 private:
-  std::unordered_map<std::string, command_func> uav_funcs;
+  std::map<std::string, std::function<void(const YAML::Node &)>> uav_funcs;
 };

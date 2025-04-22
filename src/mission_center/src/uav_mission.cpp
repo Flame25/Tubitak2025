@@ -16,6 +16,9 @@
 #include <rclcpp/logging.hpp>
 #include <rclcpp/rate.hpp>
 #include <rclcpp/utilities.hpp>
+#include <rmw/types.h>
+#include <sensor_msgs/msg/detail/nav_sat_fix__struct.hpp>
+#include <std_msgs/msg/detail/float64__struct.hpp>
 
 // TODO: Landing
 // TODO: Take off
@@ -24,9 +27,13 @@
 
 UAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr node) {
   nh = node;
-  uav_funcs["takeoff"] = std::bind(&UAV_Mission::takeoff, this);
+  uav_funcs["takeoff"] = [this](const YAML::Node &cmd) {
+    double alt = cmd["altitude"] ? cmd["altitude"].as<double>() : 1.0;
+    this->takeoff(alt);
+  };
   uav_funcs["arm_throttle"] = std::bind(&UAV_Mission::arm_throttle, this);
   uav_funcs["init"] = std::bind(&UAV_Mission::init, this);
+  uav_funcs["land"] = std::bind(&UAV_Mission::land, this);
 }
 
 template <class T>
@@ -146,7 +153,7 @@ void UAV_Mission::arm_throttle() {
     }
   } while (!curr_state.armed);
 }
-void UAV_Mission::takeoff() {
+void UAV_Mission::takeoff(double height) {
   rclcpp::Client<mavros_msgs::srv::CommandTOL>::SharedPtr takeoff_client_;
   takeoff_client_ =
       nh->create_client<mavros_msgs::srv::CommandTOL>("/mavros/cmd/takeoff");
@@ -155,30 +162,49 @@ void UAV_Mission::takeoff() {
   }
 
   auto request = std::make_shared<mavros_msgs::srv::CommandTOL::Request>();
-  request->altitude = 3;
+  request->altitude = height;
   request->min_pitch = 0;
   request->yaw = 0;
   request->latitude = 0;
   request->longitude = 0;
-
   auto future = takeoff_client_->async_send_request(request);
-  if (rclcpp::spin_until_future_complete(nh, future) ==
-      rclcpp::FutureReturnCode::SUCCESS) {
-    if (future.get()->success) {
-      RCLCPP_INFO(nh->get_logger(), "Takeoff command sent successfully.");
-      return;
-    } else {
-      RCLCPP_WARN(nh->get_logger(), "Failed to send takeoff command.");
-      return;
-    }
+  auto status =
+      rclcpp::spin_until_future_complete(nh, future, std::chrono::seconds(5));
+  if (status == rclcpp::FutureReturnCode::SUCCESS) {
+    auto res = future.get();
+    RCLCPP_INFO(nh->get_logger(),
+                "Takeoff service response: success=%d, result=%d", res->success,
+                res->result);
+  } else if (status == rclcpp::FutureReturnCode::TIMEOUT) {
+    RCLCPP_ERROR(nh->get_logger(), "Takeoff service timed out");
   } else {
-    RCLCPP_ERROR(nh->get_logger(), "Failed to call takeoff service.");
-    return;
+    RCLCPP_ERROR(nh->get_logger(), "Takeoff service failed");
   }
+
+  // TODO: Wait until desired alt
 }
 bool UAV_Mission::init() {
   RCLCPP_INFO(nh->get_logger(), "-- Initialize UAV Mission --");
   // TODO: Wait for GPS
+
+  bool GPSFound = false;
+  bool Heading = false;
+  double currentPoint_lat;
+  double currentPoint_lon;
+  double currentHeading;
+
+  boost::function<void(const sensor_msgs::msg::NavSatFix &)>
+      globalPositionCallback = [&](const sensor_msgs::msg::NavSatFix &msg) {
+        currentPoint_lat = msg.latitude;
+        currentPoint_lon = msg.longitude;
+        GPSFound = true;
+      };
+
+  boost::function<void(const std_msgs::msg::Float64 &)> headingCallback =
+      [&](const std_msgs::msg::Float64 &msg) {
+        Heading = true;
+        currentHeading = msg.data;
+      };
 
   boost::shared_ptr<const keyboard_msgs::msg::Key> keyPtr;
 
@@ -197,6 +223,25 @@ bool UAV_Mission::init() {
           }
         }
       };
+
+  rmw_qos_profile_t qos = rmw_qos_profile_default;
+  qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
+
+  auto qos_profile = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(qos), qos);
+  rclcpp::Subscription<sensor_msgs::msg::NavSatFix>::SharedPtr gps_sub;
+  gps_sub = nh->create_subscription<sensor_msgs::msg::NavSatFix>(
+      "/mavros/global_position/global", rclcpp::SensorDataQoS(),
+      globalPositionCallback);
+  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr heading_sub;
+  heading_sub = nh->create_subscription<std_msgs::msg::Float64>(
+      "/mavros/global_position/compass_hdg", rclcpp::SensorDataQoS(),
+      headingCallback);
+
+  while (!GPSFound) {
+    RCLCPP_WARN(nh->get_logger(), "Waiting for GPS...");
+    rclcpp::spin_some(nh);
+    rclcpp::sleep_for(std::chrono::milliseconds(100));
+  }
 
   RCLCPP_WARN(nh->get_logger(), "---Press f to start mission---");
   rclcpp::Subscription<keyboard_msgs::msg::Key>::SharedPtr
