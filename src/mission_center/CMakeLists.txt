@@ -60,6 +60,7 @@ ament_target_dependencies(uav_mission
 add_executable(pilot_node src/pilot_node.cpp)
 add_executable(safety_node src/safety_node.cpp)
 add_executable(ui_node src/ui_node.cpp ${IMGUI_SOURCES})
+add_executable(trajectory_streamer src/trajectory_streamer.cpp)
 
 # Link dependencies with your executable
 ament_target_dependencies(pilot_node
@@ -76,6 +77,7 @@ ament_target_dependencies(safety_node
   std_msgs
   std_srvs
   geometry_msgs
+  mavros_msgs
 )
 
 ament_target_dependencies(ui_node
@@ -84,6 +86,8 @@ ament_target_dependencies(ui_node
   std_srvs
   geometry_msgs
 )
+
+ament_target_dependencies(trajectory_streamer rclcpp mavros_msgs)
 
 # Link the custom library AFTER setting dependencies
 target_link_libraries(pilot_node uav_mission yaml-cpp)
@@ -100,6 +104,8 @@ install(TARGETS uav_mission
 install(TARGETS pilot_node safety_node ui_node
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(TARGETS trajectory_streamer DESTINATION lib/${PROJECT_NAME})
 
 # Export include directories
 ament_export_include_directories(include)
