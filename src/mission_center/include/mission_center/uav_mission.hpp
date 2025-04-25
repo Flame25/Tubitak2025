@@ -6,10 +6,12 @@
 #include <mavros_msgs/srv/command_bool.hpp>
 #include <mavros_msgs/srv/command_tol.hpp>
 #include <mavros_msgs/srv/set_mode.hpp>
+#include <rclcpp/logging.hpp>
 #include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/nav_sat_fix.hpp>
 #include <std_msgs/msg/float64.hpp>
+#include <std_srvs/srv/empty.hpp>
 #include <string>
 #include <yaml-cpp/yaml.h>
 
@@ -19,6 +21,10 @@ public:
   void takeoff(double height);
   void land();
   void switch_mode(std::string mode);
+  bool
+  restartMission(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
+                 std::shared_ptr<std_srvs::srv::Empty::Response> response);
+
   template <class T>
   bool getTopicVal(T &returnVal, const std::string &topicName,
                    std::chrono::seconds retryTimeout);
@@ -33,6 +39,11 @@ public:
     for (const auto &command : config["mission"]) {
       std::string cmd_name = command["command"].as<std::string>();
 
+      if (restart_mission.load()) {
+        RCLCPP_INFO(nh->get_logger(), "Restarting Mission");
+        restart_mission.store(false);
+        return false;
+      }
       // Check if the command exists in the map
       auto func = uav_funcs.find(cmd_name);
       if (func != uav_funcs.end()) {
@@ -56,6 +67,9 @@ public:
 
       std::cout << std::endl;
     }
+
+    RCLCPP_INFO(nh->get_logger(), "Mission Complete!");
+    this->load_mission(file_path);
     return true;
   }
 
@@ -64,5 +78,15 @@ public:
   UAV_Mission(rclcpp::Node::SharedPtr node);
 
 private:
+  std::atomic<bool> restart_mission{false};
   std::map<std::string, std::function<void(const YAML::Node &)>> uav_funcs;
+  rclcpp::Service<std_srvs::srv::Empty>::SharedPtr service_;
+  rclcpp::Service<std_srvs::srv::Empty>::SharedPtr shutdown_service;
+
+  bool killPilotCb(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
+                   std::shared_ptr<std_srvs::srv::Empty::Response> response) {
+    RCLCPP_WARN(nh->get_logger(), "--- Pilot Node Die ---");
+    rclcpp::shutdown();
+    return true;
+  }
 };

@@ -10,7 +10,7 @@
 #include <std_srvs/srv/detail/empty__struct.hpp>
 #include <std_srvs/srv/empty.hpp>
 
-#define RC_CHECK 1
+#define RC_CHECK 0
 
 // Change to the radio channel
 #define RC_LAND 6

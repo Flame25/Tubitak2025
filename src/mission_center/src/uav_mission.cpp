@@ -1,5 +1,4 @@
 #include "mission_center/uav_mission.hpp"
-#include "keyboard_msgs/msg/detail/key__struct.hpp"
 #include <boost/function.hpp>
 #include <boost/smart_ptr/shared_ptr.hpp>
 #include <chrono>
@@ -18,22 +17,43 @@
 #include <rclcpp/utilities.hpp>
 #include <rmw/types.h>
 #include <sensor_msgs/msg/detail/nav_sat_fix__struct.hpp>
-#include <std_msgs/msg/detail/float64__struct.hpp>
+#include <std_msgs/msg/bool.hpp>
 
-// TODO: Landing
-// TODO: Take off
-// TODO: GPS Lock Checker & stuffs
 // TODO: Improc Chaser
 
 UAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr node) {
   nh = node;
+  service_ = nh->create_service<std_srvs::srv::Empty>(
+      "/pilot_node/restart_mission",
+      std::bind(&UAV_Mission::restartMission, this, std::placeholders::_1,
+                std::placeholders::_2));
+
+  shutdown_service = nh->create_service<std_srvs::srv::Empty>(
+      "/pilot_node/kill_pilot",
+      std::bind(&UAV_Mission::killPilotCb, this, std::placeholders::_1,
+                std::placeholders::_2));
+
   uav_funcs["takeoff"] = [this](const YAML::Node &cmd) {
     double alt = cmd["altitude"] ? cmd["altitude"].as<double>() : 1.0;
     this->takeoff(alt);
   };
+
+  uav_funcs["switch_mode"] = [this](const YAML::Node &cmd) {
+    std::string mode = cmd["mode"] ? cmd["mode"].as<std::string>() : "guided";
+    this->switch_mode(mode);
+  };
+
   uav_funcs["arm_throttle"] = std::bind(&UAV_Mission::arm_throttle, this);
   uav_funcs["init"] = std::bind(&UAV_Mission::init, this);
   uav_funcs["land"] = std::bind(&UAV_Mission::land, this);
+}
+
+bool UAV_Mission::restartMission(
+    const std::shared_ptr<std_srvs::srv::Empty::Request> request,
+    std::shared_ptr<std_srvs::srv::Empty::Response> response) {
+  RCLCPP_WARN(nh->get_logger(), "--- Restarting Mission Pilot Node ---");
+  restart_mission.store(true);
+  return true;
 }
 
 template <class T>
@@ -224,6 +244,20 @@ bool UAV_Mission::init() {
         }
       };
 
+  boost::function<void(const std_msgs::msg::Bool &)> startCb =
+      [&](const std_msgs::msg::Bool &msg) {
+        if (msg.data) {
+          std::string topic_name = "/safety_node/active";
+          size_t pub_count = nh->count_publishers(topic_name);
+          if (pub_count > 0) {
+            RCLCPP_WARN(nh->get_logger(), "---Starting mission---");
+            startMission = true;
+          } else {
+            RCLCPP_ERROR(nh->get_logger(), "---Safety Node not running---");
+          }
+        }
+      };
+
   rmw_qos_profile_t qos = rmw_qos_profile_default;
   qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
 
@@ -240,13 +274,20 @@ bool UAV_Mission::init() {
   while (!GPSFound) {
     RCLCPP_WARN(nh->get_logger(), "Waiting for GPS...");
     rclcpp::spin_some(nh);
+    if (restart_mission.load()) {
+      return false;
+    }
     rclcpp::sleep_for(std::chrono::milliseconds(100));
   }
 
-  RCLCPP_WARN(nh->get_logger(), "---Press f to start mission---");
+  RCLCPP_WARN(nh->get_logger(), "---Mission ready to start mission---");
   rclcpp::Subscription<keyboard_msgs::msg::Key>::SharedPtr
       sub; // Subscriber pointer
   sub = nh->create_subscription<keyboard_msgs::msg::Key>("/keydown", 10, keyCb);
+
+  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr start_pub;
+  start_pub = nh->create_subscription<std_msgs::msg::Bool>(
+      "mission_center/start_mission", 10, startCb);
   while (!startMission) {
     rclcpp::spin_some(nh);
   }
