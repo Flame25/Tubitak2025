@@ -86,7 +86,13 @@ private:
   bool killPilotCb(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
                    std::shared_ptr<std_srvs::srv::Empty::Response> response) {
     RCLCPP_WARN(nh->get_logger(), "--- Pilot Node Die ---");
-    rclcpp::shutdown();
+
+    // Now launch shutdown in another thread
+    std::thread([]() {
+      std::this_thread::sleep_for(std::chrono::milliseconds(
+          100)); // short sleep to allow response to go out
+      rclcpp::shutdown();
+    }).detach();
     return true;
   }
 };

@@ -105,6 +105,10 @@ install(TARGETS pilot_node safety_node ui_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 install(TARGETS trajectory_streamer DESTINATION lib/${PROJECT_NAME})
 
 # Export include directories
