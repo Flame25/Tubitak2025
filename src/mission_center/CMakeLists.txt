@@ -43,7 +43,7 @@ set(IMGUI_SOURCES
 
 # Create the library
 add_library(uav_mission SHARED src/uav_mission.cpp)
-include_directories(${keyboard_msgs_INCLUDE_DIRS})
+include_directories(${keyboard_msgs_INCLUDE_DIRS} ${YAML_CPP_INCLUDE_DIRS})
 
 # Specify dependencies for the library
 ament_target_dependencies(uav_mission
@@ -54,6 +54,7 @@ ament_target_dependencies(uav_mission
   keyboard_msgs
   keyboard
   mavros_msgs
+  yaml-cpp
 )
 
 # Add executables
@@ -70,6 +71,7 @@ ament_target_dependencies(pilot_node
   geometry_msgs
   keyboard_msgs
   keyboard
+  yaml-cpp
 )
 
 ament_target_dependencies(safety_node
@@ -90,6 +92,7 @@ ament_target_dependencies(ui_node
 ament_target_dependencies(trajectory_streamer rclcpp mavros_msgs)
 
 # Link the custom library AFTER setting dependencies
+target_link_libraries(uav_mission yaml-cpp)
 target_link_libraries(pilot_node uav_mission yaml-cpp)
 target_link_libraries(ui_node uav_mission glfw OpenGL::GL)
 

@@ -1,7 +1,4 @@
 #include "mission_center/uav_mission.hpp"
-#include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
-#include "std_srvs/srv/empty.hpp"
 #include <std_srvs/srv/detail/empty__struct.hpp>
 #include <std_srvs/srv/set_bool.hpp>
 
