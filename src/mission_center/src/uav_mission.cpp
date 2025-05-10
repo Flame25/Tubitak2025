@@ -4,19 +4,20 @@
 #include <chrono>
 #include <iostream>
 #include <keyboard_msgs/msg/key.hpp>
-#include <mavros_msgs/msg/detail/command_code__struct.hpp>
-#include <mavros_msgs/msg/detail/state__struct.hpp>
-#include <mavros_msgs/srv/detail/command_bool__struct.hpp>
-#include <mavros_msgs/srv/detail/set_mode__struct.hpp>
+#include <px4_msgs/msg/detail/offboard_control_mode__struct.hpp>
+#include <px4_msgs/msg/detail/sensor_gps__struct.hpp>
+#include <px4_msgs/msg/detail/vehicle_command__struct.hpp>
+#include <px4_msgs/msg/detail/vehicle_control_mode__struct.hpp>
+#include <px4_msgs/msg/detail/vehicle_status__struct.hpp>
 #include <rclcpp/client.hpp>
 #include <rclcpp/duration.hpp>
 #include <rclcpp/executors.hpp>
 #include <rclcpp/future_return_code.hpp>
 #include <rclcpp/logging.hpp>
+#include <rclcpp/qos.hpp>
 #include <rclcpp/rate.hpp>
 #include <rclcpp/utilities.hpp>
 #include <rmw/types.h>
-#include <sensor_msgs/msg/detail/nav_sat_fix__struct.hpp>
 #include <std_msgs/msg/bool.hpp>
 
 // TODO: Improc Chaser
@@ -33,8 +34,25 @@ UAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr node) {
       std::bind(&UAV_Mission::killPilotCb, this, std::placeholders::_1,
                 std::placeholders::_2));
 
+  offboard_pub = nh->create_publisher<px4_msgs::msg::OffboardControlMode>(
+      "/fmu/in/offboard_control_mode", 10);
+
+  offboard_ctrl_msg.position = true;
+  offboard_ctrl_msg.velocity = false;
+  offboard_ctrl_msg.acceleration = false;
+  offboard_ctrl_msg.attitude = false;
+  offboard_ctrl_msg.body_rate = false;
+  offboard_ctrl_msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+
+  traj_pub = nh->create_publisher<px4_msgs::msg::TrajectorySetpoint>(
+      "/fmu/in/trajectory_setpoint", 10);
+
+  traj_msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+  traj_msg.position = {0.0, 0.0, -1.0};
+  traj_msg.yaw = 0.0;
+
   uav_funcs["takeoff"] = [this](const YAML::Node &cmd) {
-    double alt = cmd["altitude"] ? cmd["altitude"].as<double>() : 1.0;
+    float alt = cmd["altitude"] ? cmd["altitude"].as<float>() : 1.0;
     this->takeoff(alt);
   };
 
@@ -46,6 +64,21 @@ UAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr node) {
   uav_funcs["arm_throttle"] = std::bind(&UAV_Mission::arm_throttle, this);
   uav_funcs["init"] = std::bind(&UAV_Mission::init, this);
   uav_funcs["land"] = std::bind(&UAV_Mission::land, this);
+  uav_funcs["offboard_mode"] =
+      std::bind(&UAV_Mission::switch_offboard_mode, this);
+  uav_funcs["move"] = [this](const YAML::Node &cmd) {
+    float x = cmd["x"] ? cmd["x"].as<float>() : 0.0;
+    float y = cmd["y"] ? cmd["y"].as<float>() : 0.0;
+    float z = cmd["z"] ? cmd["z"].as<float>() : 0.0;
+    this->move(x, y, z);
+  };
+
+  offboard_thread = std::thread(&UAV_Mission::offboard_loop, this);
+}
+
+UAV_Mission::~UAV_Mission() {
+  if (offboard_thread.joinable())
+    offboard_thread.join();
 }
 
 bool UAV_Mission::restartMission(
@@ -62,15 +95,17 @@ bool UAV_Mission::getTopicVal(T &returnVal, const std::string &topicName,
   RCLCPP_INFO_STREAM(nh->get_logger(),
                      "Waiting for message from " << topicName);
 
+  rmw_qos_profile_t qos = rmw_qos_profile_default;
+  qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
   bool got_msg = false;
   std::shared_ptr<T> last_msg = nullptr;
 
   // Create a temporary subscription
-  auto sub =
-      nh->create_subscription<T>(topicName, 10, [&](typename T::SharedPtr msg) {
-        last_msg = std::make_shared<T>(*msg);
-        got_msg = true;
-      });
+  auto sub = nh->create_subscription<T>(topicName, rclcpp::SensorDataQoS(),
+                                        [&](typename T::SharedPtr msg) {
+                                          last_msg = std::make_shared<T>(*msg);
+                                          got_msg = true;
+                                        });
 
   // Timeout logic
   auto start_time = std::chrono::steady_clock::now();
@@ -92,44 +127,137 @@ bool UAV_Mission::getTopicVal(T &returnVal, const std::string &topicName,
   return true;
 }
 
-void UAV_Mission::switch_mode(std::string mode) {
-  RCLCPP_INFO_STREAM(nh->get_logger(), "--- Changing mode to " << mode);
-  rclcpp::Client<mavros_msgs::srv::SetMode>::SharedPtr setMode_client;
-  setMode_client =
-      nh->create_client<mavros_msgs::srv::SetMode>("/mavros/set_mode");
+void UAV_Mission::offboard_loop() {
+  rclcpp::Rate rate(10);
+  while (rclcpp::ok()) {
+    traj_msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+    // traj_pub->publish(traj_msg);
+    offboard_ctrl_msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+    offboard_pub->publish(offboard_ctrl_msg);
 
-  auto req = std::make_shared<mavros_msgs::srv::SetMode::Request>();
-  req->base_mode = 0;
-  req->custom_mode = mode;
-  mavros_msgs::msg::State curr_state;
+    rate.sleep();
+  }
+}
+
+void UAV_Mission::switch_offboard_mode() {
+
+  auto vehicle_cmd_pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
+      "/fmu/in/vehicle_command", 10);
+
+  px4_msgs::msg::VehicleCommand cmd{};
+  cmd.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+  cmd.command = px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE;
+  cmd.param1 = 1; // Use custom mode
+  cmd.param2 = 6; // PX4_CUSTOM_MAIN_MODE_OFFBOARD
+  cmd.target_system = 1;
+  cmd.target_component = 1;
+  cmd.source_system = 1;
+  cmd.source_component = 1;
+  cmd.from_external = true;
+
+  rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr pub;
+  pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
+      "/fmu/in/vehicle_command", 10);
+
+  // Create Message
+  px4_msgs::msg::VehicleCommand msg;
+  msg.param1 = 1.0;
+  msg.param2 = 0.0;
+  msg.command = px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM;
+
+  msg.target_system = 1;
+  msg.target_component = 1;
+  msg.source_system = 1;
+  msg.source_component = 1;
+  msg.from_external = true;
+  msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+
+  px4_msgs::msg::VehicleStatus curr_status;
+  do {
+    vehicle_cmd_pub->publish(cmd);
+    rclcpp::spin_some(nh);
+    if (!getTopicVal(curr_status, "/fmu/out/vehicle_status_v1",
+                     std::chrono::seconds(5))) {
+      RCLCPP_ERROR(nh->get_logger(),
+                   "Failed to get topic /fmu/out/vehicle_status_v1 ");
+    }
+  } while (
+      curr_status.nav_state !=
+      px4_msgs::msg::VehicleStatus::NAVIGATION_STATE_OFFBOARD); // Offboard Mode
+                                                                // (14)
+  RCLCPP_INFO(nh->get_logger(), "--- Switched to offboard mode ---");
+}
+
+void UAV_Mission::move(float x, float y, float z) {
+  RCLCPP_INFO(nh->get_logger(), "=== Moving by %.2f %.2f %.2f ===", x, y, z);
+  traj_msg.position = {x, y, z};
+
+  bool reached_target = false;
+  rclcpp::Time start_time = nh->now();
+
+  auto position_cb =
+      [&](const px4_msgs::msg::VehicleLocalPosition::SharedPtr msg) {
+        float dx = msg->x - x;
+        float dy = msg->y - y;
+        float dz = msg->z - z;
+        float dist = sqrt(dx * dx + dy * dy + dz * dz);
+
+        if (dist < 0.3) {
+          reached_target = true;
+        }
+      };
+
+  auto sub = nh->create_subscription<px4_msgs::msg::VehicleLocalPosition>(
+      "/fmu/out/vehicle_local_position", rclcpp::SensorDataQoS(), position_cb);
+
+  while (!reached_target && (nh->now() - start_time).seconds() < 10.0) {
+    traj_pub->publish(traj_msg);
+    rclcpp::sleep_for(std::chrono::milliseconds(100));
+    rclcpp::spin_some(nh);
+  }
+
+  // Reset
+  traj_msg.position = {0.0, 0.0, 0.0};
+}
+
+void UAV_Mission::switch_mode(std::string mode) {
+  // RCLCPP_INFO_STREAM(nh->get_logger(), "--- Changing mode to " << mode);
+  // rclcpp::Client<mavros_msgs::srv::SetMode>::SharedPtr setMode_client;
+  // setMode_client =
+  //     nh->create_client<mavros_msgs::srv::SetMode>("/mavros/set_mode");
+
+  // auto req = std::make_shared<mavros_msgs::srv::SetMode::Request>();
+  // req->base_mode = 0;
+  // req->custom_mode = mode;
+  // mavros_msgs::msg::State curr_state;
 
   // The only way to exit this loop with no error is when desired mode is
   // reached
   uint8_t count = 0;
-  do {
-    count++;
-    if (count > 5) {
-      RCLCPP_FATAL(nh->get_logger(), "---Mode changing failed. Terminate.---");
-      return;
-    }
+  // do {
+  //   count++;
+  //   if (count > 5) {
+  //     RCLCPP_FATAL(nh->get_logger(), "---Mode changing failed.
+  //     Terminate.---"); return;
+  //   }
 
-    auto future = setMode_client->async_send_request(req);
-    if (rclcpp::spin_until_future_complete(nh, future) ==
-        rclcpp::FutureReturnCode::SUCCESS) {
-      auto response = future.get();
-      if (!response->mode_sent) {
-        RCLCPP_WARN(nh->get_logger(),
-                    "---Mode changing failed, retrying...---");
-      }
-      rclcpp::sleep_for(std::chrono::seconds(5));
-      int gotTopic =
-          getTopicVal(curr_state, "/mavros/state", std::chrono::seconds(5));
-    } else {
-      RCLCPP_FATAL_STREAM(nh->get_logger(), "Terminate in func " << __func__);
-      return;
-    }
-  } while (boost::algorithm::to_lower_copy(curr_state.mode) !=
-           boost::algorithm::to_lower_copy(mode));
+  //  auto future = setMode_client->async_send_request(req);
+  //  if (rclcpp::spin_until_future_complete(nh, future) ==
+  //      rclcpp::FutureReturnCode::SUCCESS) {
+  //    auto response = future.get();
+  //    if (!response->mode_sent) {
+  //      RCLCPP_WARN(nh->get_logger(),
+  //                  "---Mode changing failed, retrying...---");
+  //    }
+  //    rclcpp::sleep_for(std::chrono::seconds(5));
+  //    int gotTopic =
+  //        getTopicVal(curr_state, "/mavros/state", std::chrono::seconds(5));
+  //  } else {
+  //    RCLCPP_FATAL_STREAM(nh->get_logger(), "Terminate in func " <<
+  //    __func__); return;
+  //  }
+  //} while (boost::algorithm::to_lower_copy(curr_state.mode) !=
+  //         boost::algorithm::to_lower_copy(mode));
 }
 
 void UAV_Mission::land() {
@@ -139,13 +267,24 @@ void UAV_Mission::land() {
 
 void UAV_Mission::arm_throttle() {
   RCLCPP_INFO(nh->get_logger(), "--- Arming ---");
-  rclcpp::Client<mavros_msgs::srv::CommandBool>::SharedPtr client;
-  client =
-      nh->create_client<mavros_msgs::srv::CommandBool>("/mavros/cmd/arming");
-  // Create request
-  auto request = std::make_shared<mavros_msgs::srv::CommandBool::Request>();
-  request->value = true;
-  mavros_msgs::msg::State curr_state;
+  rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr pub;
+  pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
+      "/fmu/in/vehicle_command", 10);
+
+  // Create Message
+  px4_msgs::msg::VehicleCommand msg;
+  msg.param1 = 1.0;
+  msg.param2 = 0.0;
+  msg.command = px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM;
+
+  msg.target_system = 1;
+  msg.target_component = 1;
+  msg.source_system = 1;
+  msg.source_component = 1;
+  msg.from_external = true;
+  msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+
+  px4_msgs::msg::VehicleControlMode flags;
   rclcpp::Duration dur(std::chrono::seconds(5));
   int count = 0;
   int threshold = 5;
@@ -156,56 +295,51 @@ void UAV_Mission::arm_throttle() {
       return;
     }
 
-    auto future = client->async_send_request(request);
-    if (rclcpp::spin_until_future_complete(nh, future) ==
-        rclcpp::FutureReturnCode::SUCCESS) {
-      auto response = future.get();
-      if (!response->success) {
-        RCLCPP_WARN(nh->get_logger(), "---Arming failed, retrying...---");
-      } else {
-        RCLCPP_INFO(nh->get_logger(), "---Arming succeeded!---");
-      }
-      rclcpp::sleep_for(std::chrono::seconds(5));
-      int gotTopic =
-          getTopicVal(curr_state, "/mavros/state", std::chrono::seconds(3));
-    } else {
-      RCLCPP_WARN(nh->get_logger(), "---Service call failed---");
-    }
-  } while (!curr_state.armed);
+    pub->publish(msg);
+    int gotTopic = getTopicVal(flags, "/fmu/out/vehicle_control_mode",
+                               std::chrono::seconds(3));
+
+  } while (!flags.flag_armed);
+
+  RCLCPP_WARN(nh->get_logger(), "--- Armed ---");
 }
-void UAV_Mission::takeoff(double height) {
-  rclcpp::Client<mavros_msgs::srv::CommandTOL>::SharedPtr takeoff_client_;
-  takeoff_client_ =
-      nh->create_client<mavros_msgs::srv::CommandTOL>("/mavros/cmd/takeoff");
-  while (!takeoff_client_->wait_for_service(std::chrono::seconds(1))) {
-    RCLCPP_WARN(nh->get_logger(), "Waiting for takeoff service...");
+void UAV_Mission::takeoff(float height) {
+
+  RCLCPP_INFO(nh->get_logger(), "=== Takeoff : %.2f meter ===", height);
+  traj_msg.position = {0, 0, height};
+
+  bool reached_target = false;
+  rclcpp::Time start_time = nh->now();
+
+  auto position_cb =
+      [&](const px4_msgs::msg::VehicleLocalPosition::SharedPtr msg) {
+        float dx = 0;
+        float dy = 0;
+        float dz = msg->z - height;
+        float dist = sqrt(dx * dx + dy * dy + dz * dz);
+
+        if (dist < 0.3) {
+          reached_target = true;
+        }
+      };
+
+  auto sub = nh->create_subscription<px4_msgs::msg::VehicleLocalPosition>(
+      "/fmu/out/vehicle_local_position", rclcpp::SensorDataQoS(), position_cb);
+
+  while (!reached_target && (nh->now() - start_time).seconds() < 10.0) {
+    traj_pub->publish(traj_msg);
+    rclcpp::sleep_for(std::chrono::milliseconds(100));
+    rclcpp::spin_some(nh);
   }
 
-  auto request = std::make_shared<mavros_msgs::srv::CommandTOL::Request>();
-  request->altitude = height;
-  request->min_pitch = 0;
-  request->yaw = 0;
-  request->latitude = 0;
-  request->longitude = 0;
-  auto future = takeoff_client_->async_send_request(request);
-  auto status =
-      rclcpp::spin_until_future_complete(nh, future, std::chrono::seconds(5));
-  if (status == rclcpp::FutureReturnCode::SUCCESS) {
-    auto res = future.get();
-    RCLCPP_INFO(nh->get_logger(),
-                "Takeoff service response: success=%d, result=%d", res->success,
-                res->result);
-  } else if (status == rclcpp::FutureReturnCode::TIMEOUT) {
-    RCLCPP_ERROR(nh->get_logger(), "Takeoff service timed out");
-  } else {
-    RCLCPP_ERROR(nh->get_logger(), "Takeoff service failed");
-  }
+  traj_msg.position = {0, 0, 0};
 
   // TODO: Wait until desired alt
 }
 bool UAV_Mission::init() {
   RCLCPP_INFO(nh->get_logger(), "-- Initialize UAV Mission --");
-  // TODO: Wait for GPS
+
+  // TODO : Fix for heading
 
   bool GPSFound = false;
   bool Heading = false;
@@ -213,10 +347,10 @@ bool UAV_Mission::init() {
   double currentPoint_lon;
   double currentHeading;
 
-  boost::function<void(const sensor_msgs::msg::NavSatFix &)>
-      globalPositionCallback = [&](const sensor_msgs::msg::NavSatFix &msg) {
-        currentPoint_lat = msg.latitude;
-        currentPoint_lon = msg.longitude;
+  boost::function<void(const px4_msgs::msg::SensorGps &)>
+      globalPositionCallback = [&](const px4_msgs::msg::SensorGps &msg) {
+        currentPoint_lat = msg.latitude_deg;
+        currentPoint_lon = msg.longitude_deg;
         GPSFound = true;
       };
 
@@ -262,14 +396,14 @@ bool UAV_Mission::init() {
   qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
 
   auto qos_profile = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(qos), qos);
-  rclcpp::Subscription<sensor_msgs::msg::NavSatFix>::SharedPtr gps_sub;
-  gps_sub = nh->create_subscription<sensor_msgs::msg::NavSatFix>(
-      "/mavros/global_position/global", rclcpp::SensorDataQoS(),
+  rclcpp::Subscription<px4_msgs::msg::SensorGps>::SharedPtr gps_sub;
+  gps_sub = nh->create_subscription<px4_msgs::msg::SensorGps>(
+      "/fmu/out/vehicle_gps_position", rclcpp::SensorDataQoS(),
       globalPositionCallback);
-  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr heading_sub;
-  heading_sub = nh->create_subscription<std_msgs::msg::Float64>(
-      "/mavros/global_position/compass_hdg", rclcpp::SensorDataQoS(),
-      headingCallback);
+  // rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr heading_sub;
+  // heading_sub = nh->create_subscription<std_msgs::msg::Float64>(
+  //     "/mavros/global_position/compass_hdg", rclcpp::SensorDataQoS(),
+  //     headingCallback);
 
   while (!GPSFound) {
     RCLCPP_WARN(nh->get_logger(), "Waiting for GPS...");

@@ -2,25 +2,45 @@
 #include <boost/algorithm/string.hpp>
 #include <functional>
 #include <keyboard_msgs/msg/key.hpp>
-#include <mavros_msgs/msg/state.hpp>
-#include <mavros_msgs/srv/command_bool.hpp>
-#include <mavros_msgs/srv/command_tol.hpp>
-#include <mavros_msgs/srv/set_mode.hpp>
+#include <px4_msgs/msg/detail/trajectory_setpoint__struct.hpp>
+#include <px4_msgs/msg/offboard_control_mode.hpp>
+#include <px4_msgs/msg/sensor_gps.hpp>
+#include <px4_msgs/msg/trajectory_setpoint.hpp>
+#include <px4_msgs/msg/vehicle_command.hpp>
+#include <px4_msgs/msg/vehicle_control_mode.hpp>
+#include <px4_msgs/msg/vehicle_local_position.hpp>
+#include <px4_msgs/msg/vehicle_status.hpp>
 #include <rclcpp/logging.hpp>
 #include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
-#include <sensor_msgs/msg/nav_sat_fix.hpp>
 #include <std_msgs/msg/float64.hpp>
 #include <std_srvs/srv/empty.hpp>
 #include <string>
 #include <yaml-cpp/yaml.h>
 
+/* Keeping PX4 offboard mode
+ * PX4 offboard mode kinda different from guided
+ * mode in the ardupilot. We need to keep sending
+ * both trajectory and offboard control <= 2hz so
+ * we need to spam it even when it's not moving at all.
+ */
+
 class UAV_Mission {
 public:
+  // UAV Commands
   void arm_throttle();
-  void takeoff(double height);
+  void takeoff(float height);
   void land();
   void switch_mode(std::string mode);
+  void switch_offboard_mode();
+  void move(float x, float y, float z);
+
+  // Keep Offboard Mode
+  void send_offboard_control();
+  void set_trajectory(double x, double y, double z);
+  void offboard_loop();
+
+  // Utilities
   bool
   restartMission(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
                  std::shared_ptr<std_srvs::srv::Empty::Response> response);
@@ -76,12 +96,18 @@ public:
   rclcpp::Node::SharedPtr nh;
   bool init();
   UAV_Mission(rclcpp::Node::SharedPtr node);
+  ~UAV_Mission();
 
 private:
   std::atomic<bool> restart_mission{false};
   std::map<std::string, std::function<void(const YAML::Node &)>> uav_funcs;
   rclcpp::Service<std_srvs::srv::Empty>::SharedPtr service_;
   rclcpp::Service<std_srvs::srv::Empty>::SharedPtr shutdown_service;
+  rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_pub;
+  rclcpp::Publisher<px4_msgs::msg::TrajectorySetpoint>::SharedPtr traj_pub;
+  px4_msgs::msg::OffboardControlMode offboard_ctrl_msg;
+  px4_msgs::msg::TrajectorySetpoint traj_msg;
+  std::thread offboard_thread;
 
   bool killPilotCb(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
                    std::shared_ptr<std_srvs::srv::Empty::Response> response) {

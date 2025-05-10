@@ -20,7 +20,7 @@ find_package(yaml-cpp REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(keyboard_msgs REQUIRED)
-find_package(mavros_msgs REQUIRED)
+find_package(px4_msgs REQUIRED)
 find_package(keyboard REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)
 
@@ -53,7 +53,7 @@ ament_target_dependencies(uav_mission
   geometry_msgs
   keyboard_msgs
   keyboard
-  mavros_msgs
+  px4_msgs
   yaml-cpp
 )
 
@@ -61,7 +61,7 @@ ament_target_dependencies(uav_mission
 add_executable(pilot_node src/pilot_node.cpp)
 add_executable(safety_node src/safety_node.cpp)
 add_executable(ui_node src/ui_node.cpp ${IMGUI_SOURCES})
-add_executable(trajectory_streamer src/trajectory_streamer.cpp)
+# add_executable(trajectory_streamer src/trajectory_streamer.cpp)
 
 # Link dependencies with your executable
 ament_target_dependencies(pilot_node
@@ -79,17 +79,17 @@ ament_target_dependencies(safety_node
   std_msgs
   std_srvs
   geometry_msgs
-  mavros_msgs
+  px4_msgs
 )
 
 ament_target_dependencies(ui_node
   rclcpp
   std_msgs
   std_srvs
-  geometry_msgs
+  px4_msgs
 )
 
-ament_target_dependencies(trajectory_streamer rclcpp mavros_msgs)
+# ament_target_dependencies(trajectory_streamer rclcpp)
 
 # Link the custom library AFTER setting dependencies
 target_link_libraries(uav_mission yaml-cpp)
@@ -112,7 +112,7 @@ install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}/
 )
 
-install(TARGETS trajectory_streamer DESTINATION lib/${PROJECT_NAME})
+# install(TARGETS trajectory_streamer DESTINATION lib/${PROJECT_NAME})
 
 # Export include directories
 ament_export_include_directories(include)

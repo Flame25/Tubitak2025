@@ -1,6 +1,6 @@
-#include <mavros_msgs/msg/detail/rc_in__struct.hpp>
-#include <mavros_msgs/msg/rc_in.hpp>
 #include <memory>
+#include <px4_msgs/msg/detail/rc_channels__struct.hpp>
+#include <px4_msgs/msg/rc_channels.hpp>
 #include <rclcpp/executors.hpp>
 #include <rclcpp/logging.hpp>
 #include <rclcpp/publisher.hpp>
@@ -13,7 +13,7 @@
 #include <std_srvs/srv/empty.hpp>
 #include <string>
 
-#define RC_CHECK 1
+#define RC_CHECK 0
 
 // Change to the radio channel
 #define RC_LAND 8
@@ -96,9 +96,9 @@ void wait_for_message(
 int rcTrigger() {
 
 #if RC_CHECK == 1
-  std::shared_ptr<mavros_msgs::msg::RCIn> rcInPtr;
-  wait_for_message<mavros_msgs::msg::RCIn>(rcInPtr, nh, "/mavros/rc/in",
-                                           std::chrono::seconds(5));
+  std::shared_ptr<px4_msgs::msg::RcChannels> rcInPtr;
+  wait_for_message<px4_msgs::msg::RcChannels>(rcInPtr, nh, "/mavros/rc/in",
+                                              std::chrono::seconds(5));
 
   if (!rcInPtr) {
     RCLCPP_FATAL_STREAM(nh->get_logger(), "Is RC connected?");
