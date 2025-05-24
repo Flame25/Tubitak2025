@@ -1,0 +1,87 @@
+[0.011s] Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[0.026s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.118s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.135s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.137s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.140s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.146s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.153s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.172s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.173s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.248s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.276s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[0.281s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.289s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindOpenGL.cmake:315 (message):
+[0.289s]   Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+[0.289s]   available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+[0.289s]   cmake_policy command to set the policy and suppress this warning.
+[0.289s] 
+[0.289s]   FindOpenGL found both a legacy GL library:
+[0.289s] 
+[0.289s]     OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+[0.289s] 
+[0.289s]   and GLVND libraries for OpenGL and GLX:
+[0.289s] 
+[0.289s]     OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+[0.289s]     OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+[0.289s] 
+[0.290s]   OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+[0.290s]   compatibility with CMake 3.10 and below the legacy GL library will be used.
+[0.290s] Call Stack (most recent call first):
+[0.290s]   CMakeLists.txt:19 (find_package)
+[0.290s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.290s] [0m
+[0.290s] -- Found keyboard_msgs: 1.0.0 (/home/gadzz/ardu_ws/install/keyboard_msgs/share/keyboard_msgs/cmake)
+[0.298s] -- Found mavros_msgs: 2.9.0 (/opt/ros/humble/share/mavros_msgs/cmake)
+[0.337s] -- Found keyboard: 1.0.0 (/home/gadzz/ardu_ws/install/keyboard/share/keyboard/cmake)
+[0.351s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.402s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.403s] -- Configured cppcheck include dirs: /home/gadzz/tubitak_ws/src/mission_center/include;/home/gadzz/tubitak_ws/src/mission_center/third_party/imgui
+[0.403s] -- Configured cppcheck exclude dirs and/or files: 
+[0.405s] -- Added test 'lint_cmake' to check CMake code style
+[0.412s] -- Added test 'uncrustify' to check C / C++ code style
+[0.412s] -- Configured uncrustify additional arguments: 
+[0.413s] -- Added test 'xmllint' to check XML markup files
+[0.414s] -- Configuring done
+[0.427s] -- Generating done
+[0.433s] -- Build files have been written to: /home/gadzz/tubitak_ws/build/mission_center
+[0.453s] [35m[1mConsolidate compiler generated dependencies of target safety_node[0m
+[0.453s] [35m[1mConsolidate compiler generated dependencies of target uav_mission[0m
+[0.463s] [ 14%] Built target safety_node
+[0.463s] [ 28%] Built target uav_mission
+[0.471s] [35m[1mConsolidate compiler generated dependencies of target pilot_node[0m
+[0.471s] [35m[1mConsolidate compiler generated dependencies of target ui_node[0m
+[0.481s] [ 35%] [32m[1mLinking CXX executable pilot_node[0m
+[0.483s] [ 92%] Built target ui_node
+[0.710s] [100%] Built target pilot_node
+[0.717s] Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '0': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[0.718s] Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/mission_center
+[0.723s] -- Install configuration: ""
+[0.723s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/libuav_mission.so
+[0.728s] -- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/libuav_mission.so" to ""
+[0.729s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/pilot_node
+[0.729s] -- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/pilot_node" to ""
+[0.730s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/safety_node
+[0.730s] -- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/safety_node" to ""
+[0.731s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/ui_node
+[0.732s] -- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/ui_node" to ""
+[0.732s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/library_path.sh
+[0.732s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/library_path.dsv
+[0.732s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/ament_index/resource_index/package_run_dependencies/mission_center
+[0.732s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/ament_index/resource_index/parent_prefix_path/mission_center
+[0.732s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/ament_prefix_path.sh
+[0.733s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/ament_prefix_path.dsv
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/path.sh
+[0.733s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/path.dsv
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.bash
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.sh
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.zsh
+[0.733s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.dsv
+[0.733s] -- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.dsv
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/ament_index/resource_index/packages/mission_center
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/ament_cmake_export_libraries-extras.cmake
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/mission_centerConfig.cmake
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/mission_centerConfig-version.cmake
+[0.733s] -- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.xml
+[0.735s] Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '0': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/mission_center

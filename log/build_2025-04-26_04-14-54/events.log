@@ -1,0 +1,923 @@
+[0.000000] (-) TimerEvent: {}
+[0.000876] (keyboard_msgs) JobQueued: {'identifier': 'keyboard_msgs', 'dependencies': OrderedDict()}
+[0.000953] (keyboard) JobQueued: {'identifier': 'keyboard', 'dependencies': OrderedDict([('keyboard_msgs', '/home/gadzz/tubitak_ws/install/keyboard_msgs')])}
+[0.000983] (mission_center) JobQueued: {'identifier': 'mission_center', 'dependencies': OrderedDict([('keyboard_msgs', '/home/gadzz/tubitak_ws/install/keyboard_msgs')])}
+[0.001006] (keyboard_msgs) JobStarted: {'identifier': 'keyboard_msgs'}
+[0.020844] (keyboard_msgs) JobProgress: {'identifier': 'keyboard_msgs', 'progress': 'cmake'}
+[0.023096] (keyboard_msgs) JobProgress: {'identifier': 'keyboard_msgs', 'progress': 'build'}
+[0.024498] (keyboard_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gadzz/tubitak_ws/build/keyboard_msgs', '--', '-j8', '-l8'], 'cwd': '/home/gadzz/tubitak_ws/build/keyboard_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/lib/ardupilot_sitl_models/:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/lib/ardupilot_gz_gazebo/:/home/gadzz/ardu_ws/install/ardupilot_gazebo/lib/ardupilot_gazebo/'), ('TMUX', '/tmp/tmux-1000/default,4284,0'), ('GZ_SIM_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/worlds:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/models:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/share/ardupilot_gz_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share/ardupilot_gz_description/models:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/models:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share'), ('LC_TIME', 'id_ID.UTF-8'), ('USER', 'gadzz'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('BROWSER', 'firefox-esr'), ('LD_LIBRARY_PATH', '/home/gadzz/ardu_ws/install/sdformat_urdf/lib:/home/gadzz/ardu_ws/install/ros_ign_interfaces/lib:/home/gadzz/ardu_ws/install/ros_gz_sim/lib:/home/gadzz/ardu_ws/install/ros_gz_bridge/lib:/home/gadzz/ardu_ws/install/ros_gz_interfaces/lib:/home/gadzz/ardu_ws/install/micro_ros_agent/lib:/home/gadzz/ardu_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/ardupilot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('SHLVL', '2'), ('HOME', '/home/gadzz'), ('LESS', '-R'), ('OLDPWD', '/home/gadzz'), ('DESKTOP_SESSION', 'awesome'), ('TERM_PROGRAM_VERSION', '3.5a'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SYSTEMD_EXEC_PID', '2089'), ('VISUAL', 'nvim'), ('COLORTERM', 'truecolor'), ('FZF_BASE', '/usr/bin/fzf'), ('COLCON_PREFIX_PATH', '/home/gadzz/ardu_ws/install'), ('ROS_DISTRO', 'humble'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-3667.sock'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('WINDOWID', '23068677'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/gadzz/ardu_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/gadzz/ardu_ws/install/sdformat_test_files/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ALACRITTY_LOG', '/tmp/Alacritty-3667.log'), ('TERM', 'tmux-256color'), ('USERNAME', 'gadzz'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/gadzz/.local/bin:/home/gadzz/ardu_ws/install/ardupilot_sitl/bin:/opt/ros/humble/bin:/home/gadzz/.local/bin:/usr/lib/ccache:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest'), ('DIRHISTORY_SIZE', '30'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'awesome'), ('XMODIFIERS', '@im=ibus'), ('AMENT_PREFIX_PATH', '/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/opt/ros/humble'), ('LC_NAME', 'id_ID.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'awesome'), ('QT_ACCESSIBILITY', '1'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ros_gz_sim_demos/share'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GZ_VERSION', 'harmonic'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('ALACRITTY_WINDOW_ID', '23068677'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('FZF_DEFAULT_COMMAND', 'rg --files --hidden --glob "!.git/*"'), ('PWD', '/home/gadzz/tubitak_ws/build/keyboard_msgs'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-awesome:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/awesome:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('PYTHONPATH', '/home/gadzz/ardu_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_dds_tests/lib/python3.10/site-packages:/home/gadzz/ardu_ws/install/ardupilot_sitl/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('COLCON', '1'), ('TERMINAL', 'alacritty'), ('TMUX_PANE', '%6'), ('CMAKE_PREFIX_PATH', '/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble'), ('EDITOR', 'geany'), ('HISTORY_IGNORE', '(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)')]), 'shell': False}
+[0.099820] (-) TimerEvent: {}
+[0.118892] (keyboard_msgs) StdoutLine: {'line': b'[  3%] Built target keyboard_msgs__cpp\n'}
+[0.177743] (keyboard_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_copy_keyboard_msgs\n'}
+[0.199954] (-) TimerEvent: {}
+[0.225471] (keyboard_msgs) StdoutLine: {'line': b'[ 12%] Built target keyboard_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.300233] (-) TimerEvent: {}
+[0.401021] (-) TimerEvent: {}
+[0.501400] (-) TimerEvent: {}
+[0.591407] (keyboard_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.594611] (keyboard_msgs) StdoutLine: {'line': b'writing keyboard_msgs.egg-info/PKG-INFO\n'}
+[0.595206] (keyboard_msgs) StdoutLine: {'line': b'writing dependency_links to keyboard_msgs.egg-info/dependency_links.txt\n'}
+[0.595447] (keyboard_msgs) StdoutLine: {'line': b'writing top-level names to keyboard_msgs.egg-info/top_level.txt\n'}
+[0.601582] (-) TimerEvent: {}
+[0.602019] (keyboard_msgs) StdoutLine: {'line': b"reading manifest file 'keyboard_msgs.egg-info/SOURCES.txt'\n"}
+[0.603164] (keyboard_msgs) StdoutLine: {'line': b"writing manifest file 'keyboard_msgs.egg-info/SOURCES.txt'\n"}
+[0.681066] (keyboard_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_build_keyboard_msgs_egg\n'}
+[0.701733] (-) TimerEvent: {}
+[0.726400] (keyboard_msgs) StdoutLine: {'line': b'[ 22%] Built target keyboard_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.774630] (keyboard_msgs) StdoutLine: {'line': b'[ 32%] Built target keyboard_msgs__rosidl_typesupport_cpp\n'}
+[0.801912] (-) TimerEvent: {}
+[0.821391] (keyboard_msgs) StdoutLine: {'line': b'[ 41%] Built target keyboard_msgs__rosidl_generator_c\n'}
+[0.863560] (keyboard_msgs) StdoutLine: {'line': b'[ 51%] Built target keyboard_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.898809] (keyboard_msgs) StdoutLine: {'line': b'[ 61%] Built target keyboard_msgs__rosidl_typesupport_c\n'}
+[0.902060] (-) TimerEvent: {}
+[0.937720] (keyboard_msgs) StdoutLine: {'line': b'[ 70%] Built target keyboard_msgs__rosidl_typesupport_introspection_c\n'}
+[0.981594] (keyboard_msgs) StdoutLine: {'line': b'[ 70%] Built target keyboard_msgs\n'}
+[1.002323] (-) TimerEvent: {}
+[1.026622] (keyboard_msgs) StdoutLine: {'line': b'[ 74%] Built target keyboard_msgs__py\n'}
+[1.071461] (keyboard_msgs) StdoutLine: {'line': b'[ 80%] Built target keyboard_msgs__rosidl_generator_py\n'}
+[1.102457] (-) TimerEvent: {}
+[1.107365] (keyboard_msgs) StdoutLine: {'line': b'[ 87%] Built target keyboard_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.144092] (keyboard_msgs) StdoutLine: {'line': b'[ 93%] Built target keyboard_msgs__rosidl_typesupport_c__pyext\n'}
+[1.190271] (keyboard_msgs) StdoutLine: {'line': b'[100%] Built target keyboard_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.202878] (-) TimerEvent: {}
+[1.216550] (keyboard_msgs) CommandEnded: {'returncode': 0}
+[1.218393] (keyboard_msgs) JobProgress: {'identifier': 'keyboard_msgs', 'progress': 'install'}
+[1.240014] (keyboard_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gadzz/tubitak_ws/build/keyboard_msgs'], 'cwd': '/home/gadzz/tubitak_ws/build/keyboard_msgs', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/lib/ardupilot_sitl_models/:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/lib/ardupilot_gz_gazebo/:/home/gadzz/ardu_ws/install/ardupilot_gazebo/lib/ardupilot_gazebo/'), ('TMUX', '/tmp/tmux-1000/default,4284,0'), ('GZ_SIM_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/worlds:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/models:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/share/ardupilot_gz_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share/ardupilot_gz_description/models:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/models:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share'), ('LC_TIME', 'id_ID.UTF-8'), ('USER', 'gadzz'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('BROWSER', 'firefox-esr'), ('LD_LIBRARY_PATH', '/home/gadzz/ardu_ws/install/sdformat_urdf/lib:/home/gadzz/ardu_ws/install/ros_ign_interfaces/lib:/home/gadzz/ardu_ws/install/ros_gz_sim/lib:/home/gadzz/ardu_ws/install/ros_gz_bridge/lib:/home/gadzz/ardu_ws/install/ros_gz_interfaces/lib:/home/gadzz/ardu_ws/install/micro_ros_agent/lib:/home/gadzz/ardu_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/ardupilot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('SHLVL', '2'), ('HOME', '/home/gadzz'), ('LESS', '-R'), ('OLDPWD', '/home/gadzz'), ('DESKTOP_SESSION', 'awesome'), ('TERM_PROGRAM_VERSION', '3.5a'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SYSTEMD_EXEC_PID', '2089'), ('VISUAL', 'nvim'), ('COLORTERM', 'truecolor'), ('FZF_BASE', '/usr/bin/fzf'), ('COLCON_PREFIX_PATH', '/home/gadzz/ardu_ws/install'), ('ROS_DISTRO', 'humble'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-3667.sock'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('WINDOWID', '23068677'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/gadzz/ardu_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/gadzz/ardu_ws/install/sdformat_test_files/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ALACRITTY_LOG', '/tmp/Alacritty-3667.log'), ('TERM', 'tmux-256color'), ('USERNAME', 'gadzz'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/gadzz/.local/bin:/home/gadzz/ardu_ws/install/ardupilot_sitl/bin:/opt/ros/humble/bin:/home/gadzz/.local/bin:/usr/lib/ccache:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest'), ('DIRHISTORY_SIZE', '30'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'awesome'), ('XMODIFIERS', '@im=ibus'), ('AMENT_PREFIX_PATH', '/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/opt/ros/humble'), ('LC_NAME', 'id_ID.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'awesome'), ('QT_ACCESSIBILITY', '1'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ros_gz_sim_demos/share'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GZ_VERSION', 'harmonic'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('ALACRITTY_WINDOW_ID', '23068677'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('FZF_DEFAULT_COMMAND', 'rg --files --hidden --glob "!.git/*"'), ('PWD', '/home/gadzz/tubitak_ws/build/keyboard_msgs'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-awesome:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/awesome:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('PYTHONPATH', '/home/gadzz/ardu_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_dds_tests/lib/python3.10/site-packages:/home/gadzz/ardu_ws/install/ardupilot_sitl/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('COLCON', '1'), ('TERMINAL', 'alacritty'), ('TMUX_PANE', '%6'), ('CMAKE_PREFIX_PATH', '/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble'), ('EDITOR', 'geany'), ('HISTORY_IGNORE', '(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)')]), 'shell': False}
+[1.256236] (keyboard_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.257102] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/ament_index/resource_index/rosidl_interfaces/keyboard_msgs\n'}
+[1.257333] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.257410] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.257474] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.257546] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.257626] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__functions.c\n'}
+[1.257700] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.h\n'}
+[1.257871] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__functions.h\n'}
+[1.257973] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__struct.h\n'}
+[1.258085] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/key.h\n'}
+[1.258191] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/library_path.sh\n'}
+[1.258289] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/library_path.dsv\n'}
+[1.258446] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_generator_c.so\n'}
+[1.258553] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.258673] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.258792] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.259154] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_fastrtps_c.h\n'}
+[1.259310] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.259388] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[1.259452] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.259507] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.259564] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/key.hpp\n'}
+[1.259640] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.259702] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__traits.hpp\n'}
+[1.259770] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__struct.hpp\n'}
+[1.259863] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.hpp\n'}
+[1.259922] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__builder.hpp\n'}
+[1.259964] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.260015] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.260059] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.260222] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.260410] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.260522] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/dds_fastrtps\n'}
+[1.260613] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.260704] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.260776] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.260877] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.260937] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.261011] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.261451] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_introspection_c.h\n'}
+[1.261528] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.c\n'}
+[1.261585] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_introspection_c.so\n'}
+[1.261635] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_c.so\n'}
+[1.261682] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.261729] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.261778] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.261825] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.261876] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.cpp\n'}
+[1.261920] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[1.261957] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_cpp.so\n'}
+[1.261999] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/pythonpath.sh\n'}
+[1.262041] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/pythonpath.dsv\n'}
+[1.262085] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info\n'}
+[1.262145] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.262191] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.262246] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.262311] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.262381] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs\n'}
+[1.262485] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/_keyboard_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[1.262568] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/_keyboard_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.262646] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/__init__.py\n'}
+[1.262746] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.262851] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.262918] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.262975] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg\n'}
+[1.263029] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg/__init__.py\n'}
+[1.263107] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg/_key_s.c\n'}
+[1.263169] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg/_key.py\n'}
+[1.263221] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/libkeyboard_msgs__rosidl_generator_py.so\n'}
+[1.263286] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/_keyboard_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.302969] (-) TimerEvent: {}
+[1.316797] (keyboard_msgs) StdoutLine: {'line': b"Listing '/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs'...\n"}
+[1.317019] (keyboard_msgs) StdoutLine: {'line': b"Listing '/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg'...\n"}
+[1.327639] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.328275] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.328519] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.328640] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_generator_py.so\n'}
+[1.328709] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/msg/Key.idl\n'}
+[1.328777] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/msg/Key.msg\n'}
+[1.328839] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/ament_index/resource_index/package_run_dependencies/keyboard_msgs\n'}
+[1.328905] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/ament_index/resource_index/parent_prefix_path/keyboard_msgs\n'}
+[1.328995] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/ament_prefix_path.sh\n'}
+[1.329110] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/ament_prefix_path.dsv\n'}
+[1.329283] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/path.sh\n'}
+[1.329360] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/environment/path.dsv\n'}
+[1.329466] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/local_setup.bash\n'}
+[1.329541] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/local_setup.sh\n'}
+[1.329605] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/local_setup.zsh\n'}
+[1.329684] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/local_setup.dsv\n'}
+[1.329753] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.dsv\n'}
+[1.329832] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/ament_index/resource_index/packages/keyboard_msgs\n'}
+[1.329929] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_cExport.cmake\n'}
+[1.329997] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.330065] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.330197] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.330268] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.330328] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.330391] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.330505] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.330575] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.330644] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.330715] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.330837] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.330919] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.330995] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.331093] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.331239] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.331295] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.331352] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.331408] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.331458] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.331509] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.331557] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.331605] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.331655] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.331713] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgsConfig.cmake\n'}
+[1.331775] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgsConfig-version.cmake\n'}
+[1.331843] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.xml\n'}
+[1.335826] (keyboard_msgs) CommandEnded: {'returncode': 0}
+[1.368259] (keyboard_msgs) JobEnded: {'identifier': 'keyboard_msgs', 'rc': 0}
+[1.369389] (keyboard) JobStarted: {'identifier': 'keyboard'}
+[1.374579] (mission_center) JobStarted: {'identifier': 'mission_center'}
+[1.383420] (keyboard) JobProgress: {'identifier': 'keyboard', 'progress': 'cmake'}
+[1.384395] (keyboard) JobProgress: {'identifier': 'keyboard', 'progress': 'build'}
+[1.384710] (keyboard) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gadzz/tubitak_ws/build/keyboard', '--', '-j8', '-l8'], 'cwd': '/home/gadzz/tubitak_ws/build/keyboard', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/lib/ardupilot_sitl_models/:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/lib/ardupilot_gz_gazebo/:/home/gadzz/ardu_ws/install/ardupilot_gazebo/lib/ardupilot_gazebo/'), ('TMUX', '/tmp/tmux-1000/default,4284,0'), ('GZ_SIM_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/worlds:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/models:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/share/ardupilot_gz_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share/ardupilot_gz_description/models:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/models:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share'), ('LC_TIME', 'id_ID.UTF-8'), ('USER', 'gadzz'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('BROWSER', 'firefox-esr'), ('LD_LIBRARY_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/sdformat_urdf/lib:/home/gadzz/ardu_ws/install/ros_ign_interfaces/lib:/home/gadzz/ardu_ws/install/ros_gz_sim/lib:/home/gadzz/ardu_ws/install/ros_gz_bridge/lib:/home/gadzz/ardu_ws/install/ros_gz_interfaces/lib:/home/gadzz/ardu_ws/install/micro_ros_agent/lib:/home/gadzz/ardu_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/ardupilot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('SHLVL', '2'), ('HOME', '/home/gadzz'), ('LESS', '-R'), ('OLDPWD', '/home/gadzz'), ('DESKTOP_SESSION', 'awesome'), ('TERM_PROGRAM_VERSION', '3.5a'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SYSTEMD_EXEC_PID', '2089'), ('VISUAL', 'nvim'), ('COLORTERM', 'truecolor'), ('FZF_BASE', '/usr/bin/fzf'), ('COLCON_PREFIX_PATH', '/home/gadzz/ardu_ws/install'), ('ROS_DISTRO', 'humble'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-3667.sock'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('WINDOWID', '23068677'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/gadzz/ardu_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/gadzz/ardu_ws/install/sdformat_test_files/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ALACRITTY_LOG', '/tmp/Alacritty-3667.log'), ('TERM', 'tmux-256color'), ('USERNAME', 'gadzz'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/gadzz/.local/bin:/home/gadzz/ardu_ws/install/ardupilot_sitl/bin:/opt/ros/humble/bin:/home/gadzz/.local/bin:/usr/lib/ccache:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest'), ('DIRHISTORY_SIZE', '30'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'awesome'), ('XMODIFIERS', '@im=ibus'), ('AMENT_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/opt/ros/humble'), ('LC_NAME', 'id_ID.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'awesome'), ('QT_ACCESSIBILITY', '1'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ros_gz_sim_demos/share'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GZ_VERSION', 'harmonic'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('ALACRITTY_WINDOW_ID', '23068677'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('FZF_DEFAULT_COMMAND', 'rg --files --hidden --glob "!.git/*"'), ('PWD', '/home/gadzz/tubitak_ws/build/keyboard'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-awesome:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/awesome:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('PYTHONPATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_dds_tests/lib/python3.10/site-packages:/home/gadzz/ardu_ws/install/ardupilot_sitl/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('COLCON', '1'), ('TERMINAL', 'alacritty'), ('TMUX_PANE', '%6'), ('CMAKE_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble'), ('EDITOR', 'geany'), ('HISTORY_IGNORE', '(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)')]), 'shell': False}
+[1.392126] (mission_center) JobProgress: {'identifier': 'mission_center', 'progress': 'cmake'}
+[1.393851] (mission_center) JobProgress: {'identifier': 'mission_center', 'progress': 'build'}
+[1.394308] (mission_center) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gadzz/tubitak_ws/build/mission_center', '--', '-j8', '-l8'], 'cwd': '/home/gadzz/tubitak_ws/build/mission_center', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/lib/ardupilot_sitl_models/:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/lib/ardupilot_gz_gazebo/:/home/gadzz/ardu_ws/install/ardupilot_gazebo/lib/ardupilot_gazebo/'), ('TMUX', '/tmp/tmux-1000/default,4284,0'), ('GZ_SIM_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/worlds:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/models:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/share/ardupilot_gz_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share/ardupilot_gz_description/models:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/models:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share'), ('LC_TIME', 'id_ID.UTF-8'), ('USER', 'gadzz'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('BROWSER', 'firefox-esr'), ('LD_LIBRARY_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/sdformat_urdf/lib:/home/gadzz/ardu_ws/install/ros_ign_interfaces/lib:/home/gadzz/ardu_ws/install/ros_gz_sim/lib:/home/gadzz/ardu_ws/install/ros_gz_bridge/lib:/home/gadzz/ardu_ws/install/ros_gz_interfaces/lib:/home/gadzz/ardu_ws/install/micro_ros_agent/lib:/home/gadzz/ardu_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/ardupilot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('SHLVL', '2'), ('HOME', '/home/gadzz'), ('LESS', '-R'), ('OLDPWD', '/home/gadzz'), ('DESKTOP_SESSION', 'awesome'), ('TERM_PROGRAM_VERSION', '3.5a'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SYSTEMD_EXEC_PID', '2089'), ('VISUAL', 'nvim'), ('COLORTERM', 'truecolor'), ('FZF_BASE', '/usr/bin/fzf'), ('COLCON_PREFIX_PATH', '/home/gadzz/ardu_ws/install'), ('ROS_DISTRO', 'humble'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-3667.sock'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('WINDOWID', '23068677'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/gadzz/ardu_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/gadzz/ardu_ws/install/sdformat_test_files/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ALACRITTY_LOG', '/tmp/Alacritty-3667.log'), ('TERM', 'tmux-256color'), ('USERNAME', 'gadzz'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/gadzz/.local/bin:/home/gadzz/ardu_ws/install/ardupilot_sitl/bin:/opt/ros/humble/bin:/home/gadzz/.local/bin:/usr/lib/ccache:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest'), ('DIRHISTORY_SIZE', '30'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'awesome'), ('XMODIFIERS', '@im=ibus'), ('AMENT_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/opt/ros/humble'), ('LC_NAME', 'id_ID.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'awesome'), ('QT_ACCESSIBILITY', '1'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ros_gz_sim_demos/share'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GZ_VERSION', 'harmonic'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('ALACRITTY_WINDOW_ID', '23068677'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('FZF_DEFAULT_COMMAND', 'rg --files --hidden --glob "!.git/*"'), ('PWD', '/home/gadzz/tubitak_ws/build/mission_center'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-awesome:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/awesome:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('PYTHONPATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_dds_tests/lib/python3.10/site-packages:/home/gadzz/ardu_ws/install/ardupilot_sitl/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('COLCON', '1'), ('TERMINAL', 'alacritty'), ('TMUX_PANE', '%6'), ('CMAKE_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble'), ('EDITOR', 'geany'), ('HISTORY_IGNORE', '(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)')]), 'shell': False}
+[1.403254] (-) TimerEvent: {}
+[1.503990] (-) TimerEvent: {}
+[1.504380] (keyboard) StdoutLine: {'line': b'[100%] Built target keyboard\n'}
+[1.525150] (mission_center) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o\x1b[0m\n'}
+[1.532654] (keyboard) CommandEnded: {'returncode': 0}
+[1.534702] (keyboard) JobProgress: {'identifier': 'keyboard', 'progress': 'install'}
+[1.535057] (keyboard) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gadzz/tubitak_ws/build/keyboard'], 'cwd': '/home/gadzz/tubitak_ws/build/keyboard', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/lib/ardupilot_sitl_models/:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/lib/ardupilot_gz_gazebo/:/home/gadzz/ardu_ws/install/ardupilot_gazebo/lib/ardupilot_gazebo/'), ('TMUX', '/tmp/tmux-1000/default,4284,0'), ('GZ_SIM_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/worlds:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/models:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/share/ardupilot_gz_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share/ardupilot_gz_description/models:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/models:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share'), ('LC_TIME', 'id_ID.UTF-8'), ('USER', 'gadzz'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('BROWSER', 'firefox-esr'), ('LD_LIBRARY_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/sdformat_urdf/lib:/home/gadzz/ardu_ws/install/ros_ign_interfaces/lib:/home/gadzz/ardu_ws/install/ros_gz_sim/lib:/home/gadzz/ardu_ws/install/ros_gz_bridge/lib:/home/gadzz/ardu_ws/install/ros_gz_interfaces/lib:/home/gadzz/ardu_ws/install/micro_ros_agent/lib:/home/gadzz/ardu_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/ardupilot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('SHLVL', '2'), ('HOME', '/home/gadzz'), ('LESS', '-R'), ('OLDPWD', '/home/gadzz'), ('DESKTOP_SESSION', 'awesome'), ('TERM_PROGRAM_VERSION', '3.5a'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SYSTEMD_EXEC_PID', '2089'), ('VISUAL', 'nvim'), ('COLORTERM', 'truecolor'), ('FZF_BASE', '/usr/bin/fzf'), ('COLCON_PREFIX_PATH', '/home/gadzz/ardu_ws/install'), ('ROS_DISTRO', 'humble'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-3667.sock'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('WINDOWID', '23068677'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/gadzz/ardu_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/gadzz/ardu_ws/install/sdformat_test_files/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ALACRITTY_LOG', '/tmp/Alacritty-3667.log'), ('TERM', 'tmux-256color'), ('USERNAME', 'gadzz'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/gadzz/.local/bin:/home/gadzz/ardu_ws/install/ardupilot_sitl/bin:/opt/ros/humble/bin:/home/gadzz/.local/bin:/usr/lib/ccache:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest'), ('DIRHISTORY_SIZE', '30'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'awesome'), ('XMODIFIERS', '@im=ibus'), ('AMENT_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/opt/ros/humble'), ('LC_NAME', 'id_ID.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'awesome'), ('QT_ACCESSIBILITY', '1'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ros_gz_sim_demos/share'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GZ_VERSION', 'harmonic'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('ALACRITTY_WINDOW_ID', '23068677'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('FZF_DEFAULT_COMMAND', 'rg --files --hidden --glob "!.git/*"'), ('PWD', '/home/gadzz/tubitak_ws/build/keyboard'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-awesome:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/awesome:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('PYTHONPATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_dds_tests/lib/python3.10/site-packages:/home/gadzz/ardu_ws/install/ardupilot_sitl/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('COLCON', '1'), ('TERMINAL', 'alacritty'), ('TMUX_PANE', '%6'), ('CMAKE_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble'), ('EDITOR', 'geany'), ('HISTORY_IGNORE', '(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)')]), 'shell': False}
+[1.552263] (keyboard) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.553175] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/lib/keyboard/keyboard\n'}
+[1.553494] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/lib/keyboard/keyboard_to_joy.py\n'}
+[1.554120] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/config\n'}
+[1.555314] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/config/example_config.yaml\n'}
+[1.555430] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/ament_index/resource_index/package_run_dependencies/keyboard\n'}
+[1.555496] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/ament_index/resource_index/parent_prefix_path/keyboard\n'}
+[1.555559] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/environment/ament_prefix_path.sh\n'}
+[1.555641] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/environment/ament_prefix_path.dsv\n'}
+[1.555695] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/environment/path.sh\n'}
+[1.555745] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/environment/path.dsv\n'}
+[1.555815] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/local_setup.bash\n'}
+[1.555892] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/local_setup.sh\n'}
+[1.555959] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/local_setup.zsh\n'}
+[1.556020] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/local_setup.dsv\n'}
+[1.556088] (keyboard) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.dsv\n'}
+[1.556166] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/ament_index/resource_index/packages/keyboard\n'}
+[1.556226] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/cmake/keyboardConfig.cmake\n'}
+[1.556286] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/cmake/keyboardConfig-version.cmake\n'}
+[1.556350] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.xml\n'}
+[1.559437] (keyboard) CommandEnded: {'returncode': 0}
+[1.581257] (keyboard) JobEnded: {'identifier': 'keyboard', 'rc': 0}
+[1.604156] (-) TimerEvent: {}
+[1.704872] (-) TimerEvent: {}
+[1.806018] (-) TimerEvent: {}
+[1.906757] (-) TimerEvent: {}
+[2.007658] (-) TimerEvent: {}
+[2.108226] (-) TimerEvent: {}
+[2.208779] (-) TimerEvent: {}
+[2.309454] (-) TimerEvent: {}
+[2.410402] (-) TimerEvent: {}
+[2.511162] (-) TimerEvent: {}
+[2.612031] (-) TimerEvent: {}
+[2.712801] (-) TimerEvent: {}
+[2.813520] (-) TimerEvent: {}
+[2.914325] (-) TimerEvent: {}
+[3.015089] (-) TimerEvent: {}
+[3.115848] (-) TimerEvent: {}
+[3.216710] (-) TimerEvent: {}
+[3.317933] (-) TimerEvent: {}
+[3.418728] (-) TimerEvent: {}
+[3.519363] (-) TimerEvent: {}
+[3.619891] (-) TimerEvent: {}
+[3.720843] (-) TimerEvent: {}
+[3.821550] (-) TimerEvent: {}
+[3.922409] (-) TimerEvent: {}
+[4.023097] (-) TimerEvent: {}
+[4.123875] (-) TimerEvent: {}
+[4.224879] (-) TimerEvent: {}
+[4.325589] (-) TimerEvent: {}
+[4.426295] (-) TimerEvent: {}
+[4.527615] (-) TimerEvent: {}
+[4.628585] (-) TimerEvent: {}
+[4.729673] (-) TimerEvent: {}
+[4.830574] (-) TimerEvent: {}
+[4.931624] (-) TimerEvent: {}
+[5.032605] (-) TimerEvent: {}
+[5.133327] (-) TimerEvent: {}
+[5.233982] (-) TimerEvent: {}
+[5.335102] (-) TimerEvent: {}
+[5.436062] (-) TimerEvent: {}
+[5.536592] (-) TimerEvent: {}
+[5.637096] (-) TimerEvent: {}
+[5.737636] (-) TimerEvent: {}
+[5.838188] (-) TimerEvent: {}
+[5.938820] (-) TimerEvent: {}
+[6.039595] (-) TimerEvent: {}
+[6.140129] (-) TimerEvent: {}
+[6.240635] (-) TimerEvent: {}
+[6.341089] (-) TimerEvent: {}
+[6.441649] (-) TimerEvent: {}
+[6.542834] (-) TimerEvent: {}
+[6.643561] (-) TimerEvent: {}
+[6.744620] (-) TimerEvent: {}
+[6.845474] (-) TimerEvent: {}
+[6.946330] (-) TimerEvent: {}
+[7.046833] (-) TimerEvent: {}
+[7.147418] (-) TimerEvent: {}
+[7.248249] (-) TimerEvent: {}
+[7.348878] (-) TimerEvent: {}
+[7.449453] (-) TimerEvent: {}
+[7.550767] (-) TimerEvent: {}
+[7.651554] (-) TimerEvent: {}
+[7.752427] (-) TimerEvent: {}
+[7.853381] (-) TimerEvent: {}
+[7.954361] (-) TimerEvent: {}
+[8.055570] (-) TimerEvent: {}
+[8.156908] (-) TimerEvent: {}
+[8.257925] (-) TimerEvent: {}
+[8.359271] (-) TimerEvent: {}
+[8.460688] (-) TimerEvent: {}
+[8.561527] (-) TimerEvent: {}
+[8.662592] (-) TimerEvent: {}
+[8.763810] (-) TimerEvent: {}
+[8.864835] (-) TimerEvent: {}
+[8.965719] (-) TimerEvent: {}
+[9.071995] (-) TimerEvent: {}
+[9.172693] (-) TimerEvent: {}
+[9.273403] (-) TimerEvent: {}
+[9.373823] (-) TimerEvent: {}
+[9.474522] (-) TimerEvent: {}
+[9.575440] (-) TimerEvent: {}
+[9.676181] (-) TimerEvent: {}
+[9.776804] (-) TimerEvent: {}
+[9.877525] (-) TimerEvent: {}
+[9.981140] (-) TimerEvent: {}
+[10.082394] (-) TimerEvent: {}
+[10.183794] (-) TimerEvent: {}
+[10.284720] (-) TimerEvent: {}
+[10.385903] (-) TimerEvent: {}
+[10.486944] (-) TimerEvent: {}
+[10.588145] (-) TimerEvent: {}
+[10.688819] (-) TimerEvent: {}
+[10.789414] (-) TimerEvent: {}
+[10.890238] (-) TimerEvent: {}
+[10.990845] (-) TimerEvent: {}
+[11.091398] (-) TimerEvent: {}
+[11.192006] (-) TimerEvent: {}
+[11.292999] (-) TimerEvent: {}
+[11.394048] (-) TimerEvent: {}
+[11.495043] (-) TimerEvent: {}
+[11.596292] (-) TimerEvent: {}
+[11.697600] (-) TimerEvent: {}
+[11.798547] (-) TimerEvent: {}
+[11.899149] (-) TimerEvent: {}
+[11.999915] (-) TimerEvent: {}
+[12.100727] (-) TimerEvent: {}
+[12.201541] (-) TimerEvent: {}
+[12.302421] (-) TimerEvent: {}
+[12.403212] (-) TimerEvent: {}
+[12.503930] (-) TimerEvent: {}
+[12.604490] (-) TimerEvent: {}
+[12.705339] (-) TimerEvent: {}
+[12.806548] (-) TimerEvent: {}
+[12.907380] (-) TimerEvent: {}
+[13.008661] (-) TimerEvent: {}
+[13.109717] (-) TimerEvent: {}
+[13.210560] (-) TimerEvent: {}
+[13.311089] (-) TimerEvent: {}
+[13.411798] (-) TimerEvent: {}
+[13.512310] (-) TimerEvent: {}
+[13.612952] (-) TimerEvent: {}
+[13.714045] (-) TimerEvent: {}
+[13.814972] (-) TimerEvent: {}
+[13.915756] (-) TimerEvent: {}
+[14.016688] (-) TimerEvent: {}
+[14.117560] (-) TimerEvent: {}
+[14.219356] (-) TimerEvent: {}
+[14.320521] (-) TimerEvent: {}
+[14.421021] (-) TimerEvent: {}
+[14.521897] (-) TimerEvent: {}
+[14.622922] (-) TimerEvent: {}
+[14.723674] (-) TimerEvent: {}
+[14.825117] (-) TimerEvent: {}
+[14.926683] (-) TimerEvent: {}
+[15.027514] (-) TimerEvent: {}
+[15.128432] (-) TimerEvent: {}
+[15.229354] (-) TimerEvent: {}
+[15.329851] (-) TimerEvent: {}
+[15.430964] (-) TimerEvent: {}
+[15.532503] (-) TimerEvent: {}
+[15.633649] (-) TimerEvent: {}
+[15.735031] (-) TimerEvent: {}
+[15.835954] (-) TimerEvent: {}
+[15.937056] (-) TimerEvent: {}
+[16.037636] (-) TimerEvent: {}
+[16.138215] (-) TimerEvent: {}
+[16.238661] (-) TimerEvent: {}
+[16.339299] (-) TimerEvent: {}
+[16.439924] (-) TimerEvent: {}
+[16.540582] (-) TimerEvent: {}
+[16.641559] (-) TimerEvent: {}
+[16.742252] (-) TimerEvent: {}
+[16.842908] (-) TimerEvent: {}
+[16.943552] (-) TimerEvent: {}
+[17.044332] (-) TimerEvent: {}
+[17.145395] (-) TimerEvent: {}
+[17.246138] (-) TimerEvent: {}
+[17.347110] (-) TimerEvent: {}
+[17.448302] (-) TimerEvent: {}
+[17.549048] (-) TimerEvent: {}
+[17.649773] (-) TimerEvent: {}
+[17.750541] (-) TimerEvent: {}
+[17.851587] (-) TimerEvent: {}
+[17.952131] (-) TimerEvent: {}
+[18.052863] (-) TimerEvent: {}
+[18.153833] (-) TimerEvent: {}
+[18.254862] (-) TimerEvent: {}
+[18.355585] (-) TimerEvent: {}
+[18.456300] (-) TimerEvent: {}
+[18.557030] (-) TimerEvent: {}
+[18.657942] (-) TimerEvent: {}
+[18.759026] (-) TimerEvent: {}
+[18.860855] (-) TimerEvent: {}
+[18.961624] (-) TimerEvent: {}
+[19.062231] (-) TimerEvent: {}
+[19.163014] (-) TimerEvent: {}
+[19.263718] (-) TimerEvent: {}
+[19.364531] (-) TimerEvent: {}
+[19.465126] (-) TimerEvent: {}
+[19.565830] (-) TimerEvent: {}
+[19.666487] (-) TimerEvent: {}
+[19.767748] (-) TimerEvent: {}
+[19.868697] (-) TimerEvent: {}
+[19.969300] (-) TimerEvent: {}
+[20.069985] (-) TimerEvent: {}
+[20.170830] (-) TimerEvent: {}
+[20.271564] (-) TimerEvent: {}
+[20.372164] (-) TimerEvent: {}
+[20.472875] (-) TimerEvent: {}
+[20.573360] (-) TimerEvent: {}
+[20.674526] (-) TimerEvent: {}
+[20.775206] (-) TimerEvent: {}
+[20.875879] (-) TimerEvent: {}
+[20.976572] (-) TimerEvent: {}
+[21.077230] (-) TimerEvent: {}
+[21.178109] (-) TimerEvent: {}
+[21.278832] (-) TimerEvent: {}
+[21.379649] (-) TimerEvent: {}
+[21.480140] (-) TimerEvent: {}
+[21.580814] (-) TimerEvent: {}
+[21.681759] (-) TimerEvent: {}
+[21.782656] (-) TimerEvent: {}
+[21.883838] (-) TimerEvent: {}
+[21.984698] (-) TimerEvent: {}
+[22.085724] (-) TimerEvent: {}
+[22.186719] (-) TimerEvent: {}
+[22.287738] (-) TimerEvent: {}
+[22.388461] (-) TimerEvent: {}
+[22.489250] (-) TimerEvent: {}
+[22.589893] (-) TimerEvent: {}
+[22.690797] (-) TimerEvent: {}
+[22.792163] (-) TimerEvent: {}
+[22.892770] (-) TimerEvent: {}
+[22.993493] (-) TimerEvent: {}
+[23.094315] (-) TimerEvent: {}
+[23.195245] (-) TimerEvent: {}
+[23.296350] (-) TimerEvent: {}
+[23.397049] (-) TimerEvent: {}
+[23.498155] (-) TimerEvent: {}
+[23.598773] (-) TimerEvent: {}
+[23.699749] (-) TimerEvent: {}
+[23.800498] (-) TimerEvent: {}
+[23.901453] (-) TimerEvent: {}
+[24.002557] (-) TimerEvent: {}
+[24.103211] (-) TimerEvent: {}
+[24.204004] (-) TimerEvent: {}
+[24.304974] (-) TimerEvent: {}
+[24.405733] (-) TimerEvent: {}
+[24.506354] (-) TimerEvent: {}
+[24.607189] (-) TimerEvent: {}
+[24.707832] (-) TimerEvent: {}
+[24.808487] (-) TimerEvent: {}
+[24.909135] (-) TimerEvent: {}
+[25.010459] (-) TimerEvent: {}
+[25.111345] (-) TimerEvent: {}
+[25.212053] (-) TimerEvent: {}
+[25.313023] (-) TimerEvent: {}
+[25.413792] (-) TimerEvent: {}
+[25.514664] (-) TimerEvent: {}
+[25.615799] (-) TimerEvent: {}
+[25.716674] (-) TimerEvent: {}
+[25.817803] (-) TimerEvent: {}
+[25.918689] (-) TimerEvent: {}
+[26.020190] (-) TimerEvent: {}
+[26.121195] (-) TimerEvent: {}
+[26.222154] (-) TimerEvent: {}
+[26.322828] (-) TimerEvent: {}
+[26.423284] (-) TimerEvent: {}
+[26.523856] (-) TimerEvent: {}
+[26.624456] (-) TimerEvent: {}
+[26.725566] (-) TimerEvent: {}
+[26.826971] (-) TimerEvent: {}
+[26.928146] (-) TimerEvent: {}
+[27.029009] (-) TimerEvent: {}
+[27.129533] (-) TimerEvent: {}
+[27.230291] (-) TimerEvent: {}
+[27.331104] (-) TimerEvent: {}
+[27.432277] (-) TimerEvent: {}
+[27.533024] (-) TimerEvent: {}
+[27.634141] (-) TimerEvent: {}
+[27.734797] (-) TimerEvent: {}
+[27.835590] (-) TimerEvent: {}
+[27.936404] (-) TimerEvent: {}
+[28.037660] (-) TimerEvent: {}
+[28.138318] (-) TimerEvent: {}
+[28.238955] (-) TimerEvent: {}
+[28.339472] (-) TimerEvent: {}
+[28.440051] (-) TimerEvent: {}
+[28.541171] (-) TimerEvent: {}
+[28.642045] (-) TimerEvent: {}
+[28.742805] (-) TimerEvent: {}
+[28.843757] (-) TimerEvent: {}
+[28.944662] (-) TimerEvent: {}
+[29.045253] (-) TimerEvent: {}
+[29.146383] (-) TimerEvent: {}
+[29.247456] (-) TimerEvent: {}
+[29.348369] (-) TimerEvent: {}
+[29.449053] (-) TimerEvent: {}
+[29.549973] (-) TimerEvent: {}
+[29.652146] (-) TimerEvent: {}
+[29.752970] (-) TimerEvent: {}
+[29.854517] (-) TimerEvent: {}
+[29.955053] (-) TimerEvent: {}
+[30.055783] (-) TimerEvent: {}
+[30.156709] (-) TimerEvent: {}
+[30.257583] (-) TimerEvent: {}
+[30.358365] (-) TimerEvent: {}
+[30.458951] (-) TimerEvent: {}
+[30.559574] (-) TimerEvent: {}
+[30.660434] (-) TimerEvent: {}
+[30.761233] (-) TimerEvent: {}
+[30.861966] (-) TimerEvent: {}
+[30.962670] (-) TimerEvent: {}
+[31.063607] (-) TimerEvent: {}
+[31.164651] (-) TimerEvent: {}
+[31.265580] (-) TimerEvent: {}
+[31.366307] (-) TimerEvent: {}
+[31.466956] (-) TimerEvent: {}
+[31.567693] (-) TimerEvent: {}
+[31.668352] (-) TimerEvent: {}
+[31.769163] (-) TimerEvent: {}
+[31.869678] (-) TimerEvent: {}
+[31.970543] (-) TimerEvent: {}
+[32.071140] (-) TimerEvent: {}
+[32.172232] (-) TimerEvent: {}
+[32.273627] (-) TimerEvent: {}
+[32.374469] (-) TimerEvent: {}
+[32.476232] (-) TimerEvent: {}
+[32.577201] (-) TimerEvent: {}
+[32.678096] (-) TimerEvent: {}
+[32.779077] (-) TimerEvent: {}
+[32.881184] (-) TimerEvent: {}
+[32.981874] (-) TimerEvent: {}
+[33.082719] (-) TimerEvent: {}
+[33.183538] (-) TimerEvent: {}
+[33.284240] (-) TimerEvent: {}
+[33.384728] (-) TimerEvent: {}
+[33.485337] (-) TimerEvent: {}
+[33.585884] (-) TimerEvent: {}
+[33.686414] (-) TimerEvent: {}
+[33.787380] (-) TimerEvent: {}
+[33.888109] (-) TimerEvent: {}
+[33.988676] (-) TimerEvent: {}
+[34.089264] (-) TimerEvent: {}
+[34.189974] (-) TimerEvent: {}
+[34.290424] (-) TimerEvent: {}
+[34.391036] (-) TimerEvent: {}
+[34.491514] (-) TimerEvent: {}
+[34.591982] (-) TimerEvent: {}
+[34.692604] (-) TimerEvent: {}
+[34.793350] (-) TimerEvent: {}
+[34.894193] (-) TimerEvent: {}
+[34.994954] (-) TimerEvent: {}
+[35.095641] (-) TimerEvent: {}
+[35.196756] (-) TimerEvent: {}
+[35.297767] (-) TimerEvent: {}
+[35.398719] (-) TimerEvent: {}
+[35.499337] (-) TimerEvent: {}
+[35.599977] (-) TimerEvent: {}
+[35.700862] (-) TimerEvent: {}
+[35.801570] (-) TimerEvent: {}
+[35.902354] (-) TimerEvent: {}
+[36.003110] (-) TimerEvent: {}
+[36.104266] (-) TimerEvent: {}
+[36.205376] (-) TimerEvent: {}
+[36.306061] (-) TimerEvent: {}
+[36.406999] (-) TimerEvent: {}
+[36.508104] (-) TimerEvent: {}
+[36.608814] (-) TimerEvent: {}
+[36.709766] (-) TimerEvent: {}
+[36.811437] (-) TimerEvent: {}
+[36.912421] (-) TimerEvent: {}
+[37.013118] (-) TimerEvent: {}
+[37.114338] (-) TimerEvent: {}
+[37.215556] (-) TimerEvent: {}
+[37.316439] (-) TimerEvent: {}
+[37.417124] (-) TimerEvent: {}
+[37.517989] (-) TimerEvent: {}
+[37.619287] (-) TimerEvent: {}
+[37.720002] (-) TimerEvent: {}
+[37.820859] (-) TimerEvent: {}
+[37.921762] (-) TimerEvent: {}
+[38.022359] (-) TimerEvent: {}
+[38.123426] (-) TimerEvent: {}
+[38.224275] (-) TimerEvent: {}
+[38.324791] (-) TimerEvent: {}
+[38.425303] (-) TimerEvent: {}
+[38.526062] (-) TimerEvent: {}
+[38.627321] (-) TimerEvent: {}
+[38.728256] (-) TimerEvent: {}
+[38.829209] (-) TimerEvent: {}
+[38.929927] (-) TimerEvent: {}
+[39.030741] (-) TimerEvent: {}
+[39.131696] (-) TimerEvent: {}
+[39.232216] (-) TimerEvent: {}
+[39.333379] (-) TimerEvent: {}
+[39.434174] (-) TimerEvent: {}
+[39.535198] (-) TimerEvent: {}
+[39.635908] (-) TimerEvent: {}
+[39.737090] (-) TimerEvent: {}
+[39.837664] (-) TimerEvent: {}
+[39.938130] (-) TimerEvent: {}
+[40.038806] (-) TimerEvent: {}
+[40.139452] (-) TimerEvent: {}
+[40.239959] (-) TimerEvent: {}
+[40.340599] (-) TimerEvent: {}
+[40.441697] (-) TimerEvent: {}
+[40.542636] (-) TimerEvent: {}
+[40.643351] (-) TimerEvent: {}
+[40.744532] (-) TimerEvent: {}
+[40.845302] (-) TimerEvent: {}
+[40.946313] (-) TimerEvent: {}
+[41.046948] (-) TimerEvent: {}
+[41.147719] (-) TimerEvent: {}
+[41.248199] (-) TimerEvent: {}
+[41.348581] (-) TimerEvent: {}
+[41.449181] (-) TimerEvent: {}
+[41.549836] (-) TimerEvent: {}
+[41.650363] (-) TimerEvent: {}
+[41.751114] (-) TimerEvent: {}
+[41.852008] (-) TimerEvent: {}
+[41.952999] (-) TimerEvent: {}
+[42.053740] (-) TimerEvent: {}
+[42.154863] (-) TimerEvent: {}
+[42.255506] (-) TimerEvent: {}
+[42.356419] (-) TimerEvent: {}
+[42.457245] (-) TimerEvent: {}
+[42.558107] (-) TimerEvent: {}
+[42.658607] (-) TimerEvent: {}
+[42.759312] (-) TimerEvent: {}
+[42.860202] (-) TimerEvent: {}
+[42.960859] (-) TimerEvent: {}
+[43.061518] (-) TimerEvent: {}
+[43.162289] (-) TimerEvent: {}
+[43.263008] (-) TimerEvent: {}
+[43.363881] (-) TimerEvent: {}
+[43.464514] (-) TimerEvent: {}
+[43.565665] (-) TimerEvent: {}
+[43.666518] (-) TimerEvent: {}
+[43.767141] (-) TimerEvent: {}
+[43.867993] (-) TimerEvent: {}
+[43.969013] (-) TimerEvent: {}
+[44.069839] (-) TimerEvent: {}
+[44.170520] (-) TimerEvent: {}
+[44.271104] (-) TimerEvent: {}
+[44.371821] (-) TimerEvent: {}
+[44.472508] (-) TimerEvent: {}
+[44.573445] (-) TimerEvent: {}
+[44.674387] (-) TimerEvent: {}
+[44.775246] (-) TimerEvent: {}
+[44.877498] (-) TimerEvent: {}
+[44.978829] (-) TimerEvent: {}
+[45.080049] (-) TimerEvent: {}
+[45.180928] (-) TimerEvent: {}
+[45.281475] (-) TimerEvent: {}
+[45.382229] (-) TimerEvent: {}
+[45.483101] (-) TimerEvent: {}
+[45.583692] (-) TimerEvent: {}
+[45.684902] (-) TimerEvent: {}
+[45.786038] (-) TimerEvent: {}
+[45.886624] (-) TimerEvent: {}
+[45.987167] (-) TimerEvent: {}
+[46.087909] (-) TimerEvent: {}
+[46.188697] (-) TimerEvent: {}
+[46.289506] (-) TimerEvent: {}
+[46.390164] (-) TimerEvent: {}
+[46.491389] (-) TimerEvent: {}
+[46.593094] (-) TimerEvent: {}
+[46.693756] (-) TimerEvent: {}
+[46.795238] (-) TimerEvent: {}
+[46.895808] (-) TimerEvent: {}
+[46.997208] (-) TimerEvent: {}
+[47.098245] (-) TimerEvent: {}
+[47.199055] (-) TimerEvent: {}
+[47.299904] (-) TimerEvent: {}
+[47.401179] (-) TimerEvent: {}
+[47.502032] (-) TimerEvent: {}
+[47.603050] (-) TimerEvent: {}
+[47.703673] (-) TimerEvent: {}
+[47.804672] (-) TimerEvent: {}
+[47.888837] (mission_center) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:1\x1b[m\x1b[K:\n'}
+[47.889145] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/include/mission_center/uav_mission.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool UAV_Mission::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[47.889245] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/include/mission_center/uav_mission.hpp:86:73:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[47.889317] (mission_center) StderrLine: {'line': b'   86 |   bool killPilotCb(\x1b[01;35m\x1b[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request\x1b[m\x1b[K,\n'}
+[47.889382] (mission_center) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[47.889439] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/include/mission_center/uav_mission.hpp:87:68:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kresponse\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[47.889497] (mission_center) StderrLine: {'line': b'   87 |                    \x1b[01;35m\x1b[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response\x1b[m\x1b[K) {\n'}
+[47.889564] (mission_center) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[47.889626] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool UAV_Mission::restartMission(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[47.889709] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:52:58:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[47.889779] (mission_center) StderrLine: {'line': b'   52 |     \x1b[01;35m\x1b[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request\x1b[m\x1b[K,\n'}
+[47.889838] (mission_center) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[47.889899] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:53:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kresponse\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[47.889976] (mission_center) StderrLine: {'line': b'   53 |     \x1b[01;35m\x1b[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response\x1b[m\x1b[K) {\n'}
+[47.890114] (mission_center) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[47.890183] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::switch_mode(std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[47.890238] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:125:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KgotTopic\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[47.890293] (mission_center) StderrLine: {'line': b'  125 |       int \x1b[01;35m\x1b[KgotTopic\x1b[m\x1b[K =\n'}
+[47.890349] (mission_center) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[47.890398] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::arm_throttle()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[47.890449] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:169:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KgotTopic\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[47.890503] (mission_center) StderrLine: {'line': b'  169 |       int \x1b[01;35m\x1b[KgotTopic\x1b[m\x1b[K =\n'}
+[47.890572] (mission_center) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[47.890627] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool UAV_Mission::init()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[47.890677] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:264:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kqos_profile\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[47.890736] (mission_center) StderrLine: {'line': b'  264 |   auto \x1b[01;35m\x1b[Kqos_profile\x1b[m\x1b[K = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(qos), qos);\n'}
+[47.890790] (mission_center) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[47.904845] (-) TimerEvent: {}
+[47.921614] (mission_center) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking CXX shared library libuav_mission.so\x1b[0m\n'}
+[48.004992] (-) TimerEvent: {}
+[48.105811] (-) TimerEvent: {}
+[48.206794] (-) TimerEvent: {}
+[48.307676] (-) TimerEvent: {}
+[48.408579] (-) TimerEvent: {}
+[48.509584] (-) TimerEvent: {}
+[48.611366] (-) TimerEvent: {}
+[48.712678] (-) TimerEvent: {}
+[48.813570] (-) TimerEvent: {}
+[48.914185] (-) TimerEvent: {}
+[49.014982] (-) TimerEvent: {}
+[49.116273] (-) TimerEvent: {}
+[49.217358] (-) TimerEvent: {}
+[49.318693] (-) TimerEvent: {}
+[49.419845] (-) TimerEvent: {}
+[49.520643] (-) TimerEvent: {}
+[49.621320] (-) TimerEvent: {}
+[49.721956] (-) TimerEvent: {}
+[49.823139] (-) TimerEvent: {}
+[49.924028] (-) TimerEvent: {}
+[50.024677] (-) TimerEvent: {}
+[50.125677] (-) TimerEvent: {}
+[50.226708] (-) TimerEvent: {}
+[50.327568] (-) TimerEvent: {}
+[50.428720] (-) TimerEvent: {}
+[50.529471] (-) TimerEvent: {}
+[50.630595] (-) TimerEvent: {}
+[50.731556] (-) TimerEvent: {}
+[50.832382] (-) TimerEvent: {}
+[50.932951] (-) TimerEvent: {}
+[51.033768] (-) TimerEvent: {}
+[51.134528] (-) TimerEvent: {}
+[51.235820] (-) TimerEvent: {}
+[51.337024] (-) TimerEvent: {}
+[51.438245] (-) TimerEvent: {}
+[51.539469] (-) TimerEvent: {}
+[51.640158] (-) TimerEvent: {}
+[51.741060] (-) TimerEvent: {}
+[51.841855] (-) TimerEvent: {}
+[51.942675] (-) TimerEvent: {}
+[52.034711] (mission_center) StdoutLine: {'line': b'[ 12%] Built target uav_mission\n'}
+[52.042657] (-) TimerEvent: {}
+[52.063509] (mission_center) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pilot_node\x1b[0m\n'}
+[52.094934] (mission_center) StdoutLine: {'line': b'[ 37%] Built target safety_node\n'}
+[52.095487] (mission_center) StdoutLine: {'line': b'[ 37%] Built target trajectory_streamer\n'}
+[52.098353] (mission_center) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX executable ui_node\x1b[0m\n'}
+[52.104752] (mission_center) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pilot_node.dir/src/pilot_node.cpp.o\x1b[0m\n'}
+[52.143330] (-) TimerEvent: {}
+[52.244700] (-) TimerEvent: {}
+[52.345812] (-) TimerEvent: {}
+[52.446867] (-) TimerEvent: {}
+[52.547570] (-) TimerEvent: {}
+[52.648239] (-) TimerEvent: {}
+[52.749676] (-) TimerEvent: {}
+[52.850533] (-) TimerEvent: {}
+[52.952834] (-) TimerEvent: {}
+[53.054193] (-) TimerEvent: {}
+[53.155215] (-) TimerEvent: {}
+[53.256613] (-) TimerEvent: {}
+[53.357408] (-) TimerEvent: {}
+[53.423488] (mission_center) StdoutLine: {'line': b'[ 93%] Built target ui_node\n'}
+[53.457575] (-) TimerEvent: {}
+[53.558283] (-) TimerEvent: {}
+[53.658766] (-) TimerEvent: {}
+[53.759193] (-) TimerEvent: {}
+[53.859618] (-) TimerEvent: {}
+[53.960603] (-) TimerEvent: {}
+[54.061978] (-) TimerEvent: {}
+[54.162709] (-) TimerEvent: {}
+[54.263822] (-) TimerEvent: {}
+[54.364807] (-) TimerEvent: {}
+[54.465357] (-) TimerEvent: {}
+[54.566063] (-) TimerEvent: {}
+[54.666740] (-) TimerEvent: {}
+[54.767421] (-) TimerEvent: {}
+[54.868144] (-) TimerEvent: {}
+[54.968991] (-) TimerEvent: {}
+[55.069799] (-) TimerEvent: {}
+[55.170305] (-) TimerEvent: {}
+[55.270880] (-) TimerEvent: {}
+[55.371569] (-) TimerEvent: {}
+[55.472286] (-) TimerEvent: {}
+[55.572908] (-) TimerEvent: {}
+[55.673729] (-) TimerEvent: {}
+[55.774548] (-) TimerEvent: {}
+[55.875083] (-) TimerEvent: {}
+[55.976152] (-) TimerEvent: {}
+[56.077085] (-) TimerEvent: {}
+[56.177839] (-) TimerEvent: {}
+[56.278524] (-) TimerEvent: {}
+[56.379064] (-) TimerEvent: {}
+[56.479752] (-) TimerEvent: {}
+[56.580623] (-) TimerEvent: {}
+[56.681411] (-) TimerEvent: {}
+[56.782506] (-) TimerEvent: {}
+[56.883392] (-) TimerEvent: {}
+[56.984395] (-) TimerEvent: {}
+[57.085015] (-) TimerEvent: {}
+[57.186592] (-) TimerEvent: {}
+[57.287542] (-) TimerEvent: {}
+[57.388297] (-) TimerEvent: {}
+[57.488979] (-) TimerEvent: {}
+[57.589453] (-) TimerEvent: {}
+[57.690021] (-) TimerEvent: {}
+[57.790439] (-) TimerEvent: {}
+[57.890842] (-) TimerEvent: {}
+[57.991458] (-) TimerEvent: {}
+[58.092181] (-) TimerEvent: {}
+[58.192954] (-) TimerEvent: {}
+[58.293680] (-) TimerEvent: {}
+[58.394532] (-) TimerEvent: {}
+[58.495165] (-) TimerEvent: {}
+[58.595922] (-) TimerEvent: {}
+[58.696695] (-) TimerEvent: {}
+[58.797596] (-) TimerEvent: {}
+[58.897983] (-) TimerEvent: {}
+[58.998549] (-) TimerEvent: {}
+[59.099293] (-) TimerEvent: {}
+[59.200008] (-) TimerEvent: {}
+[59.300640] (-) TimerEvent: {}
+[59.401588] (-) TimerEvent: {}
+[59.502447] (-) TimerEvent: {}
+[59.603264] (-) TimerEvent: {}
+[59.704042] (-) TimerEvent: {}
+[59.804828] (-) TimerEvent: {}
+[59.906147] (-) TimerEvent: {}
+[60.007309] (-) TimerEvent: {}
+[60.108155] (-) TimerEvent: {}
+[60.209366] (-) TimerEvent: {}
+[60.310332] (-) TimerEvent: {}
+[60.411023] (-) TimerEvent: {}
+[60.511906] (-) TimerEvent: {}
+[60.613319] (-) TimerEvent: {}
+[60.714351] (-) TimerEvent: {}
+[60.815281] (-) TimerEvent: {}
+[60.916015] (-) TimerEvent: {}
+[61.017197] (-) TimerEvent: {}
+[61.117868] (-) TimerEvent: {}
+[61.219134] (-) TimerEvent: {}
+[61.320249] (-) TimerEvent: {}
+[61.420919] (-) TimerEvent: {}
+[61.521321] (-) TimerEvent: {}
+[61.621753] (-) TimerEvent: {}
+[61.722305] (-) TimerEvent: {}
+[61.822862] (-) TimerEvent: {}
+[61.923310] (-) TimerEvent: {}
+[62.024399] (-) TimerEvent: {}
+[62.125178] (-) TimerEvent: {}
+[62.225675] (-) TimerEvent: {}
+[62.326536] (-) TimerEvent: {}
+[62.427216] (-) TimerEvent: {}
+[62.527838] (-) TimerEvent: {}
+[62.628606] (-) TimerEvent: {}
+[62.729222] (-) TimerEvent: {}
+[62.830500] (-) TimerEvent: {}
+[62.931185] (-) TimerEvent: {}
+[63.031885] (-) TimerEvent: {}
+[63.090200] (mission_center) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:1\x1b[m\x1b[K:\n'}
+[63.090455] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/include/mission_center/uav_mission.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool UAV_Mission::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[63.090503] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/include/mission_center/uav_mission.hpp:86:73:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[63.090558] (mission_center) StderrLine: {'line': b'   86 |   bool killPilotCb(\x1b[01;35m\x1b[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request\x1b[m\x1b[K,\n'}
+[63.090594] (mission_center) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[63.090629] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/include/mission_center/uav_mission.hpp:87:68:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kresponse\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[63.090666] (mission_center) StderrLine: {'line': b'   87 |                    \x1b[01;35m\x1b[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response\x1b[m\x1b[K) {\n'}
+[63.090700] (mission_center) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[63.090740] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool PilotNode::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[63.090795] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:27:73:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[63.090849] (mission_center) StderrLine: {'line': b'   27 |   bool killPilotCb(\x1b[01;35m\x1b[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request\x1b[m\x1b[K,\n'}
+[63.090886] (mission_center) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[63.090927] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:28:68:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kresponse\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[63.090962] (mission_center) StderrLine: {'line': b'   28 |                    \x1b[01;35m\x1b[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response\x1b[m\x1b[K) {\n'}
+[63.090999] (mission_center) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[63.112958] (mission_center) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pilot_node\x1b[0m\n'}
+[63.132020] (-) TimerEvent: {}
+[63.232677] (-) TimerEvent: {}
+[63.333843] (-) TimerEvent: {}
+[63.434599] (-) TimerEvent: {}
+[63.535486] (-) TimerEvent: {}
+[63.636205] (-) TimerEvent: {}
+[63.737048] (-) TimerEvent: {}
+[63.838351] (-) TimerEvent: {}
+[63.939527] (-) TimerEvent: {}
+[64.040239] (-) TimerEvent: {}
+[64.141137] (-) TimerEvent: {}
+[64.242973] (-) TimerEvent: {}
+[64.343779] (-) TimerEvent: {}
+[64.444717] (-) TimerEvent: {}
+[64.545434] (-) TimerEvent: {}
+[64.646478] (-) TimerEvent: {}
+[64.747622] (-) TimerEvent: {}
+[64.848698] (-) TimerEvent: {}
+[64.950106] (-) TimerEvent: {}
+[65.051365] (-) TimerEvent: {}
+[65.152453] (-) TimerEvent: {}
+[65.253358] (-) TimerEvent: {}
+[65.354345] (-) TimerEvent: {}
+[65.424934] (mission_center) StdoutLine: {'line': b'[100%] Built target pilot_node\n'}
+[65.450442] (mission_center) CommandEnded: {'returncode': 0}
+[65.452039] (mission_center) JobProgress: {'identifier': 'mission_center', 'progress': 'install'}
+[65.452376] (mission_center) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gadzz/tubitak_ws/build/mission_center'], 'cwd': '/home/gadzz/tubitak_ws/build/mission_center', 'env': OrderedDict([('GZ_SIM_SYSTEM_PLUGIN_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/lib/ardupilot_sitl_models/:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/lib/ardupilot_gz_gazebo/:/home/gadzz/ardu_ws/install/ardupilot_gazebo/lib/ardupilot_gazebo/'), ('TMUX', '/tmp/tmux-1000/default,4284,0'), ('GZ_SIM_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/worlds:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share/ardupilot_sitl_models/models:/home/gadzz/ardu_ws/install/ardupilot_sitl_models/share:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo/share/ardupilot_gz_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share/ardupilot_gz_description/models:/home/gadzz/ardu_ws/install/ardupilot_gz_description/share:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/worlds:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share/ardupilot_gazebo/models:/home/gadzz/ardu_ws/install/ardupilot_gazebo/share'), ('LC_TIME', 'id_ID.UTF-8'), ('USER', 'gadzz'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('BROWSER', 'firefox-esr'), ('LD_LIBRARY_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/sdformat_urdf/lib:/home/gadzz/ardu_ws/install/ros_ign_interfaces/lib:/home/gadzz/ardu_ws/install/ros_gz_sim/lib:/home/gadzz/ardu_ws/install/ros_gz_bridge/lib:/home/gadzz/ardu_ws/install/ros_gz_interfaces/lib:/home/gadzz/ardu_ws/install/micro_ros_agent/lib:/home/gadzz/ardu_ws/install/keyboard_msgs/lib:/home/gadzz/ardu_ws/install/ardupilot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('SHLVL', '2'), ('HOME', '/home/gadzz'), ('LESS', '-R'), ('OLDPWD', '/home/gadzz'), ('DESKTOP_SESSION', 'awesome'), ('TERM_PROGRAM_VERSION', '3.5a'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'id_ID.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('SYSTEMD_EXEC_PID', '2089'), ('VISUAL', 'nvim'), ('COLORTERM', 'truecolor'), ('FZF_BASE', '/usr/bin/fzf'), ('COLCON_PREFIX_PATH', '/home/gadzz/ardu_ws/install'), ('ROS_DISTRO', 'humble'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-3667.sock'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('WINDOWID', '23068677'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/gadzz/ardu_ws/install/sdformat_test_files/lib/x86_64-linux-gnu/pkgconfig:/home/gadzz/ardu_ws/install/sdformat_test_files/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ALACRITTY_LOG', '/tmp/Alacritty-3667.log'), ('TERM', 'tmux-256color'), ('USERNAME', 'gadzz'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/gadzz/.local/bin:/home/gadzz/ardu_ws/install/ardupilot_sitl/bin:/opt/ros/humble/bin:/home/gadzz/.local/bin:/usr/lib/ccache:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest:/home/gadzz/ardu_ws/Micro-XRCE-DDS-Gen/scripts:/home/gadzz/ardu_ws/src/ardupilot/Tools/autotest'), ('DIRHISTORY_SIZE', '30'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'awesome'), ('XMODIFIERS', '@im=ibus'), ('AMENT_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/opt/ros/humble'), ('LC_NAME', 'id_ID.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'awesome'), ('QT_ACCESSIBILITY', '1'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/gadzz/ardu_ws/install/ros_gz_sim_demos/share'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GZ_VERSION', 'harmonic'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('ALACRITTY_WINDOW_ID', '23068677'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('FZF_DEFAULT_COMMAND', 'rg --files --hidden --glob "!.git/*"'), ('PWD', '/home/gadzz/tubitak_ws/build/mission_center'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-awesome:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/awesome:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('PYTHONPATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_ign_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_dds_tests/lib/python3.10/site-packages:/home/gadzz/ardu_ws/install/ardupilot_sitl/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:/home/gadzz/ardu_ws/install/ardupilot_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('COLCON', '1'), ('TERMINAL', 'alacritty'), ('TMUX_PANE', '%6'), ('CMAKE_PREFIX_PATH', '/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble'), ('EDITOR', 'geany'), ('HISTORY_IGNORE', '(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)')]), 'shell': False}
+[65.455179] (-) TimerEvent: {}
+[65.469422] (mission_center) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[65.470181] (mission_center) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/libuav_mission.so\n'}
+[65.496466] (mission_center) StdoutLine: {'line': b'-- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/libuav_mission.so" to ""\n'}
+[65.496705] (mission_center) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/pilot_node\n'}
+[65.497771] (mission_center) StdoutLine: {'line': b'-- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/pilot_node" to ""\n'}
+[65.497884] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/safety_node\n'}
+[65.497966] (mission_center) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/ui_node\n'}
+[65.500821] (mission_center) StdoutLine: {'line': b'-- Set runtime path of "/home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/ui_node" to ""\n'}
+[65.501352] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/lib/mission_center/trajectory_streamer\n'}
+[65.501469] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/library_path.sh\n'}
+[65.501525] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/library_path.dsv\n'}
+[65.501599] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/ament_index/resource_index/package_run_dependencies/mission_center\n'}
+[65.501661] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/ament_index/resource_index/parent_prefix_path/mission_center\n'}
+[65.501775] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/ament_prefix_path.sh\n'}
+[65.501843] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/ament_prefix_path.dsv\n'}
+[65.501916] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/path.sh\n'}
+[65.501984] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/environment/path.dsv\n'}
+[65.502060] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.bash\n'}
+[65.502181] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.sh\n'}
+[65.502298] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.zsh\n'}
+[65.502398] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/local_setup.dsv\n'}
+[65.502458] (mission_center) StdoutLine: {'line': b'-- Installing: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.dsv\n'}
+[65.502513] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/ament_index/resource_index/packages/mission_center\n'}
+[65.502569] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[65.502627] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[65.502684] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/mission_centerConfig.cmake\n'}
+[65.502736] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/cmake/mission_centerConfig-version.cmake\n'}
+[65.502800] (mission_center) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.xml\n'}
+[65.505421] (mission_center) CommandEnded: {'returncode': 0}
+[65.532431] (mission_center) JobEnded: {'identifier': 'mission_center', 'rc': 0}
+[65.535818] (-) EventReactorShutdown: {}

@@ -1,0 +1,35 @@
+[0.012s] Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[0.047s] [ 14%] Built target safety_node
+[0.047s] [ 21%] [32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o[0m
+[8.140s] [01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::arm_throttle()[m[K’:
+[8.140s] [01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:94:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[8.140s]    94 |       int [01;35m[KgotTopic[m[K =
+[8.140s]       |           [01;35m[K^~~~~~~~[m[K
+[8.150s] [ 28%] [32m[1mLinking CXX shared library libuav_mission.so[0m
+[8.604s] [ 28%] Built target uav_mission
+[8.612s] [35m[1mConsolidate compiler generated dependencies of target pilot_node[0m
+[8.614s] [35m[1mConsolidate compiler generated dependencies of target ui_node[0m
+[8.626s] [ 35%] [32mBuilding CXX object CMakeFiles/pilot_node.dir/src/pilot_node.cpp.o[0m
+[8.629s] [ 42%] [32mBuilding CXX object CMakeFiles/ui_node.dir/src/ui_node.cpp.o[0m
+[8.630s] [ 50%] [32mBuilding CXX object CMakeFiles/ui_node.dir/third_party/imgui/imgui_tables.cpp.o[0m
+[8.630s] [ 64%] [32mBuilding CXX object CMakeFiles/ui_node.dir/third_party/imgui/imgui_draw.cpp.o[0m
+[8.630s] [ 64%] [32mBuilding CXX object CMakeFiles/ui_node.dir/third_party/imgui/imgui.cpp.o[0m
+[8.630s] [ 71%] [32mBuilding CXX object CMakeFiles/ui_node.dir/third_party/imgui/imgui_widgets.cpp.o[0m
+[8.630s] [ 78%] [32mBuilding CXX object CMakeFiles/ui_node.dir/third_party/imgui/backends/imgui_impl_glfw.cpp.o[0m
+[8.631s] [ 85%] [32mBuilding CXX object CMakeFiles/ui_node.dir/third_party/imgui/backends/imgui_impl_opengl3.cpp.o[0m
+[8.940s] [ 92%] [32m[1mLinking CXX executable ui_node[0m
+[9.161s] [ 92%] Built target ui_node
+[11.371s] [01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:[m[K In member function ‘[01m[Kbool PilotNode::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[11.371s] [01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:23:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[11.371s]    23 |   bool killPilotCb([01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+[11.371s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[11.371s] [01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:24:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[11.371s]    24 |                    [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+[11.371s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[11.378s] [100%] [32m[1mLinking CXX executable pilot_node[0m
+[11.405s] /usr/bin/ld: cannot find -lmavros_msgs: No such file or directory
+[11.529s] collect2: error: ld returned 1 exit status
+[11.530s] gmake[2]: *** [CMakeFiles/pilot_node.dir/build.make:217: pilot_node] Error 1
+[11.530s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/pilot_node.dir/all] Error 2
+[11.530s] gmake: *** [Makefile:146: all] Error 2
+[11.532s] Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '2': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8

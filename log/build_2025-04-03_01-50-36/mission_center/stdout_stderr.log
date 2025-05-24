@@ -1,0 +1,13 @@
+[ 14%] Built target safety_node
+[ 21%] [32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o[0m
+[ 28%] [32m[1mLinking CXX shared library libuav_mission.so[0m
+[ 28%] Built target uav_mission
+[ 35%] [32m[1mLinking CXX executable pilot_node[0m
+[ 42%] [32m[1mLinking CXX executable ui_node[0m
+/usr/bin/ld: libuav_mission.so: undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<keyboard_msgs::msg::Key_<std::allocator<void> > >()'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/pilot_node.dir/build.make:185: pilot_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/pilot_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 92%] Built target ui_node
+gmake: *** [Makefile:146: all] Error 2

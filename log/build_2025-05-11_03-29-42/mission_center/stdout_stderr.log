@@ -1,0 +1,67 @@
+[35m[1mConsolidate compiler generated dependencies of target uav_mission[0m
+[  7%] [32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o[0m
+In file included from [01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:1[m[K:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/include/mission_center/uav_mission.hpp:[m[K In member function ‘[01m[Kbool UAV_Mission::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/include/mission_center/uav_mission.hpp:111:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  111 |   bool killPilotCb([01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/include/mission_center/uav_mission.hpp:112:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  112 |                    [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kbool UAV_Mission::restartMission(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:85:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |     [01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:86:53:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   86 |     [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::offboard_loop()[m[K’:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:133:39:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Krcl_time_point_value_t rclcpp::Time::nanoseconds() const[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  133 |     traj_pub = [01;31m[Knh->get_clock()->now().nanoseconds[m[K / 1000;
+      |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+      |                                                  [32m[K()[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::switch_mode(std::string)[m[K’:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:220:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  220 |   uint8_t [01;35m[Kcount[m[K = 0;
+      |           [01;35m[K^~~~~[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:207:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmode[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  207 | void UAV_Mission::switch_mode([01;35m[Kstd::string mode[m[K) {
+      |                               [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::arm_throttle()[m[K’:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:283:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  283 |     int [01;35m[KgotTopic[m[K = getTopicVal(flags, "/fmu/out/vehicle_control_mode",
+      |         [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gadzz/vtol_ws/src/mission_center/include/mission_center/uav_mission.hpp:12[m[K,
+                 from [01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:1[m[K:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::takeoff(float)[m[K’:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:300:18:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+  300 |                  [01;35m[K"Publishing position target: (%.2f, %.2f, %.2f) for hover"[m[K, [32m[K0[m[K,
+      |                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~[m[K
+      |                                                                              [32m[K|[m[K
+      |                                                                              [32m[Kint[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:300:51:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  300 |                  "Publishing position target: ([01;36m[K%.2f[m[K, %.2f, %.2f) for hover", 0,
+      |                                                [01;36m[K~~~^[m[K
+      |                                                   [01;36m[K|[m[K
+      |                                                   [01;36m[Kdouble[m[K
+      |                                                [32m[K%.2d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gadzz/vtol_ws/src/mission_center/include/mission_center/uav_mission.hpp:12[m[K,
+                 from [01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:1[m[K:
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:300:18:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 6 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+  300 |                  [01;35m[K"Publishing position target: (%.2f, %.2f, %.2f) for hover"[m[K, 0,
+      |                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  301 |                  [32m[K0[m[K, height * -1);
+      |                  [32m[K~[m[K
+      |                  [32m[K|[m[K
+      |                  [32m[Kint[m[K
+[01m[K/home/gadzz/vtol_ws/src/mission_center/src/uav_mission.cpp:300:57:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  300 |                  "Publishing position target: (%.2f, [01;36m[K%.2f[m[K, %.2f) for hover", 0,
+      |                                                      [01;36m[K~~~^[m[K
+      |                                                         [01;36m[K|[m[K
+      |                                                         [01;36m[Kdouble[m[K
+      |                                                      [32m[K%.2d[m[K
+gmake[2]: *** [CMakeFiles/uav_mission.dir/build.make:76: CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/uav_mission.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

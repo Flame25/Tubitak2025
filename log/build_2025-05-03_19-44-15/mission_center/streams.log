@@ -1,0 +1,31 @@
+[0.012s] Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target trajectory_streamer[0m
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target safety_node[0m
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target uav_mission[0m
+[0.049s] [ 25%] Built target safety_node
+[0.049s] [ 25%] Built target trajectory_streamer
+[0.051s] [ 37%] Built target uav_mission
+[0.059s] [35m[1mConsolidate compiler generated dependencies of target pilot_node[0m
+[0.059s] [35m[1mConsolidate compiler generated dependencies of target ui_node[0m
+[0.072s] [ 43%] [32m[1mLinking CXX executable ui_node[0m
+[0.073s] [ 56%] Built target pilot_node
+[0.305s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::BadConversion'
+[0.305s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::memory::create_node()'
+[0.306s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::node_data::set_null()'
+[0.306s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::InvalidNode'
+[0.306s] /usr/bin/ld: libuav_mission.so: undefined reference to `typeinfo for YAML::InvalidNode'
+[0.307s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::node_data::empty_scalar[abi:cxx11]()'
+[0.307s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[0.307s] /usr/bin/ld: libuav_mission.so: undefined reference to `typeinfo for YAML::BadSubscript'
+[0.308s] /usr/bin/ld: libuav_mission.so: undefined reference to `typeinfo for YAML::BadConversion'
+[0.308s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::BadConversion::~BadConversion()'
+[0.309s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::RepresentationException'
+[0.310s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::BadSubscript::~BadSubscript()'
+[0.310s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::Exception'
+[0.310s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::node_data::mark_defined()'
+[0.310s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::BadSubscript'
+[0.319s] clang: [0;1;31merror: [0m[1mlinker command failed with exit code 1 (use -v to see invocation)[0m
+[0.322s] gmake[2]: *** [CMakeFiles/ui_node.dir/build.make:314: ui_node] Error 1
+[0.322s] gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/ui_node.dir/all] Error 2
+[0.322s] gmake: *** [Makefile:146: all] Error 2
+[0.324s] Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '2': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8

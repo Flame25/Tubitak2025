@@ -1,0 +1,328 @@
+[0.234s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.235s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fcd2e26fac0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fcd2e3a4ee0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fcd2e3a4ee0>>, mixin_verb=('build',))
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.538s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gadzz/tubitak_ws'
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.538s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['ignore', 'ignore_ament_install']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'ignore'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'ignore_ament_install'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['colcon_pkg']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'colcon_pkg'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['colcon_meta']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'colcon_meta'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['ros']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'ros'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['cmake', 'python']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'cmake'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'python'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['python_setup_py']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'python_setup_py'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.567s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['ignore', 'ignore_ament_install']
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'ignore'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'ignore_ament_install'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['colcon_pkg']
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'colcon_pkg'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['colcon_meta']
+[0.569s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'colcon_meta'
+[0.569s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['ros']
+[0.569s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'ros'
+[0.581s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mission_center' with type 'ros.ament_cmake' and name 'mission_center'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['ignore', 'ignore_ament_install']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'ignore'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'ignore_ament_install'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['colcon_pkg']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'colcon_pkg'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['colcon_meta']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'colcon_meta'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['ros']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'ros'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['cmake', 'python']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'cmake'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'python'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['python_setup_py']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'python_setup_py'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['ignore', 'ignore_ament_install']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'ignore'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'ignore_ament_install'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['colcon_pkg']
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'colcon_pkg'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['colcon_meta']
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'colcon_meta'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['ros']
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'ros'
+[0.587s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2-keyboard/keyboard' with type 'ros.ament_cmake' and name 'keyboard'
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'ignore'
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'ignore_ament_install'
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['colcon_pkg']
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'colcon_pkg'
+[0.588s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['colcon_meta']
+[0.588s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'colcon_meta'
+[0.588s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['ros']
+[0.588s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'ros'
+[0.589s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2-keyboard/keyboard_msgs' with type 'ros.ament_cmake' and name 'keyboard_msgs'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['ignore', 'ignore_ament_install']
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'ignore'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'ignore_ament_install'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['colcon_pkg']
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'colcon_pkg'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['colcon_meta']
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'colcon_meta'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['ros']
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'ros'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['cmake', 'python']
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'cmake'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'python'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['python_setup_py']
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'python_setup_py'
+[0.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.591s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.689s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.689s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.696s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 27 installed packages in /home/gadzz/ardu_ws/install
+[0.699s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 298 installed packages in /opt/ros/humble
+[0.700s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.753s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_args' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_target' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.754s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.754s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gadzz/tubitak_ws/build/keyboard_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gadzz/tubitak_ws/install/keyboard_msgs', 'merge_install': False, 'path': '/home/gadzz/tubitak_ws/src/ros2-keyboard/keyboard_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_args' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_target' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_clean_cache' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_clean_first' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_force_configure' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'ament_cmake_args' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'catkin_cmake_args' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.755s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gadzz/tubitak_ws/build/keyboard', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gadzz/tubitak_ws/install/keyboard', 'merge_install': False, 'path': '/home/gadzz/tubitak_ws/src/ros2-keyboard/keyboard', 'symlink_install': False, 'test_result_base': None}
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_args' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_target' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_clean_cache' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_clean_first' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_force_configure' from command line to 'False'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'ament_cmake_args' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'catkin_cmake_args' from command line to 'None'
+[0.755s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.755s] DEBUG:colcon.colcon_core.verb:Building package 'mission_center' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gadzz/tubitak_ws/build/mission_center', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gadzz/tubitak_ws/install/mission_center', 'merge_install': False, 'path': '/home/gadzz/tubitak_ws/src/mission_center', 'symlink_install': False, 'test_result_base': None}
+[0.756s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.760s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.761s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gadzz/tubitak_ws/src/ros2-keyboard/keyboard_msgs' with build type 'ament_cmake'
+[0.762s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gadzz/tubitak_ws/src/ros2-keyboard/keyboard_msgs'
+[0.768s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.769s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.769s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/tubitak_ws/build/keyboard_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/keyboard_msgs -- -j8 -l8
+[1.576s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/tubitak_ws/build/keyboard_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/keyboard_msgs -- -j8 -l8
+[1.602s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/tubitak_ws/build/keyboard_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/keyboard_msgs
+[1.727s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_msgs)
+[1.728s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/tubitak_ws/build/keyboard_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/keyboard_msgs
+[1.734s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs' for CMake module files
+[1.735s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs' for CMake config files
+[1.736s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'cmake_prefix_path')
+[1.738s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.ps1'
+[1.740s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.dsv'
+[1.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.sh'
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib'
+[1.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'ld_library_path_lib')
+[1.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.ps1'
+[1.748s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.dsv'
+[1.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.sh'
+[1.751s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/bin'
+[1.751s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib/pkgconfig/keyboard_msgs.pc'
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib/python3.10/site-packages'
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/bin'
+[1.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.ps1'
+[1.757s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.dsv'
+[1.759s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.sh'
+[1.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.bash'
+[1.763s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.zsh'
+[1.766s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/tubitak_ws/install/keyboard_msgs/share/colcon-core/packages/keyboard_msgs)
+[1.767s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_msgs)
+[1.768s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs' for CMake module files
+[1.769s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs' for CMake config files
+[1.769s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'cmake_prefix_path')
+[1.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.ps1'
+[1.772s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.dsv'
+[1.774s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.sh'
+[1.775s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib'
+[1.775s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'ld_library_path_lib')
+[1.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.ps1'
+[1.778s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.dsv'
+[1.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.sh'
+[1.782s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/bin'
+[1.782s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib/pkgconfig/keyboard_msgs.pc'
+[1.783s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/lib/python3.10/site-packages'
+[1.783s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard_msgs/bin'
+[1.783s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.ps1'
+[1.786s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.dsv'
+[1.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.sh'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.bash'
+[1.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/package.zsh'
+[1.792s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/tubitak_ws/install/keyboard_msgs/share/colcon-core/packages/keyboard_msgs)
+[1.793s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gadzz/tubitak_ws/src/ros2-keyboard/keyboard' with build type 'ament_cmake'
+[1.794s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gadzz/tubitak_ws/src/ros2-keyboard/keyboard'
+[1.795s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.795s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.807s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gadzz/tubitak_ws/src/mission_center' with build type 'ament_cmake'
+[1.807s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gadzz/tubitak_ws/src/mission_center'
+[1.808s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.808s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.835s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/tubitak_ws/build/keyboard': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/keyboard -- -j8 -l8
+[1.843s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[2.016s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/tubitak_ws/build/keyboard' returned '0': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/keyboard -- -j8 -l8
+[2.024s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/tubitak_ws/build/keyboard': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/keyboard
+[2.051s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard)
+[2.052s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard' for CMake module files
+[2.054s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/tubitak_ws/build/keyboard' returned '0': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/keyboard
+[2.055s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard' for CMake config files
+[2.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard', 'cmake_prefix_path')
+[2.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/hook/cmake_prefix_path.ps1'
+[2.059s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/hook/cmake_prefix_path.dsv'
+[2.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/hook/cmake_prefix_path.sh'
+[2.065s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/lib'
+[2.067s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/bin'
+[2.074s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/lib/pkgconfig/keyboard.pc'
+[2.075s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/lib/python3.10/site-packages'
+[2.079s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/bin'
+[2.081s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.ps1'
+[2.084s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.dsv'
+[2.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.sh'
+[2.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.bash'
+[2.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.zsh'
+[2.090s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/tubitak_ws/install/keyboard/share/colcon-core/packages/keyboard)
+[2.092s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard)
+[2.092s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard' for CMake module files
+[2.093s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard' for CMake config files
+[2.093s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard', 'cmake_prefix_path')
+[2.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/hook/cmake_prefix_path.ps1'
+[2.095s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/hook/cmake_prefix_path.dsv'
+[2.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/hook/cmake_prefix_path.sh'
+[2.099s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/lib'
+[2.100s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/bin'
+[2.100s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/lib/pkgconfig/keyboard.pc'
+[2.100s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/lib/python3.10/site-packages'
+[2.101s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/keyboard/bin'
+[2.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.ps1'
+[2.103s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.dsv'
+[2.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.sh'
+[2.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.bash'
+[2.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/keyboard/share/keyboard/package.zsh'
+[2.107s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/tubitak_ws/install/keyboard/share/colcon-core/packages/keyboard)
+[13.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '0': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[13.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/mission_center
+[13.095s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_center)
+[13.096s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '0': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/tubitak_ws/build/mission_center
+[13.097s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center' for CMake module files
+[13.098s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center' for CMake config files
+[13.099s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_center', 'cmake_prefix_path')
+[13.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/cmake_prefix_path.ps1'
+[13.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/cmake_prefix_path.dsv'
+[13.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/cmake_prefix_path.sh'
+[13.104s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/lib'
+[13.104s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_center', 'ld_library_path_lib')
+[13.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/ld_library_path_lib.ps1'
+[13.106s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/ld_library_path_lib.dsv'
+[13.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/ld_library_path_lib.sh'
+[13.108s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/bin'
+[13.108s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/lib/pkgconfig/mission_center.pc'
+[13.108s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/lib/python3.10/site-packages'
+[13.109s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/bin'
+[13.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.ps1'
+[13.112s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.dsv'
+[13.113s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.sh'
+[13.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.bash'
+[13.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.zsh'
+[13.116s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/tubitak_ws/install/mission_center/share/colcon-core/packages/mission_center)
+[13.117s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_center)
+[13.118s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center' for CMake module files
+[13.119s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center' for CMake config files
+[13.120s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_center', 'cmake_prefix_path')
+[13.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/cmake_prefix_path.ps1'
+[13.121s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/cmake_prefix_path.dsv'
+[13.121s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/cmake_prefix_path.sh'
+[13.122s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/lib'
+[13.122s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_center', 'ld_library_path_lib')
+[13.123s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/ld_library_path_lib.ps1'
+[13.124s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/ld_library_path_lib.dsv'
+[13.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/hook/ld_library_path_lib.sh'
+[13.126s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/bin'
+[13.126s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/lib/pkgconfig/mission_center.pc'
+[13.126s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/lib/python3.10/site-packages'
+[13.127s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/tubitak_ws/install/mission_center/bin'
+[13.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.ps1'
+[13.129s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.dsv'
+[13.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.sh'
+[13.132s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.bash'
+[13.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/tubitak_ws/install/mission_center/share/mission_center/package.zsh'
+[13.134s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/tubitak_ws/install/mission_center/share/colcon-core/packages/mission_center)
+[13.134s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.135s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.136s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.136s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.147s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.149s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[13.149s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.149s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/tubitak_ws/install/local_setup.ps1'
+[13.151s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gadzz/tubitak_ws/install/_local_setup_util_ps1.py'
+[13.153s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/tubitak_ws/install/setup.ps1'
+[13.155s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/tubitak_ws/install/local_setup.sh'
+[13.156s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gadzz/tubitak_ws/install/_local_setup_util_sh.py'
+[13.157s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/tubitak_ws/install/setup.sh'
+[13.161s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/tubitak_ws/install/local_setup.bash'
+[13.162s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/tubitak_ws/install/setup.bash'
+[13.166s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/tubitak_ws/install/local_setup.zsh'
+[13.167s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/tubitak_ws/install/setup.zsh'

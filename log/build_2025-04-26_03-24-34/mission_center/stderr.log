@@ -1,0 +1,41 @@
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kbool UAV_Mission::restartMission(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:49:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   49 |     [01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:50:53:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   50 |     [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::switch_mode(std::string)[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:122:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  122 |       int [01;35m[KgotTopic[m[K =
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::arm_throttle()[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:166:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  166 |       int [01;35m[KgotTopic[m[K =
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kbool UAV_Mission::init()[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:261:8:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kqos_profile[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  261 |   auto [01;35m[Kqos_profile[m[K = rclcpp::QoS(rclcpp::QoSInitialization::from_rmw(qos), qos);
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:[m[K In member function ‘[01m[Kbool PilotNode::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:27:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   27 |   bool killPilotCb([01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:28:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   28 |                    [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:64:26:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K-Wvexing-parse[m[K]
+   64 |     UAV_Mission u_mission[01;35m[K()[m[K;
+      |                          [01;35m[K^~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:64:26:[m[K [01;36m[Knote: [m[Kremove parentheses to default-initialize a variable
+   64 |     UAV_Mission u_mission[01;36m[K()[m[K;
+      |                          [01;36m[K^~[m[K
+      |                          [31m[K--[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:64:26:[m[K [01;36m[Knote: [m[Kor replace parentheses with braces to value-initialize a variable
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:65:15:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kload_mission[m[K’ in ‘[01m[Ku_mission[m[K’, which is of non-class type ‘[01m[KUAV_Mission()[m[K’
+   65 |     u_mission.[01;31m[Kload_mission[m[K(file_path);
+      |               [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pilot_node.dir/build.make:76: CMakeFiles/pilot_node.dir/src/pilot_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/pilot_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

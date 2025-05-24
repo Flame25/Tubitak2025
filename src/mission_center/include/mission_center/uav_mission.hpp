@@ -3,6 +3,8 @@
 #include <functional>
 #include <keyboard_msgs/msg/key.hpp>
 #include <px4_msgs/msg/detail/trajectory_setpoint__struct.hpp>
+#include <px4_msgs/msg/detail/vehicle_command__struct.hpp>
+#include <px4_msgs/msg/detail/vehicle_local_position__struct.hpp>
 #include <px4_msgs/msg/offboard_control_mode.hpp>
 #include <px4_msgs/msg/sensor_gps.hpp>
 #include <px4_msgs/msg/trajectory_setpoint.hpp>
@@ -13,6 +15,8 @@
 #include <rclcpp/logging.hpp>
 #include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
+#include <rclcpp/subscription.hpp>
+#include <rclcpp/timer.hpp>
 #include <std_msgs/msg/float64.hpp>
 #include <std_srvs/srv/empty.hpp>
 #include <string>
@@ -30,6 +34,7 @@ public:
   // UAV Commands
   void arm_throttle();
   void takeoff(float height);
+  void takeoff2(float height);
   void land();
   void switch_mode(std::string mode);
   void switch_offboard_mode();
@@ -40,7 +45,40 @@ public:
   void set_trajectory(double x, double y, double z);
   void offboard_loop();
 
+  // Timer Updater
+  void timer_callback();
+
+  // Sub Callback
+  void
+  local_pos_callback(const px4_msgs::msg::VehicleLocalPosition::SharedPtr msg);
+
   // Utilities
+
+  /**
+   * @brief Publish vehicle commands
+   * (https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleCommand.msg)
+   * @param command   Command code (matches VehicleCommand and MAVLink MAV_CMD
+   * codes)
+   * @param param1    Parameter 1, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   * @param param2    Parameter 2, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   * @param param3    Parameter 3, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   * @param param4    Parameter 4, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   * @param param5    Parameter 5, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   * @param param6    Parameter 6, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   * @param param7    Parameter 7, as defined by MAVLink uint16 VEHICLE_CMD
+   * enum.
+   */
+  void publish_vehicle_command(uint16_t command, float param1 = 0.0,
+                               float param2 = 0.0, float param3 = 0.0,
+                               float param4 = 0.0, float param5 = 0.0,
+                               float param6 = 0.0, float param7 = 0.0);
+
   bool
   restartMission(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
                  std::shared_ptr<std_srvs::srv::Empty::Response> response);
@@ -105,9 +143,18 @@ private:
   rclcpp::Service<std_srvs::srv::Empty>::SharedPtr shutdown_service;
   rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_pub;
   rclcpp::Publisher<px4_msgs::msg::TrajectorySetpoint>::SharedPtr traj_pub;
+  rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr
+      vehicle_command_pub;
   px4_msgs::msg::OffboardControlMode offboard_ctrl_msg;
   px4_msgs::msg::TrajectorySetpoint traj_msg;
   std::thread offboard_thread;
+  rclcpp::Subscription<px4_msgs::msg::VehicleLocalPosition>::SharedPtr
+      local_pos_sub;
+  rclcpp::TimerBase::SharedPtr timer;
+
+  float curr_x = 0;
+  float curr_y = 0;
+  float curr_z = 0;
 
   bool killPilotCb(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
                    std::shared_ptr<std_srvs::srv::Empty::Response> response) {

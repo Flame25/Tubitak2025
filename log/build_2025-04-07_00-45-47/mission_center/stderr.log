@@ -1,0 +1,16 @@
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::arm_throttle()[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/uav_mission.cpp:94:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   94 |       int [01;35m[KgotTopic[m[K =
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:[m[K In member function ‘[01m[Kbool PilotNode::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:23:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   23 |   bool killPilotCb([01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gadzz/tubitak_ws/src/mission_center/src/pilot_node.cpp:24:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   24 |                    [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+/usr/bin/ld: cannot find -lmavros_msgs: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/pilot_node.dir/build.make:217: pilot_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/pilot_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

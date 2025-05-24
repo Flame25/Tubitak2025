@@ -9,7 +9,9 @@
 #include <px4_msgs/msg/detail/vehicle_command__struct.hpp>
 #include <px4_msgs/msg/detail/vehicle_control_mode__struct.hpp>
 #include <px4_msgs/msg/detail/vehicle_status__struct.hpp>
+#include <random>
 #include <rclcpp/client.hpp>
+#include <rclcpp/create_timer.hpp>
 #include <rclcpp/duration.hpp>
 #include <rclcpp/executors.hpp>
 #include <rclcpp/future_return_code.hpp>
@@ -48,12 +50,12 @@ UAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr node) {
       "/fmu/in/trajectory_setpoint", 10);
 
   traj_msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
-  traj_msg.position = {0.0, 0.0, -1.0};
+  traj_msg.position = {0.0, 0.0, 0.0};
   traj_msg.yaw = 0.0;
 
   uav_funcs["takeoff"] = [this](const YAML::Node &cmd) {
     float alt = cmd["altitude"] ? cmd["altitude"].as<float>() : 1.0;
-    this->takeoff(alt);
+    this->takeoff2(alt);
   };
 
   uav_funcs["switch_mode"] = [this](const YAML::Node &cmd) {
@@ -73,12 +75,30 @@ UAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr node) {
     this->move(x, y, z);
   };
 
-  offboard_thread = std::thread(&UAV_Mission::offboard_loop, this);
+  // offboard_thread = std::thread(&UAV_Mission::offboard_loop, this);
+
+  // Timer updater
+  // timer = rclcpp::create_wall_timer(std::chrono::milliseconds(1000 / 30),
+  //                                  std::bind(&UAV_Mission::));
+
+  local_pos_sub = nh->create_subscription<px4_msgs::msg::VehicleLocalPosition>(
+      "/fmu/out/vehicle_local_position", rclcpp::SensorDataQoS(),
+      std::bind(&UAV_Mission::local_pos_callback, this, std::placeholders::_1));
+
+  vehicle_command_pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
+      "/fmu/in/vehicle_command", 10);
 }
 
 UAV_Mission::~UAV_Mission() {
   if (offboard_thread.joinable())
     offboard_thread.join();
+}
+
+void UAV_Mission::local_pos_callback(
+    const px4_msgs::msg::VehicleLocalPosition::SharedPtr msg) {
+  curr_x = msg->x;
+  curr_y = msg->y;
+  curr_z = msg->z;
 }
 
 bool UAV_Mission::restartMission(
@@ -141,9 +161,6 @@ void UAV_Mission::offboard_loop() {
 
 void UAV_Mission::switch_offboard_mode() {
 
-  auto vehicle_cmd_pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
-      "/fmu/in/vehicle_command", 10);
-
   px4_msgs::msg::VehicleCommand cmd{};
   cmd.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
   cmd.command = px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE;
@@ -154,10 +171,6 @@ void UAV_Mission::switch_offboard_mode() {
   cmd.source_system = 1;
   cmd.source_component = 1;
   cmd.from_external = true;
-
-  rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr pub;
-  pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
-      "/fmu/in/vehicle_command", 10);
 
   // Create Message
   px4_msgs::msg::VehicleCommand msg;
@@ -174,12 +187,12 @@ void UAV_Mission::switch_offboard_mode() {
 
   px4_msgs::msg::VehicleStatus curr_status;
   do {
-    vehicle_cmd_pub->publish(cmd);
+    vehicle_command_pub->publish(cmd);
     rclcpp::spin_some(nh);
-    if (!getTopicVal(curr_status, "/fmu/out/vehicle_status_v1",
+    if (!getTopicVal(curr_status, "/fmu/out/vehicle_status",
                      std::chrono::seconds(5))) {
       RCLCPP_ERROR(nh->get_logger(),
-                   "Failed to get topic /fmu/out/vehicle_status_v1 ");
+                   "Failed to get topic /fmu/out/vehicle_status ");
     }
   } while (
       curr_status.nav_state !=
@@ -190,7 +203,8 @@ void UAV_Mission::switch_offboard_mode() {
 
 void UAV_Mission::move(float x, float y, float z) {
   RCLCPP_INFO(nh->get_logger(), "=== Moving by %.2f %.2f %.2f ===", x, y, z);
-  traj_msg.position = {x, y, z};
+  rclcpp::spin_some(nh);
+  traj_msg.position = {curr_x + x, curr_y + y, curr_z + z};
 
   bool reached_target = false;
   rclcpp::Time start_time = nh->now();
@@ -215,9 +229,7 @@ void UAV_Mission::move(float x, float y, float z) {
     rclcpp::sleep_for(std::chrono::milliseconds(100));
     rclcpp::spin_some(nh);
   }
-
-  // Reset
-  traj_msg.position = {0.0, 0.0, 0.0};
+  rclcpp::sleep_for(std::chrono::seconds(2));
 }
 
 void UAV_Mission::switch_mode(std::string mode) {
@@ -262,14 +274,34 @@ void UAV_Mission::switch_mode(std::string mode) {
 
 void UAV_Mission::land() {
   RCLCPP_INFO(nh->get_logger(), "--- Land Initiated ---");
-  switch_mode("LAND");
+  publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND);
+  RCLCPP_INFO(nh->get_logger(), "Land command send");
+}
+
+void UAV_Mission::publish_vehicle_command(uint16_t command, float param1,
+                                          float param2, float param3,
+                                          float param4, float param5,
+                                          float param6, float param7) {
+  px4_msgs::msg::VehicleCommand msg{};
+  msg.param1 = param1;
+  msg.param2 = param2;
+  msg.param3 = param3;
+  msg.param4 = param4;
+  msg.param5 = param5;
+  msg.param6 = param6;
+  msg.param7 = param7;
+  msg.command = command;
+  msg.target_system = 1;
+  msg.target_component = 1;
+  msg.source_system = 1;
+  msg.source_component = 1;
+  msg.from_external = true;
+  msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+  vehicle_command_pub->publish(msg);
 }
 
 void UAV_Mission::arm_throttle() {
   RCLCPP_INFO(nh->get_logger(), "--- Arming ---");
-  rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr pub;
-  pub = nh->create_publisher<px4_msgs::msg::VehicleCommand>(
-      "/fmu/in/vehicle_command", 10);
 
   // Create Message
   px4_msgs::msg::VehicleCommand msg;
@@ -295,18 +327,89 @@ void UAV_Mission::arm_throttle() {
       return;
     }
 
-    pub->publish(msg);
+    vehicle_command_pub->publish(msg);
     int gotTopic = getTopicVal(flags, "/fmu/out/vehicle_control_mode",
                                std::chrono::seconds(3));
 
   } while (!flags.flag_armed);
 
   RCLCPP_WARN(nh->get_logger(), "--- Armed ---");
+  rclcpp::sleep_for(std::chrono::seconds(2));
 }
+
+void UAV_Mission::takeoff2(float height) {
+  RCLCPP_INFO(nh->get_logger(), "=== Takeoff2 : %.2f meter ===", height);
+
+  px4_msgs::msg::VehicleStatus status;
+  int succ =
+      getTopicVal(status, "/fmu/out/vehicle_status", std::chrono::seconds(1));
+
+  // Arm command
+  px4_msgs::msg::VehicleCommand arm_msg{};
+  arm_msg.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+  arm_msg.param1 = 1.0f; // arm
+  arm_msg.command =
+      px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM;
+  arm_msg.target_system = 1;
+  arm_msg.target_component = 1;
+  arm_msg.source_system = 1;
+  arm_msg.source_component = 1;
+  arm_msg.from_external = true;
+
+  // Takeoff message
+  px4_msgs::msg::VehicleCommand takeoff_cmd{};
+  takeoff_cmd.param1 = 0.0f;   // takeoff pitch
+  takeoff_cmd.param7 = height; // altitude
+  takeoff_cmd.command = px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_TAKEOFF;
+  takeoff_cmd.target_system = 1;
+  takeoff_cmd.target_component = 1;
+  takeoff_cmd.source_system = 1;
+  takeoff_cmd.source_component = 1;
+  takeoff_cmd.from_external = true;
+
+  // Keep sending takeoff command until we enter AUTO_TAKEOFF
+  while (rclcpp::ok()) {
+    rclcpp::spin_some(nh); // update nav_state from subscriber callback
+
+    // Check nav_state
+    if (status.nav_state ==
+        px4_msgs::msg::VehicleStatus::NAVIGATION_STATE_AUTO_TAKEOFF) {
+      RCLCPP_INFO(nh->get_logger(), "Entered NAVIGATION_STATE_AUTO_TAKEOFF");
+      break;
+    }
+
+    takeoff_cmd.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+    vehicle_command_pub->publish(takeoff_cmd);
+    RCLCPP_INFO(nh->get_logger(), "Sending NAV_TAKEOFF command...");
+
+    rclcpp::sleep_for(std::chrono::milliseconds(200));
+  }
+
+  while (rclcpp::ok()) {
+    rclcpp::spin_some(nh); // update nav_state from subscriber callback
+
+    // Check nav_state
+    if (status.nav_state ==
+        px4_msgs::msg::VehicleStatus::NAVIGATION_STATE_AUTO_LOITER) {
+      RCLCPP_INFO(nh->get_logger(), "Entered NAVIGATION_STATE_AUTO_LOITER");
+      break;
+    }
+
+    takeoff_cmd.timestamp = nh->get_clock()->now().nanoseconds() / 1000;
+    vehicle_command_pub->publish(arm_msg);
+    RCLCPP_INFO(nh->get_logger(), "Sending ARMING command...");
+
+    rclcpp::sleep_for(std::chrono::milliseconds(200));
+  }
+
+  RCLCPP_INFO(nh->get_logger(), "Takeoff sequence complete");
+}
+
 void UAV_Mission::takeoff(float height) {
 
   RCLCPP_INFO(nh->get_logger(), "=== Takeoff : %.2f meter ===", height);
-  traj_msg.position = {0, 0, height};
+  rclcpp::spin_some(nh);
+  traj_msg.position = {curr_x, curr_y, curr_z + height};
 
   bool reached_target = false;
   rclcpp::Time start_time = nh->now();
@@ -318,7 +421,7 @@ void UAV_Mission::takeoff(float height) {
         float dz = msg->z - height;
         float dist = sqrt(dx * dx + dy * dy + dz * dz);
 
-        if (dist < 0.3) {
+        if (dist < 0.1) {
           reached_target = true;
         }
       };
@@ -331,10 +434,7 @@ void UAV_Mission::takeoff(float height) {
     rclcpp::sleep_for(std::chrono::milliseconds(100));
     rclcpp::spin_some(nh);
   }
-
-  traj_msg.position = {0, 0, 0};
-
-  // TODO: Wait until desired alt
+  rclcpp::sleep_for(std::chrono::seconds(2));
 }
 bool UAV_Mission::init() {
   RCLCPP_INFO(nh->get_logger(), "-- Initialize UAV Mission --");

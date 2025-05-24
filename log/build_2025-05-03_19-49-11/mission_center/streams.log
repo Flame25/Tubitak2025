@@ -1,0 +1,77 @@
+[0.012s] Invoking command in '/home/gadzz/tubitak_ws/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
+[0.029s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.120s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.137s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.139s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.142s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.148s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.155s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.173s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.174s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.248s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.276s] -- Found std_srvs: 4.2.4 (/opt/ros/humble/share/std_srvs/cmake)
+[0.281s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.299s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindOpenGL.cmake:315 (message):
+[0.299s]   Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+[0.299s]   available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+[0.299s]   cmake_policy command to set the policy and suppress this warning.
+[0.299s] 
+[0.299s]   FindOpenGL found both a legacy GL library:
+[0.299s] 
+[0.299s]     OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+[0.299s] 
+[0.299s]   and GLVND libraries for OpenGL and GLX:
+[0.299s] 
+[0.299s]     OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+[0.299s]     OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+[0.299s] 
+[0.299s]   OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+[0.299s]   compatibility with CMake 3.10 and below the legacy GL library will be used.
+[0.299s] Call Stack (most recent call first):
+[0.299s]   CMakeLists.txt:20 (find_package)
+[0.299s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.299s] [0m
+[0.300s] -- Found keyboard_msgs: 1.0.0 (/home/gadzz/tubitak_ws/install/keyboard_msgs/share/keyboard_msgs/cmake)
+[0.306s] -- Found mavros_msgs: 2.9.0 (/opt/ros/humble/share/mavros_msgs/cmake)
+[0.339s] -- Found keyboard: 1.0.0 (/home/gadzz/ardu_ws/install/keyboard/share/keyboard/cmake)
+[0.353s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.404s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.404s] -- Configured cppcheck include dirs: /home/gadzz/tubitak_ws/src/mission_center/include;/home/gadzz/tubitak_ws/src/mission_center/third_party/imgui
+[0.404s] -- Configured cppcheck exclude dirs and/or files: 
+[0.406s] -- Added test 'lint_cmake' to check CMake code style
+[0.412s] -- Added test 'uncrustify' to check C / C++ code style
+[0.412s] -- Configured uncrustify additional arguments: 
+[0.413s] -- Added test 'xmllint' to check XML markup files
+[0.413s] -- Configuring done
+[0.429s] -- Generating done
+[0.436s] -- Build files have been written to: /home/gadzz/tubitak_ws/build/mission_center
+[0.456s] [35m[1mConsolidate compiler generated dependencies of target trajectory_streamer[0m
+[0.456s] [35m[1mConsolidate compiler generated dependencies of target safety_node[0m
+[0.456s] [35m[1mConsolidate compiler generated dependencies of target uav_mission[0m
+[0.466s] [ 25%] Built target trajectory_streamer
+[0.466s] [ 25%] Built target safety_node
+[0.468s] [ 37%] Built target uav_mission
+[0.476s] [35m[1mConsolidate compiler generated dependencies of target pilot_node[0m
+[0.476s] [35m[1mConsolidate compiler generated dependencies of target ui_node[0m
+[0.490s] [ 50%] [32m[1mLinking CXX executable ui_node[0m
+[0.490s] [ 56%] Built target pilot_node
+[0.712s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::BadConversion'
+[0.712s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::memory::create_node()'
+[0.712s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::node_data::set_null()'
+[0.713s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::InvalidNode'
+[0.713s] /usr/bin/ld: libuav_mission.so: undefined reference to `typeinfo for YAML::InvalidNode'
+[0.714s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::node_data::empty_scalar[abi:cxx11]()'
+[0.714s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[0.714s] /usr/bin/ld: libuav_mission.so: undefined reference to `typeinfo for YAML::BadSubscript'
+[0.714s] /usr/bin/ld: libuav_mission.so: undefined reference to `typeinfo for YAML::BadConversion'
+[0.715s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::BadConversion::~BadConversion()'
+[0.716s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::RepresentationException'
+[0.716s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::BadSubscript::~BadSubscript()'
+[0.716s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::Exception'
+[0.717s] /usr/bin/ld: libuav_mission.so: undefined reference to `YAML::detail::node_data::mark_defined()'
+[0.717s] /usr/bin/ld: libuav_mission.so: undefined reference to `vtable for YAML::BadSubscript'
+[0.724s] clang: [0;1;31merror: [0m[1mlinker command failed with exit code 1 (use -v to see invocation)[0m
+[0.727s] gmake[2]: *** [CMakeFiles/ui_node.dir/build.make:314: ui_node] Error 1
+[0.727s] gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/ui_node.dir/all] Error 2
+[0.728s] gmake: *** [Makefile:146: all] Error 2
+[0.729s] Invoked command in '/home/gadzz/tubitak_ws/build/mission_center' returned '2': AMENT_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/test_ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_ign:/home/gadzz/ardu_ws/install/ros_ign_gazebo_demos:/home/gadzz/ardu_ws/install/ros_gz:/home/gadzz/ardu_ws/install/ros_gz_sim_demos:/home/gadzz/ardu_ws/install/ardupilot_gz_bringup:/home/gadzz/ardu_ws/install/sdformat_urdf:/home/gadzz/ardu_ws/install/sdformat_test_files:/home/gadzz/ardu_ws/install/ros_ign_interfaces:/home/gadzz/ardu_ws/install/ros_ign_image:/home/gadzz/ardu_ws/install/ros_ign_gazebo:/home/gadzz/ardu_ws/install/ros_ign_bridge:/home/gadzz/ardu_ws/install/ros_gz_sim:/home/gadzz/ardu_ws/install/ros_gz_image:/home/gadzz/ardu_ws/install/ros_gz_bridge:/home/gadzz/ardu_ws/install/ros_gz_interfaces:/home/gadzz/ardu_ws/install/ardupilot_sitl:/home/gadzz/ardu_ws/install/micro_ros_agent:/home/gadzz/ardu_ws/install/keyboard:/home/gadzz/ardu_ws/install/keyboard_msgs:/home/gadzz/ardu_ws/install/ardupilot_sitl_models:/home/gadzz/ardu_ws/install/ardupilot_msgs:/home/gadzz/ardu_ws/install/ardupilot_gz_gazebo:/home/gadzz/ardu_ws/install/ardupilot_gz_description:/home/gadzz/ardu_ws/install/ardupilot_gz_application:/home/gadzz/ardu_ws/install/ardupilot_gazebo:/home/gadzz/ardu_ws/install/ardupilot_dds_tests:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/tubitak_ws/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/tubitak_ws/build/mission_center -- -j8 -l8
