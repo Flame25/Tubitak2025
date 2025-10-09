@@ -1,0 +1,76 @@
+[0.005s] Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center': CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble /usr/bin/cmake /home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center -DCMAKE_INSTALL_PREFIX=/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center
+[0.037s] -- The C compiler identification is GNU 11.4.0
+[0.072s] -- The CXX compiler identification is GNU 11.4.0
+[0.077s] -- Detecting C compiler ABI info
+[0.120s] -- Detecting C compiler ABI info - done
+[0.129s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.129s] -- Detecting C compile features
+[0.130s] -- Detecting C compile features - done
+[0.133s] -- Detecting CXX compiler ABI info
+[0.185s] -- Detecting CXX compiler ABI info - done
+[0.190s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.190s] -- Detecting CXX compile features
+[0.190s] -- Detecting CXX compile features - done
+[0.192s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.436s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.491s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.517s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.520s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.524s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.531s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.540s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.563s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.565s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.619s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.650s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.685s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.690s] -- Looking for pthread.h
+[0.741s] -- Looking for pthread.h - found
+[0.741s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.792s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.792s] -- Found Threads: TRUE  
+[0.826s] -- Found std_srvs: 4.9.0 (/opt/ros/humble/share/std_srvs/cmake)
+[0.832s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.856s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindOpenGL.cmake:315 (message):
+[0.856s]   Policy CMP0072 is not set: FindOpenGL prefers GLVND by default when
+[0.856s]   available.  Run "cmake --help-policy CMP0072" for policy details.  Use the
+[0.856s]   cmake_policy command to set the policy and suppress this warning.
+[0.856s] 
+[0.856s]   FindOpenGL found both a legacy GL library:
+[0.856s] 
+[0.856s]     OPENGL_gl_LIBRARY: /usr/lib/x86_64-linux-gnu/libGL.so
+[0.856s] 
+[0.856s]   and GLVND libraries for OpenGL and GLX:
+[0.856s] 
+[0.857s]     OPENGL_opengl_LIBRARY: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+[0.857s]     OPENGL_glx_LIBRARY: /usr/lib/x86_64-linux-gnu/libGLX.so
+[0.857s] 
+[0.857s]   OpenGL_GL_PREFERENCE has not been set to "GLVND" or "LEGACY", so for
+[0.857s]   compatibility with CMake 3.10 and below the legacy GL library will be used.
+[0.857s] Call Stack (most recent call first):
+[0.857s]   CMakeLists.txt:20 (find_package)
+[0.857s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.857s] [0m
+[0.857s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[0.858s] -- Found keyboard_msgs: 1.0.0 (/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake)
+[0.866s] -- Found mavros_msgs: 2.12.0 (/opt/ros/humble/share/mavros_msgs/cmake)
+[0.910s] [31mCMake Error at CMakeLists.txt:24 (find_package):
+[0.911s]   By not providing "Findkeyboard.cmake" in CMAKE_MODULE_PATH this project has
+[0.911s]   asked CMake to find a package configuration file provided by "keyboard",
+[0.911s]   but CMake did not find one.
+[0.911s] 
+[0.911s]   Could not find a package configuration file provided by "keyboard" with any
+[0.911s]   of the following names:
+[0.911s] 
+[0.911s]     keyboardConfig.cmake
+[0.911s]     keyboard-config.cmake
+[0.911s] 
+[0.911s]   Add the installation prefix of "keyboard" to CMAKE_PREFIX_PATH or set
+[0.911s]   "keyboard_DIR" to a directory containing one of the above files.  If
+[0.911s]   "keyboard" provides a separate development package or SDK, be sure it has
+[0.911s]   been installed.
+[0.911s] 
+[0.911s] [0m
+[0.911s] -- Configuring incomplete, errors occurred!
+[0.911s] See also "/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center/CMakeFiles/CMakeOutput.log".
+[0.918s] Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center' returned '1': CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble /usr/bin/cmake /home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center -DCMAKE_INSTALL_PREFIX=/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center

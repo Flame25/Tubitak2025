@@ -1,0 +1,517 @@
+[0.000000] (-) TimerEvent: {}
+[0.001231] (keyboard_msgs) JobQueued: {'identifier': 'keyboard_msgs', 'dependencies': OrderedDict()}
+[0.002098] (keyboard) JobQueued: {'identifier': 'keyboard', 'dependencies': OrderedDict([('keyboard_msgs', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs')])}
+[0.002145] (mission_center) JobQueued: {'identifier': 'mission_center', 'dependencies': OrderedDict([('keyboard_msgs', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs')])}
+[0.002178] (keyboard_msgs) JobStarted: {'identifier': 'keyboard_msgs'}
+[0.017016] (keyboard_msgs) JobProgress: {'identifier': 'keyboard_msgs', 'progress': 'cmake'}
+[0.019000] (keyboard_msgs) JobProgress: {'identifier': 'keyboard_msgs', 'progress': 'build'}
+[0.020223] (keyboard_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs', '--', '-j8', '-l8'], 'cwd': '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('TMUX', '/tmp/tmux-1000/default,12136,0'), ('USER', 'gadzz'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2500'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '24'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('LESS', '-R'), ('HOME', '/home/gadzz'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center'), ('TERM_PROGRAM_VERSION', '3.5a'), ('DESKTOP_SESSION', 'plasma'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('ROS_PYTHON_VERSION', '3'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/gadzz/.gtkrc:/home/gadzz/.config/gtkrc'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('PAGER', 'less'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '2353'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-11977.sock'), ('WINDOWID', '113246213'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'tmux-256color'), ('XDG_SESSION_ID', '4'), ('ALACRITTY_LOG', '/tmp/Alacritty-11977.log'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/gadzz/.gtkrc-2.0:/home/gadzz/.config/gtkrc-2.0'), ('PATH', '/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/opt/ros/humble/bin:/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/home/gadzz/.cargo/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gadzz/.fzf/bin:/home/gadzz/Downloads/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/gadzz:@/tmp/.ICE-unix/2714,unix/gadzz:/tmp/.ICE-unix/2714'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/gadzz/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXhQJ7UG/agent.2413'), ('AMENT_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('ALACRITTY_WINDOW_ID', '113246213'), ('PWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/gadzz/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('LC_PAPER', 'id_ID.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('TMUX_PANE', '%1'), ('CMAKE_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble')]), 'shell': False}
+[0.099869] (-) TimerEvent: {}
+[0.139461] (keyboard_msgs) StdoutLine: {'line': b'[  3%] Built target keyboard_msgs__cpp\n'}
+[0.200425] (-) TimerEvent: {}
+[0.204762] (keyboard_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_copy_keyboard_msgs\n'}
+[0.256668] (keyboard_msgs) StdoutLine: {'line': b'[ 12%] Built target keyboard_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.300528] (-) TimerEvent: {}
+[0.401201] (-) TimerEvent: {}
+[0.502201] (-) TimerEvent: {}
+[0.603574] (-) TimerEvent: {}
+[0.688129] (keyboard_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.704102] (-) TimerEvent: {}
+[0.715664] (keyboard_msgs) StdoutLine: {'line': b'writing keyboard_msgs.egg-info/PKG-INFO\n'}
+[0.716946] (keyboard_msgs) StdoutLine: {'line': b'writing dependency_links to keyboard_msgs.egg-info/dependency_links.txt\n'}
+[0.717736] (keyboard_msgs) StdoutLine: {'line': b'writing top-level names to keyboard_msgs.egg-info/top_level.txt\n'}
+[0.800848] (keyboard_msgs) StdoutLine: {'line': b"reading manifest file 'keyboard_msgs.egg-info/SOURCES.txt'\n"}
+[0.802823] (keyboard_msgs) StdoutLine: {'line': b"writing manifest file 'keyboard_msgs.egg-info/SOURCES.txt'\n"}
+[0.804229] (-) TimerEvent: {}
+[0.904863] (-) TimerEvent: {}
+[0.910235] (keyboard_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_build_keyboard_msgs_egg\n'}
+[0.957691] (keyboard_msgs) StdoutLine: {'line': b'[ 22%] Built target keyboard_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.002381] (keyboard_msgs) StdoutLine: {'line': b'[ 32%] Built target keyboard_msgs__rosidl_typesupport_cpp\n'}
+[1.005108] (-) TimerEvent: {}
+[1.050485] (keyboard_msgs) StdoutLine: {'line': b'[ 41%] Built target keyboard_msgs__rosidl_generator_c\n'}
+[1.099585] (keyboard_msgs) StdoutLine: {'line': b'[ 51%] Built target keyboard_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.105294] (-) TimerEvent: {}
+[1.143954] (keyboard_msgs) StdoutLine: {'line': b'[ 61%] Built target keyboard_msgs__rosidl_typesupport_c\n'}
+[1.190492] (keyboard_msgs) StdoutLine: {'line': b'[ 70%] Built target keyboard_msgs__rosidl_typesupport_introspection_c\n'}
+[1.205486] (-) TimerEvent: {}
+[1.231743] (keyboard_msgs) StdoutLine: {'line': b'[ 70%] Built target keyboard_msgs\n'}
+[1.281815] (keyboard_msgs) StdoutLine: {'line': b'[ 74%] Built target keyboard_msgs__py\n'}
+[1.305817] (-) TimerEvent: {}
+[1.327449] (keyboard_msgs) StdoutLine: {'line': b'[ 80%] Built target keyboard_msgs__rosidl_generator_py\n'}
+[1.375360] (keyboard_msgs) StdoutLine: {'line': b'[ 87%] Built target keyboard_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.405749] (-) TimerEvent: {}
+[1.423464] (keyboard_msgs) StdoutLine: {'line': b'[ 93%] Built target keyboard_msgs__rosidl_typesupport_c__pyext\n'}
+[1.473495] (keyboard_msgs) StdoutLine: {'line': b'[100%] Built target keyboard_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.498281] (keyboard_msgs) CommandEnded: {'returncode': 0}
+[1.499190] (keyboard_msgs) JobProgress: {'identifier': 'keyboard_msgs', 'progress': 'install'}
+[1.505923] (-) TimerEvent: {}
+[1.520912] (keyboard_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs'], 'cwd': '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('TMUX', '/tmp/tmux-1000/default,12136,0'), ('USER', 'gadzz'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2500'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '24'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('LESS', '-R'), ('HOME', '/home/gadzz'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center'), ('TERM_PROGRAM_VERSION', '3.5a'), ('DESKTOP_SESSION', 'plasma'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('ROS_PYTHON_VERSION', '3'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/gadzz/.gtkrc:/home/gadzz/.config/gtkrc'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('PAGER', 'less'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '2353'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-11977.sock'), ('WINDOWID', '113246213'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'tmux-256color'), ('XDG_SESSION_ID', '4'), ('ALACRITTY_LOG', '/tmp/Alacritty-11977.log'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/gadzz/.gtkrc-2.0:/home/gadzz/.config/gtkrc-2.0'), ('PATH', '/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/opt/ros/humble/bin:/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/home/gadzz/.cargo/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gadzz/.fzf/bin:/home/gadzz/Downloads/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/gadzz:@/tmp/.ICE-unix/2714,unix/gadzz:/tmp/.ICE-unix/2714'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/gadzz/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXhQJ7UG/agent.2413'), ('AMENT_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('ALACRITTY_WINDOW_ID', '113246213'), ('PWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/gadzz/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('LC_PAPER', 'id_ID.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('TMUX_PANE', '%1'), ('CMAKE_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble')]), 'shell': False}
+[1.533852] (keyboard_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.534309] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/ament_index/resource_index/rosidl_interfaces/keyboard_msgs\n'}
+[1.534442] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.534517] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.534592] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.534670] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__functions.c\n'}
+[1.534761] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.h\n'}
+[1.534838] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__functions.h\n'}
+[1.535235] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__struct.h\n'}
+[1.535400] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/key.h\n'}
+[1.535461] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.535525] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/library_path.sh\n'}
+[1.535581] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/library_path.dsv\n'}
+[1.535640] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_generator_c.so\n'}
+[1.538282] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.538644] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.538852] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.538916] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_fastrtps_c.h\n'}
+[1.538982] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.539046] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[1.539105] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.539162] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.539218] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.539286] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__struct.hpp\n'}
+[1.539345] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.hpp\n'}
+[1.539400] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__builder.hpp\n'}
+[1.539456] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__traits.hpp\n'}
+[1.539519] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/key.hpp\n'}
+[1.539578] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.539638] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.539699] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.539770] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.539832] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.539893] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/dds_fastrtps\n'}
+[1.539952] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.540011] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.540069] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.540128] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.540184] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.540239] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.c\n'}
+[1.540294] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_introspection_c.h\n'}
+[1.540349] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.540405] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_introspection_c.so\n'}
+[1.540493] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_c.so\n'}
+[1.540579] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs\n'}
+[1.540660] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg\n'}
+[1.540716] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail\n'}
+[1.540776] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__type_support.cpp\n'}
+[1.540817] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/include/keyboard_msgs/keyboard_msgs/msg/detail/key__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.540857] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[1.540895] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_typesupport_cpp.so\n'}
+[1.540934] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/pythonpath.sh\n'}
+[1.540970] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/pythonpath.dsv\n'}
+[1.541024] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info\n'}
+[1.541094] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[1.541157] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[1.541221] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.541282] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.541350] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs\n'}
+[1.541418] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/_keyboard_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.541488] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg\n'}
+[1.541561] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg/_key.py\n'}
+[1.541633] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg/_key_s.c\n'}
+[1.541733] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg/__init__.py\n'}
+[1.541822] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/_keyboard_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[1.541896] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/libkeyboard_msgs__rosidl_generator_py.so\n'}
+[1.541978] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/_keyboard_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.542047] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.542138] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/__init__.py\n'}
+[1.542282] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.542353] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.594288] (keyboard_msgs) StdoutLine: {'line': b"Listing '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs'...\n"}
+[1.594843] (keyboard_msgs) StdoutLine: {'line': b"Listing '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/msg'...\n"}
+[1.604493] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.606074] (-) TimerEvent: {}
+[1.607372] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.607579] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages/keyboard_msgs/keyboard_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.607647] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/libkeyboard_msgs__rosidl_generator_py.so\n'}
+[1.607721] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/msg/Key.idl\n'}
+[1.607808] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/msg/Key.msg\n'}
+[1.607868] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/ament_index/resource_index/package_run_dependencies/keyboard_msgs\n'}
+[1.607930] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/ament_index/resource_index/parent_prefix_path/keyboard_msgs\n'}
+[1.608012] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/ament_prefix_path.sh\n'}
+[1.608083] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/ament_prefix_path.dsv\n'}
+[1.608144] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/path.sh\n'}
+[1.608200] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/environment/path.dsv\n'}
+[1.608270] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/local_setup.bash\n'}
+[1.608330] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/local_setup.sh\n'}
+[1.608388] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/local_setup.zsh\n'}
+[1.608442] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/local_setup.dsv\n'}
+[1.608513] (keyboard_msgs) StdoutLine: {'line': b'-- Installing: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.dsv\n'}
+[1.608573] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/ament_index/resource_index/packages/keyboard_msgs\n'}
+[1.608640] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_cExport.cmake\n'}
+[1.608718] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.608826] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.608886] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.608944] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.608984] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.609038] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.609082] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.609120] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.609157] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.609196] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.609266] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.609336] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.609405] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.609492] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.609619] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.610392] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/export_keyboard_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.610788] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.610862] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.610929] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.611007] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.611079] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.611178] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.611248] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.611314] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgsConfig.cmake\n'}
+[1.611375] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/cmake/keyboard_msgsConfig-version.cmake\n'}
+[1.611435] (keyboard_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.xml\n'}
+[1.612632] (keyboard_msgs) CommandEnded: {'returncode': 0}
+[1.659396] (keyboard_msgs) JobEnded: {'identifier': 'keyboard_msgs', 'rc': 0}
+[1.662519] (keyboard) JobStarted: {'identifier': 'keyboard'}
+[1.668940] (mission_center) JobStarted: {'identifier': 'mission_center'}
+[1.687834] (keyboard) JobProgress: {'identifier': 'keyboard', 'progress': 'cmake'}
+[1.690513] (keyboard) JobProgress: {'identifier': 'keyboard', 'progress': 'build'}
+[1.690864] (keyboard) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard', '--', '-j8', '-l8'], 'cwd': '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('TMUX', '/tmp/tmux-1000/default,12136,0'), ('USER', 'gadzz'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2500'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '24'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('LESS', '-R'), ('HOME', '/home/gadzz'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center'), ('TERM_PROGRAM_VERSION', '3.5a'), ('DESKTOP_SESSION', 'plasma'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('ROS_PYTHON_VERSION', '3'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/gadzz/.gtkrc:/home/gadzz/.config/gtkrc'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('PAGER', 'less'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '2353'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-11977.sock'), ('WINDOWID', '113246213'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'tmux-256color'), ('XDG_SESSION_ID', '4'), ('ALACRITTY_LOG', '/tmp/Alacritty-11977.log'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/gadzz/.gtkrc-2.0:/home/gadzz/.config/gtkrc-2.0'), ('PATH', '/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/opt/ros/humble/bin:/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/home/gadzz/.cargo/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gadzz/.fzf/bin:/home/gadzz/Downloads/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/gadzz:@/tmp/.ICE-unix/2714,unix/gadzz:/tmp/.ICE-unix/2714'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/gadzz/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXhQJ7UG/agent.2413'), ('AMENT_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('ALACRITTY_WINDOW_ID', '113246213'), ('PWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/gadzz/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('LC_PAPER', 'id_ID.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('TMUX_PANE', '%1'), ('CMAKE_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble')]), 'shell': False}
+[1.693628] (mission_center) JobProgress: {'identifier': 'mission_center', 'progress': 'cmake'}
+[1.695314] (mission_center) JobProgress: {'identifier': 'mission_center', 'progress': 'build'}
+[1.695429] (mission_center) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center', '--', '-j8', '-l8'], 'cwd': '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('TMUX', '/tmp/tmux-1000/default,12136,0'), ('USER', 'gadzz'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2500'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '24'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('LESS', '-R'), ('HOME', '/home/gadzz'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center'), ('TERM_PROGRAM_VERSION', '3.5a'), ('DESKTOP_SESSION', 'plasma'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('ROS_PYTHON_VERSION', '3'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/gadzz/.gtkrc:/home/gadzz/.config/gtkrc'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('PAGER', 'less'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '2353'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-11977.sock'), ('WINDOWID', '113246213'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'tmux-256color'), ('XDG_SESSION_ID', '4'), ('ALACRITTY_LOG', '/tmp/Alacritty-11977.log'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/gadzz/.gtkrc-2.0:/home/gadzz/.config/gtkrc-2.0'), ('PATH', '/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/opt/ros/humble/bin:/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/home/gadzz/.cargo/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gadzz/.fzf/bin:/home/gadzz/Downloads/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/gadzz:@/tmp/.ICE-unix/2714,unix/gadzz:/tmp/.ICE-unix/2714'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/gadzz/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXhQJ7UG/agent.2413'), ('AMENT_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('ALACRITTY_WINDOW_ID', '113246213'), ('PWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/gadzz/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('LC_PAPER', 'id_ID.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('TMUX_PANE', '%1'), ('CMAKE_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble')]), 'shell': False}
+[1.706303] (-) TimerEvent: {}
+[1.797605] (mission_center) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target uav_mission\x1b[0m\n'}
+[1.806527] (-) TimerEvent: {}
+[1.815247] (keyboard) StdoutLine: {'line': b'[100%] Built target keyboard\n'}
+[1.840580] (keyboard) CommandEnded: {'returncode': 0}
+[1.845558] (mission_center) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o\x1b[0m\n'}
+[1.846121] (keyboard) JobProgress: {'identifier': 'keyboard', 'progress': 'install'}
+[1.846165] (keyboard) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard'], 'cwd': '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('KDE_FULL_SESSION', 'true'), ('TMUX', '/tmp/tmux-1000/default,12136,0'), ('USER', 'gadzz'), ('PAM_KWALLET5_LOGIN', '/run/user/1000/kwallet5.socket'), ('LC_TIME', 'id_ID.UTF-8'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '2500'), ('XDG_SESSION_TYPE', 'x11'), ('XCURSOR_SIZE', '24'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('LESS', '-R'), ('HOME', '/home/gadzz'), ('KDE_APPLICATIONS_AS_SCOPE', '1'), ('OLDPWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center'), ('TERM_PROGRAM_VERSION', '3.5a'), ('DESKTOP_SESSION', 'plasma'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/gadzz/.oh-my-zsh'), ('ROS_PYTHON_VERSION', '3'), ('GTK_RC_FILES', '/etc/gtk/gtkrc:/home/gadzz/.gtkrc:/home/gadzz/.config/gtkrc'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('KDE_SESSION_VERSION', '5'), ('PAGER', 'less'), ('LC_MONETARY', 'id_ID.UTF-8'), ('SYSTEMD_EXEC_PID', '2353'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('LIBVIRT_DEFAULT_URI', 'qemu:///system'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'gadzz'), ('ALACRITTY_SOCKET', '/run/user/1000/Alacritty-:0-11977.sock'), ('WINDOWID', '113246213'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'tmux-256color'), ('XDG_SESSION_ID', '4'), ('ALACRITTY_LOG', '/tmp/Alacritty-11977.log'), ('ROS_LOCALHOST_ONLY', '0'), ('GTK2_RC_FILES', '/etc/gtk-2.0/gtkrc:/home/gadzz/.gtkrc-2.0:/home/gadzz/.config/gtkrc-2.0'), ('PATH', '/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/opt/ros/humble/bin:/home/gadzz/.cargo/bin:/home/gadzz/local/bin:/home/gadzz/.cargo/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/gadzz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/gadzz/.fzf/bin:/home/gadzz/Downloads/Micro-XRCE-DDS-Gen/scripts'), ('SESSION_MANAGER', 'local/gadzz:@/tmp/.ICE-unix/2714,unix/gadzz:/tmp/.ICE-unix/2714'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session1'), ('LC_ADDRESS', 'id_ID.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XCURSOR_THEME', 'breeze_cursors'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'KDE'), ('LC_TELEPHONE', 'id_ID.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'KDE'), ('XAUTHORITY', '/home/gadzz/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'tmux'), ('SSH_AUTH_SOCK', '/tmp/ssh-XXXXXXhQJ7UG/agent.2413'), ('AMENT_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'id_ID.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'id_ID.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'id_ID.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '1'), ('ALACRITTY_WINDOW_ID', '113246213'), ('PWD', '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/home/gadzz/.config/kdedefaults:/etc/xdg/xdg-plasma:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/plasma:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'id_ID.UTF-8'), ('TMUX_PLUGIN_MANAGER_PATH', '/home/gadzz/.config/tmux/plugins/'), ('LC_PAPER', 'id_ID.UTF-8'), ('KDE_SESSION_UID', '1000'), ('COLCON', '1'), ('TMUX_PANE', '%1'), ('CMAKE_PREFIX_PATH', '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble')]), 'shell': False}
+[1.860673] (keyboard) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[1.861790] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib/keyboard/keyboard\n'}
+[1.862193] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib/keyboard/keyboard_to_joy.py\n'}
+[1.862301] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/config\n'}
+[1.862376] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/config/example_config.yaml\n'}
+[1.862447] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/ament_index/resource_index/package_run_dependencies/keyboard\n'}
+[1.862514] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/ament_index/resource_index/parent_prefix_path/keyboard\n'}
+[1.862574] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/environment/ament_prefix_path.sh\n'}
+[1.862651] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/environment/ament_prefix_path.dsv\n'}
+[1.862714] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/environment/path.sh\n'}
+[1.862782] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/environment/path.dsv\n'}
+[1.862841] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/local_setup.bash\n'}
+[1.862899] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/local_setup.sh\n'}
+[1.862955] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/local_setup.zsh\n'}
+[1.863011] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/local_setup.dsv\n'}
+[1.863816] (keyboard) StdoutLine: {'line': b'-- Installing: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.dsv\n'}
+[1.863932] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/ament_index/resource_index/packages/keyboard\n'}
+[1.864010] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/cmake/keyboardConfig.cmake\n'}
+[1.864085] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/cmake/keyboardConfig-version.cmake\n'}
+[1.864158] (keyboard) StdoutLine: {'line': b'-- Up-to-date: /home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.xml\n'}
+[1.867727] (keyboard) CommandEnded: {'returncode': 0}
+[1.895118] (keyboard) JobEnded: {'identifier': 'keyboard', 'rc': 0}
+[1.906888] (-) TimerEvent: {}
+[2.008204] (-) TimerEvent: {}
+[2.108834] (-) TimerEvent: {}
+[2.209637] (-) TimerEvent: {}
+[2.310346] (-) TimerEvent: {}
+[2.410791] (-) TimerEvent: {}
+[2.511811] (-) TimerEvent: {}
+[2.612142] (-) TimerEvent: {}
+[2.712523] (-) TimerEvent: {}
+[2.813147] (-) TimerEvent: {}
+[2.913995] (-) TimerEvent: {}
+[3.015341] (-) TimerEvent: {}
+[3.115962] (-) TimerEvent: {}
+[3.217083] (-) TimerEvent: {}
+[3.317633] (-) TimerEvent: {}
+[3.418684] (-) TimerEvent: {}
+[3.519354] (-) TimerEvent: {}
+[3.620422] (-) TimerEvent: {}
+[3.721456] (-) TimerEvent: {}
+[3.822213] (-) TimerEvent: {}
+[3.923117] (-) TimerEvent: {}
+[4.024024] (-) TimerEvent: {}
+[4.125301] (-) TimerEvent: {}
+[4.226637] (-) TimerEvent: {}
+[4.327323] (-) TimerEvent: {}
+[4.428662] (-) TimerEvent: {}
+[4.529347] (-) TimerEvent: {}
+[4.630111] (-) TimerEvent: {}
+[4.732922] (-) TimerEvent: {}
+[4.835929] (-) TimerEvent: {}
+[4.936637] (-) TimerEvent: {}
+[5.037481] (-) TimerEvent: {}
+[5.137827] (-) TimerEvent: {}
+[5.238138] (-) TimerEvent: {}
+[5.338683] (-) TimerEvent: {}
+[5.439625] (-) TimerEvent: {}
+[5.541447] (-) TimerEvent: {}
+[5.642117] (-) TimerEvent: {}
+[5.742599] (-) TimerEvent: {}
+[5.843145] (-) TimerEvent: {}
+[5.944444] (-) TimerEvent: {}
+[6.045169] (-) TimerEvent: {}
+[6.148272] (-) TimerEvent: {}
+[6.249008] (-) TimerEvent: {}
+[6.349544] (-) TimerEvent: {}
+[6.450274] (-) TimerEvent: {}
+[6.550800] (-) TimerEvent: {}
+[6.651332] (-) TimerEvent: {}
+[6.753078] (-) TimerEvent: {}
+[6.853884] (-) TimerEvent: {}
+[6.954932] (-) TimerEvent: {}
+[7.055955] (-) TimerEvent: {}
+[7.157505] (-) TimerEvent: {}
+[7.258356] (-) TimerEvent: {}
+[7.359090] (-) TimerEvent: {}
+[7.459781] (-) TimerEvent: {}
+[7.560378] (-) TimerEvent: {}
+[7.661218] (-) TimerEvent: {}
+[7.761965] (-) TimerEvent: {}
+[7.862784] (-) TimerEvent: {}
+[7.964647] (-) TimerEvent: {}
+[8.065260] (-) TimerEvent: {}
+[8.134677] (mission_center) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:1\x1b[m\x1b[K:\n'}
+[8.134957] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool UAV_Mission::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.135057] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:97:73:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.135123] (mission_center) StderrLine: {'line': b'   97 | \x1b[01;35m\x1b[Kst std::shared_ptr<std_srvs::srv::Empty::Request> request\x1b[m\x1b[K,\n'}
+[8.135201] (mission_center) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[8.135262] (mission_center) StderrLine: {'line': b'\n'}
+[8.135323] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:98:68:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kresponse\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.135387] (mission_center) StderrLine: {'line': b'   98 | \x1b[01;35m\x1b[Ktd::shared_ptr<std_srvs::srv::Empty::Response> response\x1b[m\x1b[K) {\n'}
+[8.135448] (mission_center) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[8.135508] (mission_center) StderrLine: {'line': b'\n'}
+[8.165466] (-) TimerEvent: {}
+[8.266729] (-) TimerEvent: {}
+[8.273573] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool UAV_Mission::restartMission(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.273849] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:84:58:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krequest\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.273926] (mission_center) StderrLine: {'line': b'   84 | \x1b[01;35m\x1b[Kst std::shared_ptr<std_srvs::srv::Empty::Request> request\x1b[m\x1b[K,\n'}
+[8.273968] (mission_center) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[8.274005] (mission_center) StderrLine: {'line': b'\n'}
+[8.274042] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:85:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kresponse\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.274080] (mission_center) StderrLine: {'line': b'   85 | \x1b[01;35m\x1b[Ktd::shared_ptr<std_srvs::srv::Empty::Response> response\x1b[m\x1b[K) {\n'}
+[8.274116] (mission_center) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[8.274151] (mission_center) StderrLine: {'line': b'\n'}
+[8.366882] (-) TimerEvent: {}
+[8.403722] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::switch_mode(std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.403942] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:159:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KgotTopic\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.404021] (mission_center) StderrLine: {'line': b'  159 |       int \x1b[01;35m\x1b[KgotTopic\x1b[m\x1b[K =\n'}
+[8.404108] (mission_center) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[8.439421] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::set_position(double, double, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.439822] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:237:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kheading_msg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kheading\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.440027] (mission_center) StderrLine: {'line': b'  237 |     getTopicVal(\x1b[01;31m\x1b[Kheading_msg\x1b[m\x1b[K, "/mavros/local_position/pose",\n'}
+[8.440093] (mission_center) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.440147] (mission_center) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kheading\x1b[m\x1b[K\n'}
+[8.467035] (-) TimerEvent: {}
+[8.557612] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::arm_throttle()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.558073] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:275:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KgotTopic\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.558428] (mission_center) StderrLine: {'line': b'  275 |       int \x1b[01;35m\x1b[KgotTopic\x1b[m\x1b[K =\n'}
+[8.558543] (mission_center) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[8.567158] (-) TimerEvent: {}
+[8.660755] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::move_servo(int, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.661845] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:292:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstart_time\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.662058] (mission_center) StderrLine: {'line': b'  292 |   double \x1b[01;35m\x1b[Kstart_time\x1b[m\x1b[K = nh->now().seconds();\n'}
+[8.662109] (mission_center) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.667459] (-) TimerEvent: {}
+[8.769620] (-) TimerEvent: {}
+[8.783768] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid UAV_Mission::takeoff(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.784019] (mission_center) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:327:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktmp_check\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.784102] (mission_center) StderrLine: {'line': b'  327 |   bool \x1b[01;35m\x1b[Ktmp_check\x1b[m\x1b[K = getAlt(current_alt, "local_pose");\n'}
+[8.784171] (mission_center) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.869786] (-) TimerEvent: {}
+[8.971715] (-) TimerEvent: {}
+[9.072591] (-) TimerEvent: {}
+[9.173260] (-) TimerEvent: {}
+[9.274117] (-) TimerEvent: {}
+[9.374983] (-) TimerEvent: {}
+[9.475668] (-) TimerEvent: {}
+[9.579098] (-) TimerEvent: {}
+[9.679865] (-) TimerEvent: {}
+[9.780637] (-) TimerEvent: {}
+[9.881718] (-) TimerEvent: {}
+[9.982426] (-) TimerEvent: {}
+[10.086973] (-) TimerEvent: {}
+[10.189355] (-) TimerEvent: {}
+[10.291247] (-) TimerEvent: {}
+[10.391962] (-) TimerEvent: {}
+[10.492625] (-) TimerEvent: {}
+[10.593273] (-) TimerEvent: {}
+[10.693832] (-) TimerEvent: {}
+[10.794767] (-) TimerEvent: {}
+[10.895921] (-) TimerEvent: {}
+[10.996685] (-) TimerEvent: {}
+[11.098102] (-) TimerEvent: {}
+[11.199604] (-) TimerEvent: {}
+[11.300622] (-) TimerEvent: {}
+[11.402346] (-) TimerEvent: {}
+[11.502789] (-) TimerEvent: {}
+[11.603441] (-) TimerEvent: {}
+[11.704110] (-) TimerEvent: {}
+[11.804589] (-) TimerEvent: {}
+[11.905671] (-) TimerEvent: {}
+[12.007459] (-) TimerEvent: {}
+[12.108035] (-) TimerEvent: {}
+[12.209018] (-) TimerEvent: {}
+[12.310956] (-) TimerEvent: {}
+[12.411736] (-) TimerEvent: {}
+[12.515210] (-) TimerEvent: {}
+[12.616955] (-) TimerEvent: {}
+[12.717818] (-) TimerEvent: {}
+[12.819115] (-) TimerEvent: {}
+[12.920676] (-) TimerEvent: {}
+[13.021243] (-) TimerEvent: {}
+[13.121752] (-) TimerEvent: {}
+[13.222170] (-) TimerEvent: {}
+[13.322750] (-) TimerEvent: {}
+[13.423439] (-) TimerEvent: {}
+[13.523783] (-) TimerEvent: {}
+[13.624716] (-) TimerEvent: {}
+[13.725256] (-) TimerEvent: {}
+[13.826322] (-) TimerEvent: {}
+[13.927751] (-) TimerEvent: {}
+[14.028317] (-) TimerEvent: {}
+[14.128909] (-) TimerEvent: {}
+[14.229694] (-) TimerEvent: {}
+[14.330437] (-) TimerEvent: {}
+[14.431385] (-) TimerEvent: {}
+[14.532224] (-) TimerEvent: {}
+[14.632722] (-) TimerEvent: {}
+[14.733425] (-) TimerEvent: {}
+[14.834683] (-) TimerEvent: {}
+[14.935254] (-) TimerEvent: {}
+[15.035790] (-) TimerEvent: {}
+[15.136244] (-) TimerEvent: {}
+[15.236638] (-) TimerEvent: {}
+[15.337057] (-) TimerEvent: {}
+[15.437606] (-) TimerEvent: {}
+[15.538230] (-) TimerEvent: {}
+[15.638877] (-) TimerEvent: {}
+[15.739316] (-) TimerEvent: {}
+[15.840404] (-) TimerEvent: {}
+[15.941487] (-) TimerEvent: {}
+[16.042031] (-) TimerEvent: {}
+[16.142578] (-) TimerEvent: {}
+[16.243464] (-) TimerEvent: {}
+[16.344050] (-) TimerEvent: {}
+[16.444682] (-) TimerEvent: {}
+[16.545193] (-) TimerEvent: {}
+[16.645722] (-) TimerEvent: {}
+[16.746855] (-) TimerEvent: {}
+[16.847537] (-) TimerEvent: {}
+[16.948084] (-) TimerEvent: {}
+[17.049474] (-) TimerEvent: {}
+[17.150122] (-) TimerEvent: {}
+[17.251019] (-) TimerEvent: {}
+[17.351552] (-) TimerEvent: {}
+[17.451975] (-) TimerEvent: {}
+[17.552765] (-) TimerEvent: {}
+[17.653354] (-) TimerEvent: {}
+[17.753939] (-) TimerEvent: {}
+[17.855175] (-) TimerEvent: {}
+[17.955750] (-) TimerEvent: {}
+[18.056489] (-) TimerEvent: {}
+[18.157307] (-) TimerEvent: {}
+[18.257991] (-) TimerEvent: {}
+[18.358610] (-) TimerEvent: {}
+[18.459168] (-) TimerEvent: {}
+[18.559592] (-) TimerEvent: {}
+[18.660750] (-) TimerEvent: {}
+[18.761830] (-) TimerEvent: {}
+[18.862326] (-) TimerEvent: {}
+[18.962949] (-) TimerEvent: {}
+[19.063387] (-) TimerEvent: {}
+[19.163760] (-) TimerEvent: {}
+[19.264336] (-) TimerEvent: {}
+[19.365168] (-) TimerEvent: {}
+[19.465981] (-) TimerEvent: {}
+[19.567091] (-) TimerEvent: {}
+[19.667742] (-) TimerEvent: {}
+[19.768525] (-) TimerEvent: {}
+[19.869219] (-) TimerEvent: {}
+[19.969759] (-) TimerEvent: {}
+[20.070469] (-) TimerEvent: {}
+[20.171385] (-) TimerEvent: {}
+[20.271979] (-) TimerEvent: {}
+[20.372484] (-) TimerEvent: {}
+[20.473714] (-) TimerEvent: {}
+[20.574545] (-) TimerEvent: {}
+[20.675428] (-) TimerEvent: {}
+[20.775998] (-) TimerEvent: {}
+[20.876557] (-) TimerEvent: {}
+[20.977612] (-) TimerEvent: {}
+[21.078160] (-) TimerEvent: {}
+[21.179100] (-) TimerEvent: {}
+[21.280168] (-) TimerEvent: {}
+[21.380992] (-) TimerEvent: {}
+[21.481709] (-) TimerEvent: {}
+[21.582291] (-) TimerEvent: {}
+[21.683438] (-) TimerEvent: {}
+[21.784072] (-) TimerEvent: {}
+[21.884547] (-) TimerEvent: {}
+[21.985600] (-) TimerEvent: {}
+[22.087042] (-) TimerEvent: {}
+[22.188206] (-) TimerEvent: {}
+[22.288779] (-) TimerEvent: {}
+[22.390060] (-) TimerEvent: {}
+[22.491043] (-) TimerEvent: {}
+[22.591731] (-) TimerEvent: {}
+[22.693017] (-) TimerEvent: {}
+[22.793690] (-) TimerEvent: {}
+[22.894818] (-) TimerEvent: {}
+[22.995287] (-) TimerEvent: {}
+[23.095807] (-) TimerEvent: {}
+[23.196803] (-) TimerEvent: {}
+[23.298543] (-) TimerEvent: {}
+[23.399326] (-) TimerEvent: {}
+[23.499713] (-) TimerEvent: {}
+[23.600227] (-) TimerEvent: {}
+[23.700638] (-) TimerEvent: {}
+[23.801200] (-) TimerEvent: {}
+[23.901593] (-) TimerEvent: {}
+[24.002169] (-) TimerEvent: {}
+[24.102725] (-) TimerEvent: {}
+[24.203304] (-) TimerEvent: {}
+[24.304107] (-) TimerEvent: {}
+[24.404542] (-) TimerEvent: {}
+[24.505097] (-) TimerEvent: {}
+[24.605865] (-) TimerEvent: {}
+[24.706667] (-) TimerEvent: {}
+[24.807427] (-) TimerEvent: {}
+[24.908182] (-) TimerEvent: {}
+[25.008634] (-) TimerEvent: {}
+[25.109224] (-) TimerEvent: {}
+[25.209670] (-) TimerEvent: {}
+[25.310251] (-) TimerEvent: {}
+[25.410976] (-) TimerEvent: {}
+[25.512376] (-) TimerEvent: {}
+[25.612935] (-) TimerEvent: {}
+[25.713536] (-) TimerEvent: {}
+[25.814441] (-) TimerEvent: {}
+[25.915466] (-) TimerEvent: {}
+[26.016400] (-) TimerEvent: {}
+[26.117844] (-) TimerEvent: {}
+[26.218610] (-) TimerEvent: {}
+[26.319124] (-) TimerEvent: {}
+[26.420014] (-) TimerEvent: {}
+[26.520792] (-) TimerEvent: {}
+[26.622138] (-) TimerEvent: {}
+[26.722469] (-) TimerEvent: {}
+[26.823208] (-) TimerEvent: {}
+[26.924792] (-) TimerEvent: {}
+[27.025640] (-) TimerEvent: {}
+[27.126348] (-) TimerEvent: {}
+[27.227165] (-) TimerEvent: {}
+[27.327792] (-) TimerEvent: {}
+[27.428526] (-) TimerEvent: {}
+[27.529131] (-) TimerEvent: {}
+[27.629673] (-) TimerEvent: {}
+[27.730236] (-) TimerEvent: {}
+[27.831475] (-) TimerEvent: {}
+[27.932598] (-) TimerEvent: {}
+[28.033591] (-) TimerEvent: {}
+[28.135846] (-) TimerEvent: {}
+[28.236579] (-) TimerEvent: {}
+[28.337667] (-) TimerEvent: {}
+[28.439359] (-) TimerEvent: {}
+[28.466411] (mission_center) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/uav_mission.dir/build.make:76: CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o] Error 1\n'}
+[28.466834] (mission_center) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/uav_mission.dir/all] Error 2\n'}
+[28.467086] (mission_center) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[28.475113] (mission_center) CommandEnded: {'returncode': 2}
+[28.494020] (mission_center) JobEnded: {'identifier': 'mission_center', 'rc': 2}
+[28.505221] (-) EventReactorShutdown: {}

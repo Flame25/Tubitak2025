@@ -1,0 +1,45 @@
+[35m[1mConsolidate compiler generated dependencies of target safety_node[0m
+[35m[1mConsolidate compiler generated dependencies of target trajectory_streamer[0m
+[35m[1mConsolidate compiler generated dependencies of target uav_mission[0m
+[ 12%] Built target safety_node
+[ 25%] Built target trajectory_streamer
+[ 31%] [32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o[0m
+In file included from [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:1[m[K:
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:89:42:[m[K [01;31m[Kerror: [m[K‘[01m[KPositionTarget[m[K’ is not a member of ‘[01m[Kmavros_msgs::msg[m[K’
+   89 |   rclcpp::Subscription<mavros_msgs::msg::[01;31m[KPositionTarget[m[K>
+      |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:89:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   89 |   rclcpp::Subscription<mavros_msgs::msg::PositionTarget[01;31m[K>[m[K
+      |                                                        [01;31m[K^[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:89:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:89:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:89:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:89:3:[m[K [01;31m[Kerror: [m[Ktwo or more data types in declaration of ‘[01m[KkillPilotCb[m[K’
+   89 |   [01;31m[Krclcpp[m[K::Subscription<mavros_msgs::msg::PositionTarget>
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In constructor ‘[01m[KUAV_Mission::UAV_Mission(rclcpp::Node::SharedPtr)[m[K’:
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:36:31:[m[K [01;31m[Kerror: [m[K‘[01m[KkillPilotCb[m[K’ is not a member of ‘[01m[KUAV_Mission[m[K’
+   36 |       std::bind(&UAV_Mission::[01;31m[KkillPilotCb[m[K, this, std::placeholders::_1,
+      |                               [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kbool UAV_Mission::restartMission(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:55:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   55 |     [01;35m[Kconst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:56:53:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   56 |     [01;35m[Kstd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::switch_mode(std::string)[m[K’:
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:128:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  128 |       int [01;35m[KgotTopic[m[K =
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::arm_throttle()[m[K’:
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:172:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  172 |       int [01;35m[KgotTopic[m[K =
+      |           [01;35m[K^~~~~~~~[m[K
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::takeoff(double)[m[K’:
+[01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:199:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktmp_check[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  199 |   bool [01;35m[Ktmp_check[m[K = getAlt(current_alt, "local_pose");
+      |        [01;35m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/uav_mission.dir/build.make:76: CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/uav_mission.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

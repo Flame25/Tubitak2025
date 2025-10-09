@@ -1,0 +1,288 @@
+[0.070s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.070s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72e6a53ac9d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72e6a549e4d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72e6a549e4d0>>)
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.096s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.096s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gadzz/Workspace/VTOL-MissionCenter'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['ignore', 'ignore_ament_install']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'ignore_ament_install'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['colcon_pkg']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'colcon_pkg'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['colcon_meta']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'colcon_meta'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extensions ['ros']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_center) by extension 'ros'
+[0.109s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mission_center' with type 'ros.ament_cmake' and name 'mission_center'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'ignore'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'ignore_ament_install'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['colcon_pkg']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'colcon_pkg'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['colcon_meta']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'colcon_meta'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['ros']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'ros'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['cmake', 'python']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'cmake'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'python'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extensions ['python_setup_py']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard) by extension 'python_setup_py'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['ignore', 'ignore_ament_install']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'ignore'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'ignore_ament_install'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['colcon_pkg']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'colcon_pkg'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['colcon_meta']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'colcon_meta'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extensions ['ros']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard) by extension 'ros'
+[0.110s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2-keyboard/keyboard' with type 'ros.ament_cmake' and name 'keyboard'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'ignore'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'ignore_ament_install'
+[0.110s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['colcon_pkg']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'colcon_pkg'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['colcon_meta']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'colcon_meta'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extensions ['ros']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-keyboard/keyboard_msgs) by extension 'ros'
+[0.111s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2-keyboard/keyboard_msgs' with type 'ros.ament_cmake' and name 'keyboard_msgs'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['ignore', 'ignore_ament_install']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'ignore'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'ignore_ament_install'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['colcon_pkg']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'colcon_pkg'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['colcon_meta']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'colcon_meta'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['ros']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'ros'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['cmake', 'python']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'cmake'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'python'
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extensions ['python_setup_py']
+[0.111s] Level 1:colcon.colcon_core.package_identification:_identify(terrain) by extension 'python_setup_py'
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.126s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.127s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 288 installed packages in /opt/ros/humble
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs', 'merge_install': False, 'path': '/home/gadzz/Workspace/VTOL-MissionCenter/src/ros2-keyboard/keyboard_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'keyboard' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard', 'merge_install': False, 'path': '/home/gadzz/Workspace/VTOL-MissionCenter/src/ros2-keyboard/keyboard', 'symlink_install': False, 'test_result_base': None}
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'mission_center' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'mission_center' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center', 'merge_install': False, 'path': '/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center', 'symlink_install': False, 'test_result_base': None}
+[0.153s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.153s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.154s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gadzz/Workspace/VTOL-MissionCenter/src/ros2-keyboard/keyboard_msgs' with build type 'ament_cmake'
+[0.154s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gadzz/Workspace/VTOL-MissionCenter/src/ros2-keyboard/keyboard_msgs'
+[0.155s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.155s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.155s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.162s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs -- -j8 -l8
+[0.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs -- -j8 -l8
+[0.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs
+[0.485s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_msgs)
+[0.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard_msgs
+[0.486s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs' for CMake module files
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs' for CMake config files
+[0.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'cmake_prefix_path')
+[0.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.ps1'
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.dsv'
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.sh'
+[0.489s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib'
+[0.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'ld_library_path_lib')
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.ps1'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.dsv'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.sh'
+[0.490s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/bin'
+[0.490s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/pkgconfig/keyboard_msgs.pc'
+[0.490s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/python3.10/site-packages'
+[0.490s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/bin'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.ps1'
+[0.491s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.dsv'
+[0.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.sh'
+[0.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.bash'
+[0.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.zsh'
+[0.492s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/colcon-core/packages/keyboard_msgs)
+[0.493s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard_msgs)
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs' for CMake module files
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs' for CMake config files
+[0.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'cmake_prefix_path')
+[0.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.ps1'
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.dsv'
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/cmake_prefix_path.sh'
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib'
+[0.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_msgs', 'ld_library_path_lib')
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.ps1'
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.dsv'
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/hook/ld_library_path_lib.sh'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/bin'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/pkgconfig/keyboard_msgs.pc'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib/python3.10/site-packages'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/bin'
+[0.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.ps1'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.dsv'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.sh'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.bash'
+[0.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/keyboard_msgs/package.zsh'
+[0.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/share/colcon-core/packages/keyboard_msgs)
+[0.497s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gadzz/Workspace/VTOL-MissionCenter/src/ros2-keyboard/keyboard' with build type 'ament_cmake'
+[0.497s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gadzz/Workspace/VTOL-MissionCenter/src/ros2-keyboard/keyboard'
+[0.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.497s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.500s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center' with build type 'ament_cmake'
+[0.500s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center'
+[0.500s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.500s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.505s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard': AMENT_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard -- -j8 -l8
+[0.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center': AMENT_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center -- -j8 -l8
+[0.552s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard' returned '0': AMENT_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard -- -j8 -l8
+[0.553s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard': AMENT_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard
+[0.560s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard)
+[0.560s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard' for CMake module files
+[0.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard' returned '0': AMENT_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gadzz/Workspace/VTOL-MissionCenter/build/keyboard
+[0.561s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard' for CMake config files
+[0.561s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard', 'cmake_prefix_path')
+[0.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/hook/cmake_prefix_path.ps1'
+[0.562s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/hook/cmake_prefix_path.dsv'
+[0.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/hook/cmake_prefix_path.sh'
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib'
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/bin'
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib/pkgconfig/keyboard.pc'
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib/python3.10/site-packages'
+[0.563s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/bin'
+[0.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.ps1'
+[0.563s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.dsv'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.sh'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.bash'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.zsh'
+[0.564s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/colcon-core/packages/keyboard)
+[0.565s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(keyboard)
+[0.565s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard' for CMake module files
+[0.565s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard' for CMake config files
+[0.565s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard', 'cmake_prefix_path')
+[0.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/hook/cmake_prefix_path.ps1'
+[0.566s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/hook/cmake_prefix_path.dsv'
+[0.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/hook/cmake_prefix_path.sh'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/bin'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib/pkgconfig/keyboard.pc'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/lib/python3.10/site-packages'
+[0.566s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/bin'
+[0.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.ps1'
+[0.567s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.dsv'
+[0.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.sh'
+[0.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.bash'
+[0.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/keyboard/package.zsh'
+[0.568s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard/share/colcon-core/packages/keyboard)
+[9.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center' returned '2': AMENT_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center -- -j8 -l8
+[9.739s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_center)
+[9.739s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center' for CMake module files
+[9.739s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center' for CMake config files
+[9.740s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_center', 'cmake_prefix_path')
+[9.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/hook/cmake_prefix_path.ps1'
+[9.740s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/hook/cmake_prefix_path.dsv'
+[9.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/hook/cmake_prefix_path.sh'
+[9.741s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib'
+[9.741s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_center', 'ld_library_path_lib')
+[9.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/hook/ld_library_path_lib.ps1'
+[9.741s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/hook/ld_library_path_lib.dsv'
+[9.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/hook/ld_library_path_lib.sh'
+[9.741s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/bin'
+[9.741s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib/pkgconfig/mission_center.pc'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib/python3.10/site-packages'
+[9.742s] Level 1:colcon.colcon_core.environment:checking '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/bin'
+[9.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/package.ps1'
+[9.742s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/package.dsv'
+[9.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/package.sh'
+[9.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/package.bash'
+[9.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/mission_center/package.zsh'
+[9.743s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/share/colcon-core/packages/mission_center)
+[9.754s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.754s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.754s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[9.754s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.757s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.757s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.757s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.775s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.775s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/Workspace/VTOL-MissionCenter/install/local_setup.ps1'
+[9.776s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gadzz/Workspace/VTOL-MissionCenter/install/_local_setup_util_ps1.py'
+[9.777s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/Workspace/VTOL-MissionCenter/install/setup.ps1'
+[9.777s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/Workspace/VTOL-MissionCenter/install/local_setup.sh'
+[9.778s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gadzz/Workspace/VTOL-MissionCenter/install/_local_setup_util_sh.py'
+[9.778s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/Workspace/VTOL-MissionCenter/install/setup.sh'
+[9.779s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/Workspace/VTOL-MissionCenter/install/local_setup.bash'
+[9.779s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/Workspace/VTOL-MissionCenter/install/setup.bash'
+[9.780s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gadzz/Workspace/VTOL-MissionCenter/install/local_setup.zsh'
+[9.780s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gadzz/Workspace/VTOL-MissionCenter/install/setup.zsh'

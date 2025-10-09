@@ -1,0 +1,46 @@
+[0.030s] Invoking command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center': CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center -- -j8 -l8
+[0.126s] [  6%] [32mBuilding CXX object CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o[0m
+[4.894s] In file included from [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:1[m[K:
+[4.894s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:[m[K In member function ‘[01m[Kbool UAV_Mission::killPilotCb(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[4.894s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:97:73:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.894s]    97 | [01;35m[Kst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+[4.894s]       | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[4.895s] 
+[4.895s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/include/mission_center/uav_mission.hpp:98:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.895s]    98 | [01;35m[Ktd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+[4.895s]       | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[4.895s] 
+[4.992s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kbool UAV_Mission::restartMission(std::shared_ptr<std_srvs::srv::Empty_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Empty_Response_<std::allocator<void> > >)[m[K’:
+[4.992s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:77:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.992s]    77 | [01;35m[Kst std::shared_ptr<std_srvs::srv::Empty::Request> request[m[K,
+[4.992s]       | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[4.992s] 
+[4.992s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:78:53:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.992s]    78 | [01;35m[Ktd::shared_ptr<std_srvs::srv::Empty::Response> response[m[K) {
+[4.992s]       | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[4.993s] 
+[5.072s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::switch_mode(std::string)[m[K’:
+[5.072s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:152:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.072s]   152 |       int [01;35m[KgotTopic[m[K =
+[5.072s]       |           [01;35m[K^~~~~~~~[m[K
+[5.093s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::heading(double)[m[K’:
+[5.093s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:198:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimex[m[K’?
+[5.093s]   198 |   [01;31m[Ktimer[m[K->cancel();
+[5.093s]       |   [01;31m[K^~~~~[m[K
+[5.093s]       |   [32m[Ktimex[m[K
+[5.172s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::arm_throttle()[m[K’:
+[5.172s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:261:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KgotTopic[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.172s]   261 |       int [01;35m[KgotTopic[m[K =
+[5.172s]       |           [01;35m[K^~~~~~~~[m[K
+[5.247s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::move_servo(int, int)[m[K’:
+[5.247s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:278:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstart_time[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.247s]   278 |   double [01;35m[Kstart_time[m[K = nh->now().seconds();
+[5.247s]       |          [01;35m[K^~~~~~~~~~[m[K
+[5.323s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:[m[K In member function ‘[01m[Kvoid UAV_Mission::takeoff(double)[m[K’:
+[5.323s] [01m[K/home/gadzz/Workspace/VTOL-MissionCenter/src/mission_center/src/uav_mission.cpp:313:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktmp_check[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.323s]   313 |   bool [01;35m[Ktmp_check[m[K = getAlt(current_alt, "local_pose");
+[5.323s]       |        [01;35m[K^~~~~~~~~[m[K
+[21.815s] gmake[2]: *** [CMakeFiles/uav_mission.dir/build.make:76: CMakeFiles/uav_mission.dir/src/uav_mission.cpp.o] Error 1
+[21.815s] gmake[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/uav_mission.dir/all] Error 2
+[21.815s] gmake: *** [Makefile:146: all] Error 2
+[21.818s] Invoked command in '/home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center' returned '2': CMAKE_PREFIX_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center:/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard:/opt/ros/humble LD_LIBRARY_PATH=/home/gadzz/Workspace/VTOL-MissionCenter/install/keyboard_msgs/lib:/home/gadzz/Workspace/VTOL-MissionCenter/install/mission_center/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/gadzz/Workspace/VTOL-MissionCenter/build/mission_center -- -j8 -l8

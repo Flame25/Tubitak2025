@@ -1,3 +1,5 @@
+#pragma once
+
 #include <boost/algorithm/algorithm.hpp>
 #include <boost/algorithm/string.hpp>
 #include <functional>
@@ -9,6 +11,7 @@
 #include <rclcpp/logging.hpp>
 #include <rclcpp/node.hpp>
 #include <rclcpp/rclcpp.hpp>
+#include <rclcpp/subscription.hpp>
 #include <sensor_msgs/msg/nav_sat_fix.hpp>
 #include <std_msgs/msg/float64.hpp>
 #include <std_srvs/srv/empty.hpp>
@@ -18,12 +21,18 @@
 class UAV_Mission {
 public:
   void arm_throttle();
-  void takeoff(double height);
+  void takeoff(double target_height);
   void land();
   void switch_mode(std::string mode);
+  void move_servo(int channel, int pwm);
+  void set_position(double x, double y, double z);
+  void wait(double second);
   bool
   restartMission(const std::shared_ptr<std_srvs::srv::Empty::Request> request,
                  std::shared_ptr<std_srvs::srv::Empty::Response> response);
+
+  double degree_to_rad(double deg);
+  void heading(int type, double target);
 
   template <class T>
   bool getTopicVal(T &returnVal, const std::string &topicName,
@@ -72,6 +81,9 @@ public:
     this->load_mission(file_path);
     return true;
   }
+
+  // --- Helper Func ---
+  bool getAlt(double &alt, std::string source);
 
   rclcpp::Node::SharedPtr nh;
   bool init();
